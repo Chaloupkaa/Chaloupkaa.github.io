@@ -1,0 +1,228 @@
+.auth-bar {
+  height: 4.1875rem;
+  line-height: 4.1875rem;
+  padding: 0.2rem 0;
+  padding-top: 3.2px;
+  padding-bottom: 3.2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background-color: rgb(27, 27, 34);
+  box-shadow: 0px 3px 10px rgb(0, 0, 0);
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  margin-left: 15px;
+}
+
+.logo-link {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  padding: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.link {
+  color: #626979;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #deecee;
+}
+
+.link-support {
+  margin-left: 23px;
+}
+
+.socials,
+.left {
+  display: flex;
+}
+
+.balance {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 0.9375rem;
+  background-color: #323246;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  box-sizing: inherit;
+}
+
+.currency-string {
+  font-size: 15px;
+  color: #adb8cc;
+  margin-left: 7px;
+  cursor: default;
+  user-select: none;
+}
+
+.balance-amount {
+  font-size: 15px;
+  color: #fff;
+  margin-right: auto;
+}
+
+.deposit {
+  color: #ffffff;
+  background: #00aaeb;
+  text-transform: capitalize;
+  font-weight: 500;
+  box-shadow: rgba(42, 197, 241, 0.2) 0px 0.625rem 1.875rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.875rem;
+  border-radius: 0.3125rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.deposit:hover {
+  filter: brightness(1.15);
+}
+
+.user-notifications {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 2.5rem;
+  box-shadow: rgba(42, 197, 241, 0.2) 0px 10px 30px 0px;
+  background-color: #323246;
+  border-radius: 0.1875rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.user-notifications:hover {
+  filter: brightness(1.2);
+}
+
+.bell-icon {
+  font-size: 15px;
+  line-height: 2.5rem;
+}
+.account-info {
+  background-color: #323246;
+  color: #adb8cc;
+  max-width: 9.75rem;
+  white-space: nowrap;
+  padding: 0 1.25rem;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.account-info:hover {
+  filter: brightness(1.15);
+}
+
+.username {
+  color: rgb(173, 184, 204);
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.user-icon {
+  color: rgb(173, 184, 204);
+  margin-right: 0.625rem;
+  user-select: none;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.socials-discord,
+.socials-tiktok {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(103%) contrast(103%);
+  opacity: 0.3;
+  height: 25px;
+  width: 25px;
+  line-height: 67px;
+  vertical-align: middle;
+  user-select: none;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  background-color: #323246;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.logout-img {
+  font-size: 15px;
+  width: 1.15rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.logout-img:hover {
+  filter: brightness(2);
+}
+
+.plus-icon-balance {
+  position: absolute;
+  right: -5%;
+  top: -5%;
+  display: none;
+  width: 15px;
+  margin-left: 0.25rem;
+}
+
+.euro-icon-mobile {
+  display: none !important;
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
+}

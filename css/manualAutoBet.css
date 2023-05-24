@@ -1,0 +1,365 @@
+/* General settings */
+
+.sidebar {
+  width: 25%;
+}
+
+#autoBet > * {
+  margin-top: 0.5rem;
+}
+
+.betting-Settings-Wrapper {
+  margin: 0 5%;
+}
+
+.betting-Settings-Wrapper > * {
+  margin-top: 0.5rem;
+}
+
+/* Number input styles */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="number"] {
+  width: 6rem;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: 1.5;
+  width: 100%;
+  color: #fff;
+  background: #0f212e;
+  border: 2px solid #2f4553;
+  border-radius: 0.25rem;
+  letter-spacing: 0;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  outline: 0;
+  margin: 0;
+  cursor: text;
+  appearance: none;
+  font-size: 0.875rem;
+  box-shadow: none;
+  padding: 0.5em;
+  padding-right: 2em;
+}
+
+input[type="number"]:hover:not(:disabled) {
+  border-color: #557086;
+}
+
+input[type="number"]:focus {
+  border-color: #557086;
+}
+
+/* Select input styles */
+
+select {
+  width: 6rem;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: 1.5;
+  width: 100%;
+  color: #fff;
+  background-color: #0f212e;
+  border: 2px solid #2f4553;
+  border-radius: 0.25rem;
+  letter-spacing: 0;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  outline: 0;
+  margin: 0;
+  cursor: text;
+  appearance: none;
+  font-size: 0.875rem;
+  box-shadow: none;
+  padding: 0.5em;
+  padding-right: 2em;
+}
+
+select:hover:not(:disabled) {
+  border-color: #557086;
+}
+
+select:focus {
+  border-color: #557086;
+}
+
+select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Manual / Auto switch */
+
+.manual-auto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5% 5%;
+  height: 45px;
+  background-color: #0f212e;
+  border-radius: 100px;
+}
+
+.manual-auto-btn {
+  background-color: #0f212e;
+  height: 35px;
+  border-radius: 100px;
+  width: 45%;
+  border-style: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.manual-auto-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.manual-auto-btn:hover:not(:disabled) {
+  background-color: #2f4553;
+}
+
+.manual-auto-btn:focus {
+  background-color: #2f4553;
+}
+
+.buttonActive {
+  background-color: #2f4553;
+}
+
+/* Amount editors */
+
+.amount-editor-button {
+  width: 60px;
+  height: 39px;
+  background-color: #2f4553;
+  border-style: none;
+  transition: all 0.2s ease-in-out;
+}
+.amount-editor-button:hover:not(:disabled) {
+  color: #fff;
+  background-color: #3d5564;
+}
+
+/* Bet button */
+
+.bet-button {
+  background-color: #00b801;
+  width: 100%;
+  height: 3.5rem;
+  border-style: none;
+  color: #0f212e;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #000;
+  transition: all 0.2s ease-in-out;
+}
+
+.bet-button:disabled {
+  background-color: #008a01;
+  cursor: default;
+}
+
+.bet-button:hover:not(:disabled) {
+  box-shadow: 0 1px 10px #000;
+  filter: brightness(1.07);
+}
+
+.auto-bet-button-active {
+  background-color: #008a01;
+  cursor: pointer;
+}
+
+/* Amount half, double */
+
+#amountDouble {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#amountHalf:disabled,
+#amountDouble:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#amountDouble::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  width: 2px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #1a2c38;
+  transform: translateX(-1px);
+}
+
+/* After icon, little dice */
+
+.after-icon {
+  position: fixed;
+}
+
+.after-icons {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 90%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #b1bad3;
+  z-index: 2;
+}
+
+#littleDice {
+  display: none;
+  margin-top: 5px;
+}
+
+/* Wrappers */
+
+.on-win-loss-wrapper {
+  display: flex;
+}
+
+.input-icon-wrapper {
+  position: relative;
+}
+
+.on-win-loss-wrapper {
+  position: relative;
+  background-color: #2f4553;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.bet-amount-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #2f4553;
+  border-radius: 4px;
+}
+
+/* Reset on */
+
+.reset-increase-wrapper {
+  background-color: #2f4553;
+  border-radius: 3px;
+  display: flex;
+}
+
+.reset-on {
+  background-color: #2f4553;
+  border-style: none;
+  color: #d5dceb;
+  font-size: 11px;
+  padding: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reset-on:hover:not(:disabled) {
+  color: #fff;
+  background-color: #3d5564;
+  cursor: pointer;
+}
+
+.reset-on:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Increase-by */
+
+.increase-by {
+  background-color: #2f4553;
+  border-style: none;
+  color: #d5dceb;
+  font-size: 11px;
+  padding: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 1px;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.increase-by:hover:not(:disabled) {
+  color: #fff;
+  background-color: #3d5564;
+  cursor: pointer;
+}
+
+.increase-by:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Inputs */
+
+#betAmount {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Disabled inputs */
+
+#profitOnWin {
+  cursor: not-allowed;
+  background-color: #2f4553;
+  color: #fff;
+  opacity: 1;
+}
+
+/* Transitions */
+
+.infinity-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Need to be at the end */
+
+.auto-betting-button-active {
+  background-color: #071824;
+  color: #fff;
+  cursor: pointer;
+}
+
+.auto-betting-button-active:hover {
+  background-color: #071824;
+}
+
+.on-win-loss-input:is(:disabled) {
+  background-color: #203444;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+input[type="number"]:is(:disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

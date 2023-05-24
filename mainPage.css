@@ -1,0 +1,36 @@
+.main {
+  margin-top: 2rem;
+}
+
+.all-cards {
+  display: flex;
+}
+
+.game-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  width: 10rem;
+  height: 15rem;
+  color: darkslategray;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game-card:hover {
+  filter: brightness(1.3);
+  transform: translateY(-0.5rem);
+  cursor: pointer;
+}
+
+.dice-game {
+  background-image: url(img/card-bg/temp-bg-dice.jpg);
+}
+
+.mines-game {
+  background-image: url(img/card-bg/temp-bg-mines.jpg);
+}

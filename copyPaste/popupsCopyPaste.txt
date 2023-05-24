@@ -1,0 +1,9 @@
+<div class="incorrect-bet" id="incorrectBet">
+      <div class="close-btn"><img src="img/popup-close.png" id="closeBtnBet" /></div>
+      <p class="incorrect-bet-p">Bet must be greater than 0!</p>
+    </div>
+    
+    <div class="insufficient-balance" id="balancePopup">
+      <div class="close-btn"><img src="img/popup-close.png" id="closeBtnBalance" /></div>
+      <p class="insufficient-balance-p">Insufficient balance!</p>
+    </div>

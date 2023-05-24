@@ -1,0 +1,93 @@
+@media (max-width: 970px) {
+  .auth-bar {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .socials,
+  .link-affiliate,
+  .link-support {
+    display: none;
+  }
+
+  .user-notifications {
+    display: none;
+  }
+
+  .logout {
+    display: none;
+  }
+
+  .auth-bar {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  body > header > div.auth-bar {
+    height: 100%;
+    padding: 5px;
+  }
+
+  body > header > div.auth-bar > div.right > div > ul > li.account-info > span {
+    display: none;
+  }
+
+  body > header > div.auth-bar > div.right > div > ul > li.account-info > img {
+    margin: 0;
+  }
+
+  body > header > div.auth-bar > div.right {
+    justify-content: space-evenly;
+  }
+
+  .plus-icon-balance {
+    display: block;
+  }
+
+  .euro-icon-mobile {
+    display: block !important;
+  }
+
+  .currency-balance {
+    display: none !important;
+  }
+
+  .account-info {
+    margin-left: 0;
+    width: 30px !important;
+    justify-content: center;
+  }
+
+  .deposit {
+    display: none;
+  }
+
+  .logo {
+    width: 150px;
+    margin-right: 0;
+  }
+
+  body > footer > nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .inner-list {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .socials-discord {
+    display: none;
+  }
+
+  .socials-tiktok {
+    display: none;
+  }
+}
