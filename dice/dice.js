@@ -1,1 +1,455 @@
-const _0x9aef23=_0x59b5;(function(_0x2e2b7d,_0x19a127){const _0x2a2056=_0x59b5,_0x7a6aa0=_0x2e2b7d();while(!![]){try{const _0x25dbca=-parseInt(_0x2a2056(0x143))/0x1*(-parseInt(_0x2a2056(0xf5))/0x2)+parseInt(_0x2a2056(0xf3))/0x3+-parseInt(_0x2a2056(0x150))/0x4*(parseInt(_0x2a2056(0x12c))/0x5)+parseInt(_0x2a2056(0xec))/0x6*(parseInt(_0x2a2056(0x129))/0x7)+-parseInt(_0x2a2056(0x11d))/0x8*(parseInt(_0x2a2056(0x133))/0x9)+-parseInt(_0x2a2056(0x123))/0xa*(parseInt(_0x2a2056(0xe8))/0xb)+-parseInt(_0x2a2056(0x136))/0xc;if(_0x25dbca===_0x19a127)break;else _0x7a6aa0['push'](_0x7a6aa0['shift']());}catch(_0x2af39b){_0x7a6aa0['push'](_0x7a6aa0['shift']());}}}(_0x3423,0xe0b43));const slider=document['getElementById']('slider'),overUnder=document[_0x9aef23(0xf7)]('overUnder'),multiplierInput=document['getElementById'](_0x9aef23(0x110)),winChanceInput=document['getElementById'](_0x9aef23(0xf6)),overUnderChange=document[_0x9aef23(0xf7)](_0x9aef23(0x12a));let overUnderState=document[_0x9aef23(0xf7)](_0x9aef23(0x117));const sliderMoveAudio=document[_0x9aef23(0xf7)](_0x9aef23(0x135)),diceWinSFX=document['getElementById'](_0x9aef23(0xed)),diceLossSFX=document[_0x9aef23(0xf7)](_0x9aef23(0xfe));let betAmount=document['querySelector'](_0x9aef23(0xe7)),balanceAmount=0x64,outcome,betButton=document[_0x9aef23(0xf7)](_0x9aef23(0xf1)),amountHalfButton=document[_0x9aef23(0xf7)](_0x9aef23(0x115)),amountDoubleButton=document[_0x9aef23(0xf7)](_0x9aef23(0x12e));const profitOnWin=document[_0x9aef23(0xf7)](_0x9aef23(0x134));let resultArray=[],numberOfDisplayedNumbers=0x0,timer=null;document[_0x9aef23(0x13a)]('DOMContentLoaded',()=>{const _0x6829dd=_0x9aef23;document[_0x6829dd(0xf7)](_0x6829dd(0x13c))['style'][_0x6829dd(0x113)]='0',document['getElementById'](_0x6829dd(0x13c))[_0x6829dd(0x10c)][_0x6829dd(0x13f)]=0x0,document[_0x6829dd(0xf7)](_0x6829dd(0x134))[_0x6829dd(0x10f)]=!![],slider[_0x6829dd(0x100)]=0x32;let _0x494b1f=winChance();multiplier(_0x494b1f),rollOverUnder(),profitOnWinCalculation();}),overUnderChange['addEventListener'](_0x9aef23(0x121),overUnderChangeFunction);function overUnderChangeFunction(){invertSlider();}function _0x59b5(_0x1f814b,_0x2b4776){const _0x3423a3=_0x3423();return _0x59b5=function(_0x59b5f3,_0x262c1b){_0x59b5f3=_0x59b5f3-0xe4;let _0x1fd1fa=_0x3423a3[_0x59b5f3];return _0x1fd1fa;},_0x59b5(_0x1f814b,_0x2b4776);}slider[_0x9aef23(0x13a)](_0x9aef23(0x122),()=>{const _0x38da93=_0x9aef23;overUnderState[_0x38da93(0x138)]==='Over'&&sliderStopOver();if(overUnderState[_0x38da93(0x138)]==='Under'){if(_0x38da93(0xf0)!=='yEGwJ')sliderStopUnder();else{_0x27cee5[_0x38da93(0x10f)]=![];let _0x2e169d=0x63/_0x477602[_0x38da93(0x100)];_0x284c1e[_0x38da93(0x100)]=0x64-_0x2e169d;let _0x179a23=_0x5899a4[_0x38da93(0x100)];_0x39c4f9[_0x38da93(0x100)]=_0x179a23,_0x46cf04[_0x38da93(0x100)]=(0x64-_0x14f312[_0x38da93(0x100)])[_0x38da93(0xfc)](0x2),_0xe62f1f(),_0x180488();}}sliderMove();let _0xeccb3b=winChance();multiplier(_0xeccb3b),rollOverUnder();}),multiplierInput[_0x9aef23(0x13a)]('input',()=>{const _0xb8f2c1=_0x9aef23;if(overUnderState[_0xb8f2c1(0x138)]===_0xb8f2c1(0x149)){(multiplierInput[_0xb8f2c1(0x100)]===Infinity||multiplierInput[_0xb8f2c1(0x100)]===null||multiplierInput['value']===undefined)&&(multiplierInput[_0xb8f2c1(0x100)]=1.98);multiplierInput[_0xb8f2c1(0x100)]<=1.0103&&(betButton[_0xb8f2c1(0x10f)]=!![]);multiplierInput[_0xb8f2c1(0x100)]>=0x26ac&&(_0xb8f2c1(0xf9)!==_0xb8f2c1(0x101)?multiplierInput[_0xb8f2c1(0x100)]=0x26ac:_0x194586());if(multiplierInput[_0xb8f2c1(0x100)]>=1.0103&&multiplierInput[_0xb8f2c1(0x100)]<=0x1356){betButton[_0xb8f2c1(0x10f)]=![];let _0x42eec8=0x63/multiplierInput[_0xb8f2c1(0x100)];slider[_0xb8f2c1(0x100)]=0x64-_0x42eec8;let _0x1c50d2=slider[_0xb8f2c1(0x100)];overUnder[_0xb8f2c1(0x100)]=_0x1c50d2,winChanceInput['value']=(0x64-slider[_0xb8f2c1(0x100)])['toFixed'](0x2),profitOnWinCalculation(),moveColorsOnInput();}}if(overUnderState[_0xb8f2c1(0x138)]===_0xb8f2c1(0xff)){if(_0xb8f2c1(0x146)!==_0xb8f2c1(0x127)){(multiplierInput[_0xb8f2c1(0x100)]===Infinity||multiplierInput['value']===null||multiplierInput[_0xb8f2c1(0x100)]===undefined)&&(multiplierInput[_0xb8f2c1(0x100)]=1.98);multiplierInput[_0xb8f2c1(0x100)]<=1.01&&(betButton[_0xb8f2c1(0x10f)]=!![]);multiplierInput[_0xb8f2c1(0x100)]>=0x26ac&&(multiplierInput['value']=0x26ac);if(multiplierInput[_0xb8f2c1(0x100)]>=1.01&&multiplierInput['value']<=0x26ac){if('jOYnA'!==_0xb8f2c1(0x14a)){betButton[_0xb8f2c1(0x10f)]=![];let _0x5bf3be=0x63/multiplierInput[_0xb8f2c1(0x100)];slider[_0xb8f2c1(0x100)]=_0x5bf3be;let _0x21797d=slider[_0xb8f2c1(0x100)];overUnder['value']=_0x21797d,winChanceInput[_0xb8f2c1(0x100)]=slider['value'],profitOnWinCalculation(),moveColorsOnInput();}else{if(_0x12cf6d[_0xb8f2c1(0x138)]===_0xb8f2c1(0x149)){let _0x5807fa=_0x5d83a8['value'],_0x581078=_0xb8f2c1(0xee)+_0x5807fa+_0xb8f2c1(0x118)+_0x5807fa+'%,\x20#00e701\x20100%)';_0x45b6ce[_0xb8f2c1(0x10c)][_0xb8f2c1(0x119)]=_0x581078;}if(_0x5c727f[_0xb8f2c1(0x138)]==='Under'){let _0x541cbe=_0x3560de['value'],_0x538792='linear-gradient(to\x20right,\x20#00e701\x200%,\x20#00e701\x20'+_0x541cbe+_0xb8f2c1(0xf8)+_0x541cbe+_0xb8f2c1(0x14f);_0x2f9192[_0xb8f2c1(0x10c)][_0xb8f2c1(0x119)]=_0x538792;}}}}else{let _0x127ca5=_0xb8f2c1(0xee)+_0xcf6221+_0xb8f2c1(0x118)+_0x28e398+_0xb8f2c1(0x14c);this[_0xb8f2c1(0x10c)][_0xb8f2c1(0x119)]=_0x127ca5,this[_0xb8f2c1(0x100)]=_0x3fdb5a;}}}),winChanceInput[_0x9aef23(0x13a)](_0x9aef23(0x122),()=>{const _0x5873f9=_0x9aef23;if(overUnderState[_0x5873f9(0x138)]===_0x5873f9(0x149)){if(winChanceInput[_0x5873f9(0x100)]===Infinity||winChanceInput[_0x5873f9(0x100)]===null||winChanceInput['value']===undefined){if(_0x5873f9(0xf2)===_0x5873f9(0xf2))winChanceInput['value']=0x32;else{_0x1078bc[_0x5873f9(0x10f)]=![];let _0x3aeb0e=_0x345bd4['value'],_0x49f7b1=0x63/_0x3aeb0e;_0x3815a8['value']=_0x49f7b1[_0x5873f9(0xfc)](0x2);let _0x1fbcf1=0x64-_0x3aeb0e;_0x4d27fa['value']=_0x1fbcf1,_0x4075ad[_0x5873f9(0x100)]=_0x1fbcf1[_0x5873f9(0xfc)](0x2),_0x57c7f9(),_0x310186();}}winChanceInput[_0x5873f9(0x100)]<0.01&&(betButton[_0x5873f9(0x10f)]=!![]);winChanceInput['value']>=97.99&&(_0x5873f9(0x106)!==_0x5873f9(0x106)?_0x57b356['value']=_0x173a7f:winChanceInput[_0x5873f9(0x100)]=97.99);if(winChanceInput['value']>=0.01&&winChanceInput[_0x5873f9(0x100)]<=97.99){betButton[_0x5873f9(0x10f)]=![];let _0x4fc606=winChanceInput[_0x5873f9(0x100)],_0x5638f9=0x63/_0x4fc606;multiplierInput[_0x5873f9(0x100)]=_0x5638f9[_0x5873f9(0xfc)](0x2);let _0x347bf9=0x64-_0x4fc606;slider[_0x5873f9(0x100)]=_0x347bf9,overUnder[_0x5873f9(0x100)]=_0x347bf9[_0x5873f9(0xfc)](0x2),profitOnWinCalculation(),moveColorsOnInput();}}if(overUnderState[_0x5873f9(0x138)]===_0x5873f9(0xff)){(winChanceInput[_0x5873f9(0x100)]===Infinity||winChanceInput['value']===null||winChanceInput[_0x5873f9(0x100)]===undefined)&&(winChanceInput[_0x5873f9(0x100)]=0x32);winChanceInput[_0x5873f9(0x100)]<0.01&&(_0x5873f9(0x11a)!==_0x5873f9(0x11a)?_0x3eb340[_0x5873f9(0x100)]=0x26ac:betButton[_0x5873f9(0x10f)]=!![]);winChanceInput[_0x5873f9(0x100)]>=97.99&&(_0x5873f9(0x13e)!==_0x5873f9(0x13e)?_0x2802ae['disabled']=!![]:winChanceInput[_0x5873f9(0x100)]=97.99);if(winChanceInput[_0x5873f9(0x100)]>=0.01&&winChanceInput[_0x5873f9(0x100)]<=97.99){betButton[_0x5873f9(0x10f)]=![];let _0x270004=winChanceInput['value'],_0x534462=0x63/_0x270004;multiplierInput[_0x5873f9(0x100)]=_0x534462['toFixed'](0x2);let _0x32eeab=_0x270004;slider[_0x5873f9(0x100)]=_0x32eeab,overUnder[_0x5873f9(0x100)]=_0x32eeab,profitOnWinCalculation(),moveColorsOnInput();}}}),betAmount[_0x9aef23(0x13a)](_0x9aef23(0x122),()=>{profitOnWinCalculation();}),slider[_0x9aef23(0x148)]=function(){const _0x37ef68=_0x9aef23;let _0x290d6a=Math[_0x37ef68(0x112)](Math['max'](this[_0x37ef68(0x100)],2.01),99.99),_0x45fe12=_0x290d6a;profitOnWinCalculation();if(overUnderState[_0x37ef68(0x138)]===_0x37ef68(0x149)){if('gkItJ'!==_0x37ef68(0x10a)){let _0x31865e=_0x38948e[_0x37ef68(0x100)];return _0x3539ba[_0x37ef68(0x100)]=_0x30650f['value'],_0x31865e;}else{let _0x24881c=_0x37ef68(0xee)+_0x45fe12+'%,\x20#00e701\x20'+_0x45fe12+'%,\x20#00e701\x20100%)';this['style'][_0x37ef68(0x119)]=_0x24881c,this[_0x37ef68(0x100)]=_0x290d6a;}}if(overUnderState[_0x37ef68(0x138)]===_0x37ef68(0xff)){let _0x463bdb=_0x37ef68(0x137)+_0x45fe12+_0x37ef68(0xf8)+_0x45fe12+'%,\x20#E9113C\x20100%)';this[_0x37ef68(0x10c)][_0x37ef68(0x119)]=_0x463bdb,slider[_0x37ef68(0x10c)][_0x37ef68(0x119)]=_0x463bdb;}};function _0x3423(){const _0x7cf698=['9teCuZA','resultsArray','vqpKw','exvdt','random','oninput','Over','ZgbCx','none','%,\x20#00e701\x20100%)','Kfuiz','EoBsP','%,\x20#E9113C\x20100%)','340KnXdzI','oCMvd','play','balancePopup','#betAmount','1245277QAEGGm','max','GcTsV','HzQCs','861882YnNioe','diceWin','linear-gradient(to\x20right,\x20#E9113C\x200%,\x20#E9113C\x20','display','Jmzul','betButton','uLEHR','4387905RUdtAe','YDbqx','318712UTvvlH','winChance','getElementById','%,\x20#E9113C\x20','HylYX','block','result-popup-loss','toFixed','remove','diceLoss','Under','value','DkBqX','log','zQZmU','Win','MtIXp','DcGtB','mutQB','push','classList','gkItJ','insertBefore','style','slider','add','disabled','multiplier','QEQrP','min','opacity','NKllQ','amountHalf','innerHTML','overUnderSpan','%,\x20#00e701\x20','background','CbWth','fade-in','HKQRv','11168hNEjfk','Loss','fade-out','oGBAO','click','input','60IGbHsw','gIlFb','balanceAmount','FjrGo','whfRO','removeChild','49fkAezs','overUnderChange','incorrectBet','51010cswEip','RKnbX','amountDouble','popup-visible','lastChild','body','FenJQ','4932mwBnFP','profitOnWin','sliderMove','8046732tZLidy','linear-gradient(to\x20right,\x20#00e701\x200%,\x20#00e701\x20','textContent','closeBtnBet','addEventListener','zzgLT','resultPopup','createElement','rhoMG','left','cloneNode','qzyFD','result-popup-win'];_0x3423=function(){return _0x7cf698;};return _0x3423();}function winChance(){const _0x4c6cdf=_0x9aef23;if(overUnderState[_0x4c6cdf(0x138)]===_0x4c6cdf(0x149)){if(_0x4c6cdf(0x132)!==_0x4c6cdf(0x132))_0x5d240a['classList'][_0x4c6cdf(0xfd)](_0x4c6cdf(0xfb)),_0x582e0b['classList'][_0x4c6cdf(0x10e)](_0x4c6cdf(0x142));else{let _0x54b6dd=0x64-slider[_0x4c6cdf(0x100)];return winChanceInput[_0x4c6cdf(0x100)]=_0x54b6dd['toFixed'](0x2),_0x54b6dd;}}if(overUnderState[_0x4c6cdf(0x138)]==='Under'){let _0xb29478=slider[_0x4c6cdf(0x100)];return winChanceInput[_0x4c6cdf(0x100)]=slider['value'],_0xb29478;}}function multiplier(_0x310f91){const _0xfede2c=_0x9aef23;if(overUnderState[_0xfede2c(0x138)]==='Over'){if(_0xfede2c(0x120)===_0xfede2c(0x120)){let _0x3f3790=0x63/_0x310f91;multiplierInput[_0xfede2c(0x100)]=_0x3f3790[_0xfede2c(0xfc)](0x2);}else{let _0x5e509d=_0x368266['value'],_0x189e16=_0xfede2c(0xee)+_0x5e509d+_0xfede2c(0x118)+_0x5e509d+_0xfede2c(0x14c);_0x292c43[_0xfede2c(0x10c)][_0xfede2c(0x119)]=_0x189e16;}}else{if(_0xfede2c(0x14d)!==_0xfede2c(0x14d))_0x4551d9['classList']['add']('win');else{let _0x4b1458=0x63/_0x310f91;multiplierInput[_0xfede2c(0x100)]=_0x4b1458[_0xfede2c(0xfc)](0x2);}}}function rollOverUnder(){const _0x36754b=_0x9aef23;let _0x28cd91=slider['value'];overUnder[_0x36754b(0x100)]=_0x28cd91;}function sliderMove(){const _0x3c24ab=_0x9aef23,_0xae00b8=sliderMoveAudio['cloneNode']();_0xae00b8[_0x3c24ab(0xe5)]();}function diceWin(){const _0x33a42f=_0x9aef23,_0x598c8e=diceWinSFX[_0x33a42f(0x140)]();_0x598c8e[_0x33a42f(0xe5)]();}function diceLoss(){const _0x59cbf9=_0x9aef23,_0x16ae9f=diceLossSFX[_0x59cbf9(0x140)]();_0x16ae9f[_0x59cbf9(0xe5)]();}function invertSlider(){const _0x8015da=_0x9aef23;let _0x169cc9=slider[_0x8015da(0x100)],_0xc6fb72=0x64-_0x169cc9;slider[_0x8015da(0x100)]=_0xc6fb72,overUnder[_0x8015da(0x100)]=_0xc6fb72[_0x8015da(0xfc)](0x2);if(overUnderState[_0x8015da(0x138)]==='Under'){let _0x1d08bd=_0xc6fb72,_0x158f8f='linear-gradient(to\x20right,\x20#E9113C\x200%,\x20#E9113C\x20'+_0x1d08bd+_0x8015da(0x118)+_0x1d08bd+'%,\x20#00e701\x20100%)';slider['style'][_0x8015da(0x119)]=_0x158f8f,overUnderState[_0x8015da(0x116)]=_0x8015da(0x149);}else{if('HKQRv'!==_0x8015da(0x11c))_0x56455b[_0x8015da(0x100)]=_0x568434;else{let _0xc71bb2=_0xc6fb72,_0x551185=_0x8015da(0x137)+_0xc71bb2+_0x8015da(0xf8)+_0xc71bb2+_0x8015da(0x14f);slider[_0x8015da(0x10c)]['background']=_0x551185,overUnderState[_0x8015da(0x116)]=_0x8015da(0xff);}}}function placeBet(){const _0x21c5e1=_0x9aef23;let _0x380ff5=parseFloat(document['getElementById']('betAmount')['value']);if(_0x380ff5<=0x0){if(_0x21c5e1(0x111)===_0x21c5e1(0x141))_0x279a1d(),_0x48ebed(()=>{_0x3551ca();},0x12c),_0x3b0be9=_0x21c5e1(0x104);else{stopAutobet(),autobetRunning=![],document[_0x21c5e1(0xf7)](_0x21c5e1(0x12b))[_0x21c5e1(0x10c)][_0x21c5e1(0xef)]=_0x21c5e1(0xfa),document[_0x21c5e1(0x131)][_0x21c5e1(0x109)][_0x21c5e1(0x10e)](_0x21c5e1(0x12f)),document[_0x21c5e1(0xf7)](_0x21c5e1(0x139))[_0x21c5e1(0x13a)](_0x21c5e1(0x121),function(){const _0x2da704=_0x21c5e1;document[_0x2da704(0xf7)](_0x2da704(0x12b))[_0x2da704(0x10c)][_0x2da704(0xef)]=_0x2da704(0x14b),document['body'][_0x2da704(0x109)]['remove'](_0x2da704(0x12f));});return;}}if(_0x380ff5>balanceAmount){stopAutobet(),autobetRunning=![],document[_0x21c5e1(0xf7)]('balancePopup')[_0x21c5e1(0x10c)][_0x21c5e1(0xef)]=_0x21c5e1(0xfa),document['body'][_0x21c5e1(0x109)][_0x21c5e1(0x10e)]('popup-visible'),document['getElementById']('closeBtnBalance')[_0x21c5e1(0x13a)](_0x21c5e1(0x121),function(){const _0x179e40=_0x21c5e1;_0x179e40(0x105)!==_0x179e40(0x105)?_0x2cb79e[_0x179e40(0x128)](_0x2aed48):(document['getElementById'](_0x179e40(0xe6))[_0x179e40(0x10c)][_0x179e40(0xef)]=_0x179e40(0x14b),document[_0x179e40(0x131)][_0x179e40(0x109)][_0x179e40(0xfd)](_0x179e40(0x12f)));});return;}_0x380ff5<=balanceAmount&&(document[_0x21c5e1(0xf7)]('balanceAmount')[_0x21c5e1(0x138)]=(balanceAmount-_0x380ff5)[_0x21c5e1(0xfc)](0x2),checkWinOrLoss(),clearTimeout(timer),displayResultPopup(),betButton[_0x21c5e1(0x10f)]=!![],setTimeout(()=>{const _0x26d0be=_0x21c5e1;if(_0x26d0be(0x12d)!==_0x26d0be(0x114))betButton['disabled']=![];else{let _0x4331f1=_0x591986[_0x26d0be(0x112)](_0x4abe7d[_0x26d0be(0xe9)](this[_0x26d0be(0x100)],2.01),99.99),_0x4013e3=_0x4331f1;_0x4e4eed();if(_0x494af8[_0x26d0be(0x138)]===_0x26d0be(0x149)){let _0x1a2ce0='linear-gradient(to\x20right,\x20#E9113C\x200%,\x20#E9113C\x20'+_0x4013e3+_0x26d0be(0x118)+_0x4013e3+_0x26d0be(0x14c);this[_0x26d0be(0x10c)][_0x26d0be(0x119)]=_0x1a2ce0,this['value']=_0x4331f1;}if(_0x491908[_0x26d0be(0x138)]===_0x26d0be(0xff)){let _0x171739=_0x26d0be(0x137)+_0x4013e3+_0x26d0be(0xf8)+_0x4013e3+'%,\x20#E9113C\x20100%)';this['style'][_0x26d0be(0x119)]=_0x171739,_0x11ac46[_0x26d0be(0x10c)]['background']=_0x171739;}}},0x1f4));}function autobet(){const _0x5a6efc=_0x9aef23;document['getElementById'](_0x5a6efc(0x125))['textContent']=(balanceAmount-betAmount)[_0x5a6efc(0xfc)](0x2),checkWinOrLoss(),displayResultPopup();}function amountHalf(){const _0x2a891b=_0x9aef23,_0x10d16e=parseFloat(betAmount[_0x2a891b(0x100)]),_0x94c625=_0x10d16e/0x2;if(_0x94c625>0.1){const _0x4b0de8=_0x10d16e/0x2;betAmount['value']=_0x4b0de8['toFixed'](0x2),profitOnWinCalculation();}else betAmount[_0x2a891b(0x100)]=0.1[_0x2a891b(0xfc)](0x1),profitOnWinCalculation();}function sliderStopOver(){const _0x4bb09e=_0x9aef23;let _0x2e8cf9=2.01,_0x3645ce=99.99;slider[_0x4bb09e(0x100)]<_0x2e8cf9&&(slider[_0x4bb09e(0x100)]=_0x2e8cf9),slider[_0x4bb09e(0x100)]>_0x3645ce&&(_0x4bb09e(0xf4)!==_0x4bb09e(0xeb)?slider[_0x4bb09e(0x100)]=_0x3645ce:(_0x330666['value']=0.1[_0x4bb09e(0xfc)](0x1),_0x532799()));}function sliderStopUnder(){const _0x4b7c50=_0x9aef23;let _0xd391e1=0.01,_0x225020=97.99;slider[_0x4b7c50(0x100)]<_0xd391e1&&(slider[_0x4b7c50(0x100)]=_0xd391e1),slider[_0x4b7c50(0x100)]>_0x225020&&(slider[_0x4b7c50(0x100)]=_0x225020);}function amountDouble(){const _0x175b42=_0x9aef23,_0x5a10c7=parseFloat(betAmount['value']),_0x287387=_0x5a10c7*0x2;if(_0x287387>0x98967f)_0x175b42(0x124)!==_0x175b42(0x124)?(_0x2af5ee(),_0x2b3d2e=_0x175b42(0x11e)):(betAmount['value']=0x98967f,profitOnWinCalculation());else{if(_0x175b42(0x14e)===_0x175b42(0x14e)){const _0x18068f=_0x5a10c7*0x2;betAmount[_0x175b42(0x100)]=_0x18068f['toFixed'](0x2),profitOnWinCalculation();}else _0x334f67[_0x175b42(0x100)]=97.99;}}function profitOnWinCalculation(){const _0x522926=_0x9aef23;let _0x51ab57=(betAmount['value']*multiplierInput['value'])['toFixed'](0x2);profitOnWin[_0x522926(0x100)]=_0x51ab57;}function moveColorsOnInput(){const _0x2e91b5=_0x9aef23;if(overUnderState[_0x2e91b5(0x138)]==='Over'){if('mFxZp'!=='mFxZp')_0x2612e3();else{let _0x2fde81=slider[_0x2e91b5(0x100)],_0x17971e=_0x2e91b5(0xee)+_0x2fde81+_0x2e91b5(0x118)+_0x2fde81+'%,\x20#00e701\x20100%)';slider[_0x2e91b5(0x10c)][_0x2e91b5(0x119)]=_0x17971e;}}if(overUnderState['textContent']===_0x2e91b5(0xff)){if(_0x2e91b5(0x145)!=='vqpKw'){_0x3858fc[_0x2e91b5(0x10f)]=![];let _0xac73b5=_0x734911[_0x2e91b5(0x100)],_0x19d7a4=0x63/_0xac73b5;_0x42cc7a[_0x2e91b5(0x100)]=_0x19d7a4[_0x2e91b5(0xfc)](0x2);let _0x451fd3=_0xac73b5;_0x3bb580[_0x2e91b5(0x100)]=_0x451fd3,_0x233626['value']=_0x451fd3,_0x3b0eaf(),_0x24c29c();}else{let _0x333e22=slider['value'],_0x2c6e87=_0x2e91b5(0x137)+_0x333e22+'%,\x20#E9113C\x20'+_0x333e22+_0x2e91b5(0x14f);slider[_0x2e91b5(0x10c)]['background']=_0x2c6e87;}}}function checkWinOrLoss(){const _0x14d82c=_0x9aef23;let _0x141588=document[_0x14d82c(0xf7)](_0x14d82c(0x134)),_0x3bd938=parseInt(_0x141588['value']);_0x3bd938=_0x141588[_0x14d82c(0x100)]-betAmount['value'];let _0x2b8d87=parseFloat(document[_0x14d82c(0xf7)](_0x14d82c(0x10d))[_0x14d82c(0x100)]),_0x3cc467=(betAmount[_0x14d82c(0x100)]*multiplierInput['value'])[_0x14d82c(0xfc)](0x2),_0x4cd6a5=Math[_0x14d82c(0x147)]()*99.98+0.01;_0x4cd6a5=_0x4cd6a5[_0x14d82c(0xfc)](0x2);overUnderState['textContent']==='Over'?_0x14d82c(0xe4)!=='oCMvd'?(_0x3a1680[_0x14d82c(0x100)]=0x98967f,_0x417772()):_0x4cd6a5>_0x2b8d87?(diceLoss(),setTimeout(()=>{diceWin();},0x12c),outcome=_0x14d82c(0x104)):(diceLoss(),outcome=_0x14d82c(0x11e)):_0x14d82c(0x103)===_0x14d82c(0x126)?(_0x536b7f(),_0x3ecacb='Loss'):_0x4cd6a5<_0x2b8d87?(diceLoss(),setTimeout(()=>{diceWin();},0x12c),outcome=_0x14d82c(0x104)):(diceLoss(),outcome=_0x14d82c(0x11e));document[_0x14d82c(0xf7)](_0x14d82c(0x13c))['textContent']=_0x4cd6a5;let _0x19f2fe=(_0x4cd6a5-0.01)/(99.99-0.01),_0x1bed7e=document[_0x14d82c(0xf7)](_0x14d82c(0x13c));if(outcome===_0x14d82c(0x104)){if('mutQB'===_0x14d82c(0x107))_0x1bed7e[_0x14d82c(0x109)]['remove'](_0x14d82c(0xfb)),_0x1bed7e[_0x14d82c(0x109)][_0x14d82c(0x10e)](_0x14d82c(0x142));else{const _0x569c93=_0xc32957[_0x14d82c(0x130)];_0x569c93[_0x14d82c(0x109)][_0x14d82c(0xfd)](_0x14d82c(0x11b)),_0x569c93[_0x14d82c(0x109)][_0x14d82c(0x10e)](_0x14d82c(0x11f)),_0x79b560(()=>{_0x2a3bfd['removeChild'](_0x569c93);},0x1f4),_0x5ca660===_0x14d82c(0x104)&&_0x262346(),_0x35ffdd===_0x14d82c(0x11e)&&_0x4f403d();}}outcome===_0x14d82c(0x11e)&&(_0x14d82c(0xea)==='tSlMY'?(_0x2c1e3c['getElementById'](_0x14d82c(0x125))[_0x14d82c(0x138)]=(_0xcee776-_0x2495ad)[_0x14d82c(0xfc)](0x2),_0x30010a(),_0x17d708(_0x4f574c),_0x51ca7c(),_0x4c6271[_0x14d82c(0x10f)]=!![],_0xff64fb(()=>{const _0x1f88d0=_0x14d82c;_0x27ae52[_0x1f88d0(0x10f)]=![];},0x1f4)):(_0x1bed7e[_0x14d82c(0x109)][_0x14d82c(0xfd)](_0x14d82c(0x142)),_0x1bed7e[_0x14d82c(0x109)][_0x14d82c(0x10e)](_0x14d82c(0xfb))));_0x1bed7e[_0x14d82c(0x10c)][_0x14d82c(0x13f)]=_0x19f2fe*97.5+'%',clearTimeout(timer);outcome==='Win'&&(balanceAmount+=_0x3bd938,console[_0x14d82c(0x102)](_0x3bd938));outcome===_0x14d82c(0x11e)&&('wDITM'!=='crrIL'?balanceAmount-=betAmount[_0x14d82c(0x100)]:_0x45fcab['value']=_0x4f3cd8);document['getElementById'](_0x14d82c(0x125))[_0x14d82c(0x138)]=balanceAmount[_0x14d82c(0xfc)](0x2);const _0x2776ad=document[_0x14d82c(0xf7)](_0x14d82c(0x144));resultArray[_0x14d82c(0x108)](_0x4cd6a5),numberOfDisplayedNumbers+=0x1;const _0x523711=document[_0x14d82c(0x13d)]('p');_0x523711[_0x14d82c(0x138)]=_0x4cd6a5;outcome===_0x14d82c(0x104)&&_0x523711['classList'][_0x14d82c(0x10e)]('win');_0x523711[_0x14d82c(0x109)][_0x14d82c(0x10e)]('fade-in'),_0x2776ad[_0x14d82c(0x10b)](_0x523711,_0x2776ad['firstChild']);if(numberOfDisplayedNumbers>0x5){const _0x52c664=_0x2776ad['lastChild'];_0x52c664['classList'][_0x14d82c(0xfd)](_0x14d82c(0x11b)),_0x52c664[_0x14d82c(0x109)][_0x14d82c(0x10e)](_0x14d82c(0x11f)),setTimeout(()=>{const _0x2bbdcc=_0x14d82c;_0x2776ad[_0x2bbdcc(0x128)](_0x52c664);},0x1f4);outcome==='Win'&&increaseOnWin();if(outcome===_0x14d82c(0x11e)){if(_0x14d82c(0x13b)!==_0x14d82c(0x13b)){let _0x455c7f=0x64-_0x14759d[_0x14d82c(0x100)];return _0x4fd644[_0x14d82c(0x100)]=_0x455c7f[_0x14d82c(0xfc)](0x2),_0x455c7f;}else increaseOnLoss();}}setTimeout(()=>{const _0xd2cae6=_0x14d82c;_0x523711[_0xd2cae6(0x109)]['add']('active');},0x12c);}function displayResultPopup(){const _0x3030e3=_0x9aef23;document[_0x3030e3(0xf7)](_0x3030e3(0x13c))[_0x3030e3(0x10c)][_0x3030e3(0x113)]='1',timer=setTimeout(hideResultPopup,0x1388);}function hideResultPopup(){const _0x18766a=_0x9aef23;document[_0x18766a(0xf7)](_0x18766a(0x13c))[_0x18766a(0x10c)][_0x18766a(0x113)]='0',timer=null;}
+const slider = document.getElementById("slider");
+const overUnder = document.getElementById("overUnder");
+const multiplierInput = document.getElementById("multiplier");
+const winChanceInput = document.getElementById("winChance");
+const overUnderChange = document.getElementById("overUnderChange");
+let overUnderState = document.getElementById("overUnderSpan");
+
+//Audio
+const sliderMoveAudio = new Audio("audio/slider-move.mp3");
+const diceWinSFX = new Audio("audio/dice-win.mp3");
+const diceLossSFX = new Audio("audio/dice-throw.mp3");
+
+//Betting
+let betAmount = document.querySelector("#betAmount");
+let balanceAmount = 100.0;
+let outcome;
+let betButton = document.getElementById("betButton");
+let amountHalfButton = document.getElementById("amountHalf");
+let amountDoubleButton = document.getElementById("amountDouble");
+const profitOnWin = document.getElementById("profitOnWin");
+
+//Results array
+let resultArray = [];
+let numberOfDisplayedNumbers = 0;
+
+// Timer
+let timer = null;
+
+// Load code when the page is opened
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("resultPopup").style.opacity = "0";
+  document.getElementById("resultPopup").style.left = 0;
+  document.getElementById("profitOnWin").disabled = true;
+  slider.value = 50;
+  let winChanceValue = winChance();
+  multiplier(winChanceValue);
+  rollOverUnder();
+  profitOnWinCalculation();
+});
+
+//Switch under/over
+overUnderChange.addEventListener("click", overUnderChangeFunction);
+
+function overUnderChangeFunction() {
+  invertSlider();
+}
+
+// Player uses slider to change value
+slider.addEventListener("input", () => {
+  if (overUnderState.textContent === "Over") {
+    sliderStopOver();
+  }
+  if (overUnderState.textContent === "Under") {
+    sliderStopUnder();
+  }
+  sliderMove();
+  let winChanceValue = winChance();
+  multiplier(winChanceValue);
+  rollOverUnder();
+});
+
+// User types multiplier value
+multiplierInput.addEventListener("input", () => {
+  if (overUnderState.textContent === "Over") {
+    if (multiplierInput.value === Infinity || multiplierInput.value === null || multiplierInput.value === undefined) {
+      multiplierInput.value = 1.98;
+    }
+    if (multiplierInput.value <= 1.0103) {
+      betButton.disabled = true;
+    }
+    if (multiplierInput.value >= 9900) {
+      multiplierInput.value = 9900;
+    }
+
+    if (multiplierInput.value >= 1.0103 && multiplierInput.value <= 4950) {
+      betButton.disabled = false;
+      let winChanceValue = 99 / multiplierInput.value;
+      slider.value = 100 - winChanceValue;
+      let overUnderValue = slider.value;
+      overUnder.value = overUnderValue;
+      winChanceInput.value = (100 - slider.value).toFixed(2);
+      profitOnWinCalculation();
+      moveColorsOnInput();
+    }
+  }
+  if (overUnderState.textContent === "Under") {
+    if (multiplierInput.value === Infinity || multiplierInput.value === null || multiplierInput.value === undefined) {
+      multiplierInput.value = 1.98;
+    }
+    if (multiplierInput.value <= 1.01) {
+      betButton.disabled = true;
+    }
+    if (multiplierInput.value >= 9900) {
+      multiplierInput.value = 9900;
+    }
+
+    if (multiplierInput.value >= 1.01 && multiplierInput.value <= 9900) {
+      betButton.disabled = false;
+      let winChanceValue = 99 / multiplierInput.value;
+      slider.value = winChanceValue;
+      let overUnderValue = slider.value;
+      overUnder.value = overUnderValue;
+      winChanceInput.value = slider.value;
+      profitOnWinCalculation();
+      moveColorsOnInput();
+    }
+  }
+});
+
+// User enters win chance
+winChanceInput.addEventListener("input", () => {
+  if (overUnderState.textContent === "Over") {
+    if (winChanceInput.value === Infinity || winChanceInput.value === null || winChanceInput.value === undefined) {
+      winChanceInput.value = 50;
+    }
+    if (winChanceInput.value < 0.01) {
+      betButton.disabled = true;
+    }
+    if (winChanceInput.value >= 97.99) {
+      winChanceInput.value = 97.99;
+    }
+
+    if (winChanceInput.value >= 0.01 && winChanceInput.value <= 97.99) {
+      betButton.disabled = false;
+      let winChanceValue = winChanceInput.value;
+      let multiplierValue = 99 / winChanceValue;
+      multiplierInput.value = multiplierValue.toFixed(2);
+      let overUnderValue = 100 - winChanceValue;
+      slider.value = overUnderValue;
+      overUnder.value = overUnderValue.toFixed(2);
+      profitOnWinCalculation();
+      moveColorsOnInput();
+    }
+  }
+
+  if (overUnderState.textContent === "Under") {
+    if (winChanceInput.value === Infinity || winChanceInput.value === null || winChanceInput.value === undefined) {
+      winChanceInput.value = 50;
+    }
+    if (winChanceInput.value < 0.01) {
+      betButton.disabled = true;
+    }
+    if (winChanceInput.value >= 97.99) {
+      winChanceInput.value = 97.99;
+    }
+
+    if (winChanceInput.value >= 0.01 && winChanceInput.value <= 97.99) {
+      betButton.disabled = false;
+      let winChanceValue = winChanceInput.value;
+      let multiplierValue = 99 / winChanceValue;
+      multiplierInput.value = multiplierValue.toFixed(2);
+      let overUnderValue = winChanceValue;
+      slider.value = overUnderValue;
+      overUnder.value = overUnderValue;
+      profitOnWinCalculation();
+      moveColorsOnInput();
+    }
+  }
+});
+
+//User edits bet amount
+betAmount.addEventListener("input", () => {
+  profitOnWinCalculation();
+});
+
+//Background of slider change
+slider.oninput = function () {
+  //Calculate current position
+  let value = Math.min(Math.max(this.value, 2.01), 99.99);
+  let percent = value;
+  //Edit profit on win input
+  profitOnWinCalculation();
+  //Move the colors
+  if (overUnderState.textContent === "Over") {
+    let color = "linear-gradient(to right, #e60000 0%, #e60000 " + percent + "%, #fcd704 " + percent + "%, #fcd704 100%)";
+    this.style.background = color;
+    this.value = value;
+  }
+  if (overUnderState.textContent === "Under") {
+    let color = "linear-gradient(to right, #fcd704 0%, #fcd704 " + percent + "%, #e60000 " + percent + "%, #e60000 100%)";
+    this.style.background = color;
+    slider.style.background = color;
+  }
+};
+
+function winChance() {
+  if (overUnderState.textContent === "Over") {
+    let winChanceValue = 100 - slider.value;
+    winChanceInput.value = winChanceValue.toFixed(2);
+    return winChanceValue;
+  }
+
+  if (overUnderState.textContent === "Under") {
+    let winChanceValue = slider.value;
+    winChanceInput.value = slider.value;
+    return winChanceValue;
+  }
+}
+
+function multiplier(winChanceValue) {
+  if (overUnderState.textContent === "Over") {
+    let multiplierValue = 99 / winChanceValue;
+    multiplierInput.value = multiplierValue.toFixed(2);
+  } else {
+    let multiplierValue = 99 / winChanceValue;
+    multiplierInput.value = multiplierValue.toFixed(2);
+  }
+}
+
+function rollOverUnder() {
+  let overValue = slider.value;
+  overUnder.value = overValue;
+}
+
+function sliderMove() {
+  const newSliderMoveAudio = sliderMoveAudio.cloneNode();
+  newSliderMoveAudio.volume = 0.2;
+  newSliderMoveAudio.play();
+}
+
+function diceWin() {
+  const newDiceWinSFX = diceWinSFX.cloneNode();
+  newDiceWinSFX.play();
+}
+
+function diceLoss() {
+  const newDiceLossSFX = diceLossSFX.cloneNode();
+  newDiceLossSFX.play();
+}
+
+function invertSlider() {
+  //Invert and edit roll over/under value
+  let currentSliderValue = slider.value;
+  let newSliderValue = 100 - currentSliderValue;
+  slider.value = newSliderValue;
+  overUnder.value = newSliderValue.toFixed(2);
+
+  //Edit background colors of slider
+  if (overUnderState.textContent === "Under") {
+    let percent = newSliderValue;
+    let color = "linear-gradient(to right, #e60000 0%, #e60000 " + percent + "%, #fcd704 " + percent + "%, #fcd704 100%)";
+    slider.style.background = color;
+    overUnderState.innerHTML = "Over";
+  } else {
+    let percent = newSliderValue;
+    let color = "linear-gradient(to right, #fcd704 0%, #fcd704 " + percent + "%, #e60000 " + percent + "%, #e60000 100%)";
+    slider.style.background = color;
+    overUnderState.innerHTML = "Under";
+  }
+}
+
+function placeBet() {
+  let betAmount = parseFloat(document.getElementById("betAmount").value);
+  //Check if betAmount is greater than 0
+  if (betAmount <= 0) {
+    stopAutobet();
+    autobetRunning = false;
+    //Display popup and disable user interaction with the site
+    document.getElementById("incorrectBet").style.display = "block";
+    document.body.classList.add("popup-visible");
+    //After user clicks the close button hide popup and enable user interaction again
+    document.getElementById("closeBtnBet").addEventListener("click", function () {
+      document.getElementById("incorrectBet").style.display = "none";
+      document.body.classList.remove("popup-visible");
+    });
+    return;
+  }
+
+  //Check if player has enough balance
+  if (betAmount > balanceAmount) {
+    stopAutobet();
+    autobetRunning = false;
+    //Display popup and disable user interaction with the site
+    document.getElementById("balancePopup").style.display = "block";
+    document.body.classList.add("popup-visible");
+    //After user clicks the close button hide popup and enable user interaction again
+    document.getElementById("closeBtnBalance").addEventListener("click", function () {
+      document.getElementById("balancePopup").style.display = "none";
+      document.body.classList.remove("popup-visible");
+    });
+    return;
+  }
+
+  if (betAmount <= balanceAmount) {
+    // Show current balance after betting
+    document.getElementById("balanceAmount").textContent = (balanceAmount - betAmount).toFixed(2);
+    checkWinOrLoss();
+    clearTimeout(timer);
+    displayResultPopup();
+    betButton.disabled = true;
+    setTimeout(() => {
+      betButton.disabled = false;
+    }, 500);
+  }
+}
+
+function autobet() {
+  document.getElementById("balanceAmount").textContent = (balanceAmount - betAmount).toFixed(2);
+  checkWinOrLoss();
+  displayResultPopup();
+}
+
+function sliderStopOver() {
+  let minRange = 2.01;
+  let maxRange = 99.99;
+
+  if (slider.value < minRange) {
+    slider.value = minRange;
+  }
+
+  if (slider.value > maxRange) {
+    slider.value = maxRange;
+  }
+}
+
+function sliderStopUnder() {
+  let minRange = 0.01;
+  let maxRange = 97.99;
+
+  if (slider.value < minRange) {
+    slider.value = minRange;
+  }
+
+  if (slider.value > maxRange) {
+    slider.value = maxRange;
+  }
+}
+
+function profitOnWinCalculation() {
+  let calcProfitOnWin = (betAmount.value * multiplierInput.value).toFixed(2);
+  profitOnWin.value = calcProfitOnWin;
+}
+
+function moveColorsOnInput() {
+  if (overUnderState.textContent === "Over") {
+    let percent = slider.value;
+    let color = "linear-gradient(to right, #e60000 0%, #e60000 " + percent + "%, #fcd704 " + percent + "%, #fcd704 100%)";
+    slider.style.background = color;
+  }
+
+  if (overUnderState.textContent === "Under") {
+    let percent = slider.value;
+    let color = "linear-gradient(to right, #fcd704 0%, #fcd704 " + percent + "%, #e60000 " + percent + "%, #e60000 100%)";
+    slider.style.background = color;
+  }
+}
+
+function checkWinOrLoss() {
+  let profitOnWinElement = document.getElementById("profitOnWin");
+  let currentProfitOnWin = parseInt(profitOnWinElement.value);
+  currentProfitOnWin = profitOnWinElement.value - betAmount.value;
+
+  let sliderValue = parseFloat(document.getElementById("slider").value);
+  let calcProfitOnWin = (betAmount.value * multiplierInput.value).toFixed(2);
+
+  //Calculate random number
+  let randomNumber = Math.random() * 99.98 + 0.01;
+  randomNumber = randomNumber.toFixed(2);
+
+  if (overUnderState.textContent === "Over") {
+    if (randomNumber > sliderValue) {
+      diceLoss();
+      setTimeout(() => {
+        diceWin();
+      }, 300);
+      outcome = "Win";
+    } else {
+      diceLoss();
+      outcome = "Loss";
+    }
+  } else {
+    if (randomNumber < sliderValue) {
+      diceLoss();
+      setTimeout(() => {
+        diceWin();
+      }, 300);
+      outcome = "Win";
+    } else {
+      diceLoss();
+      outcome = "Loss";
+    }
+  }
+
+  //Display result popup over the slider
+  document.getElementById("resultPopup").textContent = randomNumber;
+  let percentage = (randomNumber - 0.01) / (99.99 - 0.01);
+  let popup = document.getElementById("resultPopup");
+
+  if (outcome === "Win") {
+    popup.classList.remove("result-popup-loss");
+    popup.classList.add("result-popup-win");
+  }
+  if (outcome === "Loss") {
+    popup.classList.remove("result-popup-win");
+    popup.classList.add("result-popup-loss");
+  }
+
+  popup.style.left = `${percentage * 97.5}%`;
+
+  clearTimeout(timer);
+
+  if (outcome === "Win") {
+    balanceAmount += currentProfitOnWin;
+    console.log(currentProfitOnWin);
+  }
+  if (outcome === "Loss") {
+    balanceAmount -= betAmount.value;
+  }
+  document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(2);
+
+  //Edit result array
+  const resultsArray = document.getElementById("resultsArray");
+  resultArray.push(randomNumber);
+  numberOfDisplayedNumbers += 1;
+  const generatedResultArray = document.createElement("p");
+  generatedResultArray.textContent = randomNumber;
+
+  if (outcome === "Win") {
+    generatedResultArray.classList.add("win");
+  }
+
+  generatedResultArray.classList.add("fade-in");
+  resultsArray.insertBefore(generatedResultArray, resultsArray.firstChild);
+
+  if (numberOfDisplayedNumbers > 5) {
+    // Select the last element and add transition class to it
+    const lastElement = resultsArray.lastChild;
+    lastElement.classList.remove("fade-in");
+    lastElement.classList.add("fade-out");
+    // Remove the last element after the fade-out effect finishes
+    setTimeout(() => {
+      resultsArray.removeChild(lastElement);
+    }, 500);
+    if (outcome === "Win") {
+      increaseOnWin();
+    }
+    if (outcome === "Loss") {
+      increaseOnLoss();
+    }
+  }
+
+  setTimeout(() => {
+    generatedResultArray.classList.add("active");
+  }, 300);
+}
+
+function displayResultPopup() {
+  document.getElementById("resultPopup").style.opacity = "1";
+  timer = setTimeout(hideResultPopup, 5000);
+}
+
+function hideResultPopup() {
+  document.getElementById("resultPopup").style.opacity = "0";
+  timer = null;
+}

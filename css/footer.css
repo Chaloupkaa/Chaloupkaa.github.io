@@ -1,7 +1,8 @@
 body > footer {
   color: rgba(255, 255, 255, 0.3);
   margin: 0;
-  background-color: #151519;
+  background-color: #282447;
+  box-shadow: 0px -1px 10px #161427;
   margin-top: 60px;
 }
 
@@ -44,7 +45,7 @@ body > footer > nav > ul > li > p {
   margin: 0;
   font-size: 16.6px;
   margin-bottom: 16px;
-  color: #00aaeb;
+  color: #fcd804;
 }
 
 body > footer > nav > ul > li > ul {
@@ -129,7 +130,7 @@ body > footer > nav > ul > li.license > a > img {
 body > footer > div.icons {
   margin: 0;
   overflow: hidden;
-  background: #1b1b22;
+  background: #312d58;
   padding: 2rem 0;
 }
 
@@ -147,7 +148,7 @@ body > footer > div.icons > div > div {
   color: rgba(255, 255, 255, 0.3);
   margin: 0;
   overflow: hidden;
-  background: #1b1b22;
+  background: #312d58;
   padding: 1rem 0;
 }
 

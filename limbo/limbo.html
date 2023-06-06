@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/mediaQueries.css" />
+    <link rel="stylesheet" href="../css/popups.css" />
+    <link rel="stylesheet" href="../css/settings.css" />
+    <link rel="stylesheet" href="../css/manualAutoBet.css" />
+    <link rel="stylesheet" href="../css/gameContainers.css" />
+    <link rel="stylesheet" href="limbo.css" />
+    <link rel="stylesheet" href="limboMediaQueries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>BETLOAD | Limbo</title>
+  </head>
+  <body>
+    <div class="loader-wrapper" id="loaderWrapper"><div class="loader" id="loader"></div></div>
+    <header>
+      <div class="auth-bar">
+        <div class="left">
+          <a href="../index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
+          <a href="#" class="link link-affiliate">Affiliate</a>
+          <a href="#" class="link link-support">Live Support</a>
+          <ul class="socials">
+            <li>
+              <a href="#"><img src="../img/general/discord.svg" class="socials-discord" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="../img/general/tiktok.svg" class="socials-tiktok" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="user-info">
+            <ul>
+              <li class="balance default">
+                <span class="balance-amount" id="balanceAmount">100.00</span>
+                <div class="currency-wrapper"><span class="currency-string currency-balance">EUR</span></div>
+                <i class="fa-solid fa-euro euro-icon-mobile"></i>
+                <img src="../img/icons/deposit-money.svg" class="plus-icon-balance" />
+              </li>
+              <li>
+                <a href="#" class="deposit">DEPOSIT</a>
+              </li>
+              <li class="user-notifications">
+                <img src="../img/general/bell.svg" class="bell-icon" />
+                <span class="total-notifications"></span>
+              </li>
+              <li class="account-info">
+                <img src="../img/general/user-icon.svg" class="user-icon" />
+                <span class="username">chaloupka_</span>
+              </li>
+              <li>
+                <div class="logout"><img src="../img/general/logout.svg" class="logout-img" /></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="nav-wrapper"></div>
+    </header>
+    <div class="incorrect-bet" id="incorrectBet">
+      <div class="close-btn"><img src="../img/general/popup-close.png" id="closeBtnBet" /></div>
+      <p class="incorrect-bet-p">Bet must be greater than 0!</p>
+    </div>
+
+    <div class="insufficient-balance" id="balancePopup">
+      <div class="close-btn"><img src="../img/general/popup-close.png" id="closeBtnBalance" /></div>
+      <p class="insufficient-balance-p">Insufficient balance!</p>
+    </div>
+
+    <div class="main">
+      <div class="game-container">
+        <div class="sidebar">
+          <div class="manual-auto">
+            <button id="manual" class="manual-auto-btn buttonActive">Manual</button>
+            <button id="auto" class="manual-auto-btn">Auto</button>
+          </div>
+          <!--Manual betting settings-->
+          <div id="bettingSettingsManual" class="betting-Settings-Wrapper">
+            <div class="bet-amount-wrapper">
+              <p class="game-text">Bet Amount</p>
+              <div class="bet-amount-input-wrapper">
+                <input type="number" id="betAmount" class="currency-input-string" value="10.00" />
+
+                <button id="amountHalf" class="amount-editor-button" onclick="amountHalf()">½</button>
+
+                <button id="amountDouble" class="amount-editor-button" onclick="amountDouble()">2×</button>
+              </div>
+            </div>
+            <div class="manual-profit-on-win" id="manualBet">
+              <button class="bet-button" id="betButton">Bet</button>
+            </div>
+
+            <!--Autobet settings-->
+            <div id="autoBet">
+              <div class="num-bets">
+                <p class="game-text">Number of Bets</p>
+                <div class="input-icon-wrapper">
+                  <input type="number" id="numberOfBets" value="0" min="0" />
+                  <i id="infinityIcon" class="fa-solid fa-infinity after-icons infinity-transition"></i>
+                </div>
+              </div>
+              <div class="on-win">
+                <p class="game-text">On Win</p>
+                <div class="on-win-loss-wrapper">
+                  <div class="reset-increase-wrapper">
+                    <button id="resetOnWin" class="reset-on">Reset</button>
+                    <button id="increaseOnWinButton" class="increase-by">Increase by:</button>
+                  </div>
+
+                  <input type="number" id="increaseOnWinInput" class="on-win-loss-input" value="0" />
+                  <i class="fa-solid fa-percent after-icons"></i>
+                </div>
+              </div>
+              <div class="on-loss">
+                <p class="game-text">On Loss</p>
+                <div class="on-win-loss-wrapper">
+                  <div class="reset-increase-wrapper">
+                    <button id="resetOnLoss" class="reset-on">Reset</button>
+                    <button id="increaseOnLossButton" class="increase-by">Increase by:</button>
+                  </div>
+                  <input type="number" id="increaseOnLossInput" class="on-win-loss-input" value="0" />
+                  <i class="fa-solid fa-percent after-icons"></i>
+                </div>
+              </div>
+              <div class="stop-on-profit-loss-wrapper">
+                <p class="game-text">Stop on Profit</p>
+                <div class="input-icon-wrapper">
+                  <input type="number" id="stopOnProfitInput" value="0" />
+                  <i class="fa-solid fa-euro-sign after-icons"></i>
+                </div>
+              </div>
+              <div class="stop-on-profit-loss-wrapper">
+                <p class="game-text">Stop on Loss</p>
+                <div class="input-icon-wrapper">
+                  <input type="number" id="stopOnLossInput" value="0" />
+                  <i class="fa-solid fa-euro-sign after-icons"></i>
+                </div>
+              </div>
+              <div class="start-autobet">
+                <button class="bet-button" id="startAutobet" onclick=" handleAutobetButton()">
+                  Start Autobet<i id="littleDice" class="fa-solid fa-dice fa-bounce" style="color: #071d2a"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="game-content flex-center-content">
+          <div class="results-array" id="resultsArray"></div>
+          <div class="result-wrapper">
+            <span class="result" id="resultEl">1.00</span>
+            <span class="multiplier-sign" id="multiplicationSign">×</span>
+          </div>
+          <div class="settings">
+            <div class="target-multiplier-wrapper">
+              <p class="game-text">Target Multiplier</p>
+              <div class="input-icon-wrapper">
+                <input type="number" id="targetMultiplierInput" />
+                <i class="fa-solid fa-xmark after-icons"></i>
+              </div>
+            </div>
+            <div class="win-chance-wrapper">
+              <p class="game-text">Win Chance</p>
+              <div class="input-icon-wrapper">
+                <input type="number" id="winChanceInput" />
+                <i class="fa-solid fa-percent after-icons"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <nav>
+        <ul class="middle">
+          <li>
+            <p>Our Products</p>
+            <ul class="inner-list">
+              <li><a href="#">Minigames</a></li>
+              <li><a href="#">VIP Club</a></li>
+            </ul>
+          </li>
+          <li>
+            <p>Information</p>
+            <ul class="inner-list">
+              <li>
+                <a href="#">Company Details</a>
+              </li>
+              <li>
+                <a href="#">Responsible Gaming</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Affiliate</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Help</p>
+            <ul class="inner-list">
+              <li>
+                <a href="#">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="/policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
+              </li>
+              <li>
+                <a href="/policies-info/refundPolicy.html">Refund Policy</a>
+              </li>
+              <li>
+                <a href="/policies-info/disputeResolution.html">Dispute Resolution</a>
+              </li>
+              <li>
+                <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
+              </li>
+              <li>
+                <a href="policies-info\selfExclusion.html">Self-Exclusion</a>
+              </li>
+              <li>
+                <a href="#">Frequently Asked Questions (F.A.Q)</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Contact Us</p>
+            <ul class="inner-list">
+              <li><a href="#">Live Support</a></li>
+              <li><a href="#">Support email</a></li>
+              <li><a href="#">Affiliate email</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <div class="middle">
+          <div class="payments">
+            <div>
+              <a href="#"><img src="/img/payments/mastercard.svg" /></a>
+              <a href="#"><img src="/img/payments/visa.svg" /></a>
+              <a href="#"><img src="/img/payments/netteler.svg" /></a>
+              <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
+              <a href="#"><img src="/img/payments/skrill.svg" /></a>
+              <a href="#"><img src="/img/payments/btc.svg" /></a>
+              <a href="#"><img src="/img/payments/discover.svg" /></a>
+              <a href="#"><img src="/img/payments/payop.svg" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="/img/payments/diners-club.svg" /></a>
+              <a href="#"><img src="/img/payments/ecopayz.svg" /></a>
+              <a href="#"><img src="/img/payments/jcb.svg" /></a>
+              <a href="#"><img src="/img/payments/astropay.svg" /></a>
+              <a href="#"><img src="/img/payments/web-money.svg" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="warning-text">
+          <div class="imgs">
+            <img src="/img/warning-text/18plus.png" />
+            <img src="/img/warning-text/ssl.png" />
+          </div>
+          <span class="warning">
+            <p>
+              Attention! It is gambling advertising. Gambling is not suitable for solving financial problems. Please read
+              <a href="#">Terms & Conditions</a> and play responsibly.
+            </p>
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="limbo.js"></script>
+    <script src="../js/betSidebar.js"></script>
+    <script src="../js/loader.js"></script>
+  </body>
+</html>

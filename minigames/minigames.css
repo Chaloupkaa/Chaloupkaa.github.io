@@ -1,0 +1,47 @@
+.betload-originals-wrapper {
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  background-image: url(img/betload_originals_background.png);
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+.betload-originals-text {
+  font-size: 2rem;
+  margin-left: 15%;
+}
+
+.all-cards {
+  display: grid;
+  justify-content: center; /**/
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.game-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 145px;
+  color: darkslategray;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dice-game {
+  background-image: url(../img/card-bg/temp-bg-dice.jpg);
+}
+
+.mines-game {
+  background-image: url(../img/card-bg/temp-bg-mines.jpg);
+}
+
+.limbo-game {
+  background-color: rgb(40, 87, 87);
+}

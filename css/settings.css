@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+@import url("https://use.typekit.net/xdd1rwt.css");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  color: #deecee;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+  color: var(--default-text-color);
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: rgb(27, 27, 34);
+  background-color: var(--body-background-color);
   height: 100%;
 }
 
@@ -68,7 +69,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #1a2c38;
+  background-color: var(--body-background-color);
   z-index: 10000;
 }
 

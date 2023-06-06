@@ -6,10 +6,10 @@
 
 .game-container {
   display: flex;
-  width: 90%;
-  height: 90vh;
+  width: 960px;
+  height: 70vh;
   margin-top: 1rem;
-  background-color: #213743;
+  background-color: var(--secondary-game-container-color);
   border-radius: 10px;
 }
 
@@ -19,7 +19,13 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #0f212e;
+  background-color: var(--primary-game-container-color);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+/* Other containers */
+
+.all-content-on-site-wrapper {
+  width: 100%;
 }

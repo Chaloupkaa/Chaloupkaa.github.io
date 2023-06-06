@@ -1,0 +1,63 @@
+.results-array {
+  width: 100%;
+}
+
+.results-array {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+  padding: 10px;
+  height: 52px;
+}
+
+#resultsArray > p {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-right: 0.25rem;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #2f4553;
+  transition: all 0.2s ease-in-out;
+}
+
+#resultsArray > p.win {
+  background-color: var(--win-element-background);
+  color: #04172d;
+}
+
+.result-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.result {
+  font-size: 8rem;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  user-select: none;
+}
+
+.multiplier-sign {
+  font-size: 6rem;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  user-select: none;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--secondary-game-container-color);
+  border-radius: 3px;
+  width: 95%;
+  margin-bottom: 1rem;
+  padding: 5px;
+}
+
+.target-multiplier-wrapper,
+.win-chance-wrapper {
+  width: 45%;
+}

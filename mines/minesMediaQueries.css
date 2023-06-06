@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1290px) {
+  .mine {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .mine {
+    width: 80px;
+    height: 80px;
+  }
+}

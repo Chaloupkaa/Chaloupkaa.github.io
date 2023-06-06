@@ -1,0 +1,6 @@
+@media only screen and (max-width: 490px) {
+  .all-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px 10px;
+  }
+}

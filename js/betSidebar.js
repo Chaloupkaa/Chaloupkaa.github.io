@@ -1,1 +1,444 @@
-const _0x2dd998=_0x190f;(function(_0x3c70b6,_0x24a60d){const _0x8b9c58=_0x190f,_0x358eff=_0x3c70b6();while(!![]){try{const _0x22718e=parseInt(_0x8b9c58(0x10c))/0x1*(-parseInt(_0x8b9c58(0x135))/0x2)+-parseInt(_0x8b9c58(0x126))/0x3*(parseInt(_0x8b9c58(0x123))/0x4)+parseInt(_0x8b9c58(0x110))/0x5*(parseInt(_0x8b9c58(0x132))/0x6)+parseInt(_0x8b9c58(0x118))/0x7+-parseInt(_0x8b9c58(0x137))/0x8*(parseInt(_0x8b9c58(0xfb))/0x9)+parseInt(_0x8b9c58(0xfe))/0xa+parseInt(_0x8b9c58(0xf6))/0xb*(parseInt(_0x8b9c58(0x104))/0xc);if(_0x22718e===_0x24a60d)break;else _0x358eff['push'](_0x358eff['shift']());}catch(_0x4f9ed0){_0x358eff['push'](_0x358eff['shift']());}}}(_0x8e46,0xd715c));const buttonManual=document[_0x2dd998(0x11b)](_0x2dd998(0x103)),buttonAuto=document[_0x2dd998(0x11b)]('auto'),resetOnWinButton=document[_0x2dd998(0x11b)](_0x2dd998(0x105)),resetOnLossButton=document[_0x2dd998(0x11b)](_0x2dd998(0x136)),increaseOnWinButton=document[_0x2dd998(0x11b)](_0x2dd998(0x122)),increaseOnLossButton=document[_0x2dd998(0x11b)]('increaseOnLossButton'),startAutobetButton=document['getElementById'](_0x2dd998(0x109));let lastIncreaseOnWinButtonState=![],lastIncreaseOnLossButtonState=![];const numberOfBets=document[_0x2dd998(0x11b)]('numberOfBets'),increaseOnWinInput=document[_0x2dd998(0x11b)](_0x2dd998(0x134)),increaseOnLossInput=document['getElementById'](_0x2dd998(0x128)),stopOnProfitInput=document[_0x2dd998(0x11b)](_0x2dd998(0x130)),stopOnLossInput=document[_0x2dd998(0x11b)](_0x2dd998(0x106)),manualBet=document[_0x2dd998(0x11b)]('manualBet'),autoBet=document[_0x2dd998(0x11b)](_0x2dd998(0x100)),bettingSettingsAutoWrapper=document[_0x2dd998(0x11b)](_0x2dd998(0xf8)),bettingSettingsManualWrapper=document[_0x2dd998(0x11b)](_0x2dd998(0x12b)),littleDice=document['getElementById']('littleDice');let stopOnProfitValue,stopOnLossValue,targetWinBalance=0x0,targetLossBalance=0x0;document[_0x2dd998(0x12c)](_0x2dd998(0x10e),()=>{const _0x45d469=_0x2dd998;autoBet[_0x45d469(0x12d)][_0x45d469(0xfd)]='none',buttonAuto[_0x45d469(0xf7)]['remove']('buttonActive'),buttonManual[_0x45d469(0xf7)]['add'](_0x45d469(0x11a)),resetOnWinButton[_0x45d469(0xf7)][_0x45d469(0x120)](_0x45d469(0x113)),resetOnLossButton['classList'][_0x45d469(0x120)](_0x45d469(0x113)),disableAutoBettingSettingsInput();}),buttonManual['addEventListener'](_0x2dd998(0x129),()=>{const _0x11fc7b=_0x2dd998;buttonAuto[_0x11fc7b(0xf7)][_0x11fc7b(0x10a)](_0x11fc7b(0x11a)),buttonManual[_0x11fc7b(0xf7)]['add'](_0x11fc7b(0x11a)),document['getElementById']('betButton')[_0x11fc7b(0x10d)]=![],disableAutoBettingSettingsInput(),autoBet['style'][_0x11fc7b(0xfd)]=_0x11fc7b(0x108),manualBet[_0x11fc7b(0x12d)][_0x11fc7b(0xfd)]='block';}),buttonAuto['addEventListener'](_0x2dd998(0x129),()=>{const _0xfea103=_0x2dd998;buttonManual[_0xfea103(0xf7)][_0xfea103(0x10a)](_0xfea103(0x11a)),buttonAuto['classList']['add'](_0xfea103(0x11a)),manualBet[_0xfea103(0x12d)]['display']=_0xfea103(0x108),document[_0xfea103(0x11b)]('betButton')[_0xfea103(0x10d)]=!![],enableAutoBettingSettingsInput(),autoBet[_0xfea103(0x12d)][_0xfea103(0xfd)]='block';}),increaseOnWinButton[_0x2dd998(0x12c)](_0x2dd998(0x129),()=>{const _0x483efb=_0x2dd998;resetOnWinButton[_0x483efb(0xf7)]['remove'](_0x483efb(0x113)),increaseOnWinButton['classList']['add'](_0x483efb(0x113)),increaseOnWinInput[_0x483efb(0x10d)]=![],lastIncreaseOnWinButtonState=!![];}),resetOnWinButton['addEventListener']('click',()=>{const _0x57e033=_0x2dd998;increaseOnWinButton[_0x57e033(0xf7)][_0x57e033(0x10a)](_0x57e033(0x113)),resetOnWinButton[_0x57e033(0xf7)][_0x57e033(0x120)](_0x57e033(0x113)),increaseOnWinInput[_0x57e033(0x10d)]=!![],lastIncreaseOnWinButtonState=![];}),increaseOnLossButton[_0x2dd998(0x12c)](_0x2dd998(0x129),()=>{const _0x32cf5d=_0x2dd998;resetOnLossButton[_0x32cf5d(0xf7)][_0x32cf5d(0x10a)](_0x32cf5d(0x113)),increaseOnLossButton[_0x32cf5d(0xf7)][_0x32cf5d(0x120)]('auto-betting-button-active'),increaseOnLossInput[_0x32cf5d(0x10d)]=![],lastIncreaseOnLossButtonState=!![];}),resetOnLossButton['addEventListener'](_0x2dd998(0x129),()=>{const _0x408dc3=_0x2dd998;increaseOnLossButton['classList'][_0x408dc3(0x10a)]('auto-betting-button-active'),resetOnLossButton[_0x408dc3(0xf7)]['add'](_0x408dc3(0x113)),increaseOnLossInput[_0x408dc3(0x10d)]=!![],lastIncreaseOnLossButtonState=![];});function disableAutoBettingSettingsInput(){const _0x17bf62=_0x2dd998;numberOfBets[_0x17bf62(0x10d)]=!![],increaseOnWinInput['disabled']=!![],increaseOnLossInput[_0x17bf62(0x10d)]=!![],stopOnProfitInput[_0x17bf62(0x10d)]=!![],stopOnLossInput[_0x17bf62(0x10d)]=!![],startAutobetButton[_0x17bf62(0x10d)]=!![];}function enableAutoBettingSettingsInput(){const _0x2b3576=_0x2dd998;numberOfBets[_0x2b3576(0x10d)]=![],stopOnProfitInput[_0x2b3576(0x10d)]=![],stopOnLossInput[_0x2b3576(0x10d)]=![],startAutobetButton['disabled']=![];}function displayInfinityIcon(){const _0x132379=_0x2dd998;numberOfBets[_0x132379(0x12f)]<=0x0&&(document[_0x132379(0x11b)](_0x132379(0x11d))[_0x132379(0x12d)][_0x132379(0xfd)]=_0x132379(0x11e)),numberOfBets['value']>0x0&&(document['getElementById'](_0x132379(0x11d))[_0x132379(0x12d)][_0x132379(0xfd)]='none');}numberOfBets[_0x2dd998(0x12c)](_0x2dd998(0xff),()=>{displayInfinityIcon();});let autobetRunning=![];function handleAutobetButton(){const _0x32d190=_0x2dd998;!autobetRunning?(autobetRunning=!![],startAutobet(),console[_0x32d190(0x107)](_0x32d190(0xfc))):(autobetRunning=![],startAutobetButton[_0x32d190(0x10d)]=_0x32d190(0x111),stopAutobet(),console[_0x32d190(0x107)]('Stopping\x20autobet'));}function startAutobet(){const _0x33d494=_0x2dd998;disableAllControls(),littleDice[_0x33d494(0x12d)][_0x33d494(0xfd)]=_0x33d494(0x11e),startAutobetButton['innerHTML']=_0x33d494(0x11f)+littleDice['outerHTML'],startAutobetButton[_0x33d494(0xf7)][_0x33d494(0x120)](_0x33d494(0x12e)),setTimeout(()=>{const _0x12de96=_0x33d494;if(_0x12de96(0x114)!==_0x12de96(0x114)){_0x47c092=0x1+_0x40d615[_0x12de96(0x12f)]/0x64,_0xdf6633[_0x12de96(0x107)](_0x1b1ea4);let _0x5a8ed4=(_0x34657a[_0x12de96(0x12f)]*=_0x428c90)[_0x12de96(0x12a)](0x2);_0x139d67[_0x12de96(0x107)](_0x5a8ed4),_0x1f48fa['value']=_0x5a8ed4;}else numberOfBets[_0x12de96(0x12f)]>0x0?limitedBets():unlimitedBets();},0x1f4);}function stopAutobet(){const _0x3d273a=_0x2dd998;littleDice[_0x3d273a(0x12d)]['display']='none',startAutobetButton[_0x3d273a(0x133)]=_0x3d273a(0x11c),startAutobetButton[_0x3d273a(0xf7)][_0x3d273a(0x10a)](_0x3d273a(0x12e)),numberOfBets[_0x3d273a(0x12f)]=0x0,increaseOnWinInput[_0x3d273a(0x12f)]=0x0,increaseOnLossInput[_0x3d273a(0x12f)]=0x0,stopOnProfitInput[_0x3d273a(0x12f)]=0x0,stopOnLossInput['value']=0x0,displayInfinityIcon(),setTimeout(()=>{const _0x960f3d=_0x3d273a;if(_0x960f3d(0x124)==='uqLcP')return _0x2e3850=![],_0x3bd808(),_0x44573c['value']=0x0,!![];else enableAllControls();},0x3e8);}async function limitedBets(){const _0x2825e0=_0x2dd998;for(let _0x455b43=0x1;numberOfBets[_0x2825e0(0x12f)]>0x0;_0x455b43++){if(_0x2825e0(0x116)!==_0x2825e0(0xf5)){if(!autobetRunning){if(_0x2825e0(0x131)!=='WbwrF')_0x61fb72();else{stopAutobet();break;}}if(stopOnProfit()===!![]){if('TyoDX'==='TyoDX')break;else!_0xc9bd0f?(_0xd32fa7=!![],_0x7c7625(),_0x42a35f[_0x2825e0(0x107)](_0x2825e0(0xfc))):(_0x344372=![],_0xc363b6[_0x2825e0(0x10d)]=_0x2825e0(0x111),_0x58a73a(),_0x3a4721[_0x2825e0(0x107)]('Stopping\x20autobet'));}if(stopOnLoss()===!![])break;placeBet(),numberOfBets[_0x2825e0(0x12f)]-=0x1,await new Promise(_0x18d311=>setTimeout(_0x18d311,0x2ee));}else _0x25568c[_0x2825e0(0xfa)]('disabled');}autobetRunning=![],stopAutobet();}async function unlimitedBets(){while(autobetRunning){if(stopOnProfit()===!![])break;if(stopOnLoss()===!![])break;placeBet(),await new Promise(_0x5bd8ad=>setTimeout(_0x5bd8ad,0x2ee));}}function disableAllControls(){const _0x3e7629=_0x2dd998;buttonManual['disabled']=!![],buttonAuto[_0x3e7629(0x10d)]=!![],resetOnWinButton[_0x3e7629(0x10d)]=!![],resetOnLossButton[_0x3e7629(0x10d)]=!![],increaseOnWinButton[_0x3e7629(0x10d)]=!![],increaseOnLossButton[_0x3e7629(0x10d)]=!![],numberOfBets['disabled']=!![],increaseOnWinInput[_0x3e7629(0x10d)]=!![],increaseOnLossInput[_0x3e7629(0x10d)]=!![],stopOnProfitInput['disabled']=!![],stopOnLossInput[_0x3e7629(0x10d)]=!![],multiplierInput[_0x3e7629(0x10d)]=!![],winChanceInput[_0x3e7629(0x10d)]=!![],amountDoubleButton[_0x3e7629(0x10d)]=!![],amountHalfButton['disabled']=!![],betAmount[_0x3e7629(0x10d)]=!![],slider[_0x3e7629(0x10d)]=!![],overUnderChange[_0x3e7629(0x10f)](_0x3e7629(0x129),overUnderChangeFunction),overUnder[_0x3e7629(0x12d)][_0x3e7629(0x10b)]=_0x3e7629(0x112),overUnder[_0x3e7629(0x12d)][_0x3e7629(0x125)]=_0x3e7629(0x102);}function enableAllControls(){const _0x2d88eb=_0x2dd998;startAutobetButton[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),buttonManual['removeAttribute'](_0x2d88eb(0x10d)),buttonAuto['removeAttribute'](_0x2d88eb(0x10d)),resetOnWinButton[_0x2d88eb(0xfa)]('disabled'),resetOnLossButton[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),increaseOnWinButton[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),increaseOnLossButton[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),numberOfBets[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),lastIncreaseOnWinButtonState===!![]&&increaseOnWinInput['removeAttribute']('disabled'),lastIncreaseOnLossButtonState===!![]&&increaseOnLossInput[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),stopOnProfitInput['removeAttribute']('disabled'),stopOnLossInput[_0x2d88eb(0xfa)]('disabled'),multiplierInput['removeAttribute'](_0x2d88eb(0x10d)),winChanceInput[_0x2d88eb(0xfa)]('disabled'),amountDoubleButton[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),amountHalfButton[_0x2d88eb(0xfa)]('disabled'),betAmount[_0x2d88eb(0xfa)](_0x2d88eb(0x10d)),slider['removeAttribute'](_0x2d88eb(0x10d)),overUnderChange[_0x2d88eb(0x12c)](_0x2d88eb(0x129),overUnderChangeFunction),overUnder['style']['opacity']='1',overUnder['style'][_0x2d88eb(0x125)]=_0x2d88eb(0x117);}function increaseOnWin(){const _0x186549=_0x2dd998;if(resetOnWinButton[_0x186549(0x10d)]===!![]&&outcome==='Win'&&increaseOnWinInput[_0x186549(0x12f)]>0x0){if(_0x186549(0x121)!==_0x186549(0x121))return;else{increasePercentage=0x1+increaseOnWinInput['value']/0x64,console[_0x186549(0x107)](increasePercentage);let _0x1a5a37=(betAmount[_0x186549(0x12f)]*=increasePercentage)[_0x186549(0x12a)](0x2);console[_0x186549(0x107)](_0x1a5a37),betAmount[_0x186549(0x12f)]=_0x1a5a37;}}}function increaseOnLoss(){const _0xbd7e6d=_0x2dd998;if(resetOnLossButton[_0xbd7e6d(0x10d)]===!![]&&outcome==='Loss'&&increaseOnLossInput[_0xbd7e6d(0x12f)]>0x0){if('sDzMY'!=='sDzMY')_0x3960f8['removeAttribute']('disabled'),_0x36c6de['removeAttribute'](_0xbd7e6d(0x10d)),_0x4dcb31[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x25cc95[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x21ee58['removeAttribute'](_0xbd7e6d(0x10d)),_0x14c744[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x5e206d[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x48416f[_0xbd7e6d(0xfa)]('disabled'),_0x2f1492===!![]&&_0x39a203[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x2ba7ad===!![]&&_0xc4e7e[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0xc656c0[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x4712d9[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x1c52c6[_0xbd7e6d(0xfa)]('disabled'),_0x17374d[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x4ddff7[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x3929fa[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x647457[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x58882b[_0xbd7e6d(0xfa)](_0xbd7e6d(0x10d)),_0x57a5ee['addEventListener'](_0xbd7e6d(0x129),_0x2e5b6b),_0x24c1ed['style'][_0xbd7e6d(0x10b)]='1',_0x3e60c1[_0xbd7e6d(0x12d)][_0xbd7e6d(0x125)]='pointer';else{increasePercentage=0x1+increaseOnLossInput[_0xbd7e6d(0x12f)]/0x64,console[_0xbd7e6d(0x107)](increasePercentage);let _0x45617d=(betAmount['value']*=increasePercentage)[_0xbd7e6d(0x12a)](0x2);console[_0xbd7e6d(0x107)](_0x45617d),betAmount[_0xbd7e6d(0x12f)]=_0x45617d;}}}stopOnProfitInput[_0x2dd998(0x12c)](_0x2dd998(0xff),function(){const _0x4ba0b8=_0x2dd998;stopOnProfitValue=stopOnProfitInput[_0x4ba0b8(0x12f)],calculateStopOnProfitThreshold();});function calculateStopOnProfitThreshold(){const _0xd0e9f0=_0x2dd998;if(stopOnProfitInput[_0xd0e9f0(0x12f)]<=0x0){if('jRhkI'!=='MFnFD')return;else _0x39b265[_0xd0e9f0(0x12d)][_0xd0e9f0(0xfd)]=_0xd0e9f0(0x108),_0x539b39[_0xd0e9f0(0x133)]=_0xd0e9f0(0x11c),_0x362079[_0xd0e9f0(0xf7)][_0xd0e9f0(0x10a)](_0xd0e9f0(0x12e)),_0x7d8ab7[_0xd0e9f0(0x12f)]=0x0,_0x3c68de['value']=0x0,_0x43713b[_0xd0e9f0(0x12f)]=0x0,_0x3aa780['value']=0x0,_0x47775a[_0xd0e9f0(0x12f)]=0x0,_0xe33e5(),_0x5c1846(()=>{_0x19e0e9();},0x3e8);}else _0xd0e9f0(0x115)===_0xd0e9f0(0xf9)?(_0x9bec97=_0x39efd4['value'],_0x2b6368()):targetWinBalance=balanceAmount+parseFloat(stopOnProfitValue);}function stopOnProfit(){const _0x5961b7=_0x2dd998;if(stopOnProfitInput[_0x5961b7(0x12f)]<=0x0){if(_0x5961b7(0x138)==='ONFYA')return![];else{if(_0x351ff9[_0x5961b7(0x12f)]<=0x0)return;else _0x426467=_0xa5900e+_0x5a7468(_0x415804);}}else{if(_0x5961b7(0x101)!==_0x5961b7(0x127)){if(balanceAmount>=targetWinBalance)return autobetRunning=![],stopAutobet(),stopOnProfitInput[_0x5961b7(0x12f)]=0x0,!![];}else _0x2cc5e1=_0x405df8-_0xa36d2b(_0xdd1ec5);}}function _0x8e46(){const _0x4a8f07=['cursor','933OXeCkb','tXnFJ','increaseOnLossInput','click','toFixed','bettingSettingsManual','addEventListener','style','auto-bet-button-active','value','stopOnProfitInput','WbwrF','8762058skmTsT','innerHTML','increaseOnWinInput','118462KQpTpR','resetOnLoss','3464352HDXajj','ONFYA','vYADH','20064WTSnbR','classList','bettingSettingsAuto','MDhDb','removeAttribute','9YFYeLm','Starting\x20autobet','display','9273480KuSeNf','input','autoBet','eEDYA','not-allowed','manual','672hCOVuI','resetOnWin','stopOnLossInput','log','none','startAutobet','remove','opacity','12tgEQHA','disabled','DOMContentLoaded','removeEventListener','5cOxUlT','true','0.5','auto-betting-button-active','XRkEr','UIKLo','vLhuH','pointer','1222872WfRZLR','FdyIW','buttonActive','getElementById','Start\x20Autobet','infinityIcon','block','Stop\x20Autobet\x20','add','oHkuC','increaseOnWinButton','8228jJtabG','FUlag'];_0x8e46=function(){return _0x4a8f07;};return _0x8e46();}stopOnLossInput[_0x2dd998(0x12c)](_0x2dd998(0xff),function(){stopOnLossValue=stopOnLossInput['value'],calculateStopOnLossThreshold();});function calculateStopOnLossThreshold(){const _0x379163=_0x2dd998;if(stopOnLossInput[_0x379163(0x12f)]<=0x0)return;else _0x379163(0x119)!=='FdyIW'?(_0xcc4472=_0x5498a5[_0x379163(0x12f)],_0xaf184a()):targetLossBalance=balanceAmount-parseFloat(stopOnLossValue);}function _0x190f(_0x2282ac,_0x4be3a7){const _0x8e4622=_0x8e46();return _0x190f=function(_0x190fbd,_0x657dac){_0x190fbd=_0x190fbd-0xf5;let _0x257622=_0x8e4622[_0x190fbd];return _0x257622;},_0x190f(_0x2282ac,_0x4be3a7);}function stopOnLoss(){const _0x4e3ef2=_0x2dd998;if(stopOnLossInput[_0x4e3ef2(0x12f)]<=0x0)return![];if(balanceAmount<=targetLossBalance)return autobetRunning=![],stopAutobet(),stopOnLossInput[_0x4e3ef2(0x12f)]=0x0,!![];}
+//
+// Buttons
+//
+const buttonManual = document.getElementById("manual");
+const buttonAuto = document.getElementById("auto");
+const resetOnWinButton = document.getElementById("resetOnWin");
+const resetOnLossButton = document.getElementById("resetOnLoss");
+const increaseOnWinButton = document.getElementById("increaseOnWinButton");
+const increaseOnLossButton = document.getElementById("increaseOnLossButton");
+const startAutobetButton = document.getElementById("startAutobet");
+let lastIncreaseOnWinButtonState = false;
+let lastIncreaseOnLossButtonState = false;
+
+//
+// Inputs
+//
+const numberOfBets = document.getElementById("numberOfBets");
+const increaseOnWinInput = document.getElementById("increaseOnWinInput");
+const increaseOnLossInput = document.getElementById("increaseOnLossInput");
+const stopOnProfitInput = document.getElementById("stopOnProfitInput");
+const stopOnLossInput = document.getElementById("stopOnLossInput");
+
+//
+// Auto / Manual div, wrappers
+//
+const manualBet = document.getElementById("manualBet");
+const autoBet = document.getElementById("autoBet");
+const bettingSettingsAutoWrapper = document.getElementById("bettingSettingsAuto");
+const bettingSettingsManualWrapper = document.getElementById("bettingSettingsManual");
+
+//
+// Icons
+//
+const littleDice = document.getElementById("littleDice");
+
+//
+// Betting
+//
+let stopOnProfitValue;
+let stopOnLossValue;
+let targetWinBalance = 0;
+let targetLossBalance = 0;
+
+//
+// Onload settings
+//
+document.addEventListener("DOMContentLoaded", () => {
+  autoBet.style.display = "none";
+  buttonAuto.classList.remove("buttonActive");
+  buttonManual.classList.add("buttonActive");
+  resetOnWinButton.classList.add("auto-betting-button-active");
+  resetOnLossButton.classList.add("auto-betting-button-active");
+
+  disableAutoBettingSettingsInput();
+});
+
+//
+// If manual button clicked remove active state from auto button
+//
+buttonManual.addEventListener("click", () => {
+  buttonAuto.classList.remove("buttonActive");
+  buttonManual.classList.add("buttonActive");
+
+  // Hide auto betting settings, show manual betting settings and enable bet button
+  document.getElementById("betButton").disabled = false;
+
+  // Disable all inputs in autobet tab
+  disableAutoBettingSettingsInput();
+  autoBet.style.display = "none";
+  manualBet.style.display = "block";
+});
+
+// If auto button clicked remove active state from manual button
+buttonAuto.addEventListener("click", () => {
+  buttonManual.classList.remove("buttonActive");
+  buttonAuto.classList.add("buttonActive");
+  // Hide manual betting settings, show auto betting settings and disable bet button
+  manualBet.style.display = "none";
+  document.getElementById("betButton").disabled = true;
+  // Enable all inputs except increase on win/loss
+  enableAutoBettingSettingsInput();
+  autoBet.style.display = "block";
+});
+
+increaseOnWinButton.addEventListener("click", () => {
+  resetOnWinButton.classList.remove("auto-betting-button-active");
+  increaseOnWinButton.classList.add("auto-betting-button-active");
+  increaseOnWinInput.disabled = false;
+  lastIncreaseOnWinButtonState = true;
+});
+
+resetOnWinButton.addEventListener("click", () => {
+  increaseOnWinButton.classList.remove("auto-betting-button-active");
+  resetOnWinButton.classList.add("auto-betting-button-active");
+  increaseOnWinInput.disabled = true;
+  lastIncreaseOnWinButtonState = false;
+});
+
+increaseOnLossButton.addEventListener("click", () => {
+  resetOnLossButton.classList.remove("auto-betting-button-active");
+  increaseOnLossButton.classList.add("auto-betting-button-active");
+  increaseOnLossInput.disabled = false;
+  lastIncreaseOnLossButtonState = true;
+});
+
+resetOnLossButton.addEventListener("click", () => {
+  increaseOnLossButton.classList.remove("auto-betting-button-active");
+  resetOnLossButton.classList.add("auto-betting-button-active");
+  increaseOnLossInput.disabled = true;
+  lastIncreaseOnLossButtonState = false;
+});
+
+function disableAutoBettingSettingsInput() {
+  numberOfBets.disabled = true;
+  increaseOnWinInput.disabled = true;
+  increaseOnLossInput.disabled = true;
+  stopOnProfitInput.disabled = true;
+  stopOnLossInput.disabled = true;
+  startAutobetButton.disabled = true;
+}
+
+function enableAutoBettingSettingsInput() {
+  numberOfBets.disabled = false;
+  stopOnProfitInput.disabled = false;
+  stopOnLossInput.disabled = false;
+  startAutobetButton.disabled = false;
+}
+
+//
+// Infinity bets if user didn't enter Number of Bets
+//
+function displayInfinityIcon() {
+  if (numberOfBets.value <= 0) {
+    document.getElementById("infinityIcon").style.display = "block";
+  }
+
+  if (numberOfBets.value > 0) {
+    document.getElementById("infinityIcon").style.display = "none";
+  }
+}
+
+numberOfBets.addEventListener("input", () => {
+  displayInfinityIcon();
+});
+
+//
+// Decide whether to start or stop autobet
+//
+let autobetRunning = false;
+
+function handleAutobetButton() {
+  if (!autobetRunning) {
+    autobetRunning = true;
+    startAutobet();
+    console.log("Starting autobet");
+  } else {
+    autobetRunning = false;
+    startAutobetButton.disabled = "true";
+    stopAutobet();
+    console.log("Stopping autobet");
+  }
+}
+
+//
+// Start Autobet
+//
+function startAutobet() {
+  //Disable all controls
+  disableAllControls();
+  // Change text in autobet button to "Stop Autobet", apply autobet running styles and show little dice icon
+  littleDice.style.display = "block";
+  startAutobetButton.innerHTML = "Stop Autobet " + littleDice.outerHTML;
+  startAutobetButton.classList.add("auto-bet-button-active");
+
+  setTimeout(() => {
+    if (numberOfBets.value > 0) {
+      limitedBets();
+    } else {
+      unlimitedBets();
+    }
+  }, 500);
+}
+
+//
+// Stop Autobet
+//
+function stopAutobet() {
+  // If autobet is running and user clicks autobet button again, the autobet will be stopped
+  littleDice.style.display = "none";
+  startAutobetButton.innerHTML = "Start Autobet";
+  startAutobetButton.classList.remove("auto-bet-button-active");
+
+  // Set all auto setting to default
+  numberOfBets.value = 0;
+  increaseOnWinInput.value = 0;
+  increaseOnLossInput.value = 0;
+  stopOnProfitInput.value = 0;
+  stopOnLossInput.value = 0;
+  displayInfinityIcon();
+
+  setTimeout(() => {
+    enableAllControls();
+  }, 1000);
+}
+
+//
+// Limited bets funciton
+//
+async function limitedBets() {
+  for (let i = 1; numberOfBets.value > 0; i++) {
+    if (!autobetRunning) {
+      stopAutobet();
+      break;
+    }
+
+    // Check for stopOnProfit
+    if (stopOnProfit() === true) {
+      break;
+    }
+
+    // Check for stopOnLoss
+    if (stopOnLoss() === true) {
+      break;
+    }
+
+    placeBet();
+    // Current remaining bets
+    numberOfBets.value -= 1;
+    await new Promise((resolve) => setTimeout(resolve, 750));
+  }
+  autobetRunning = false;
+  stopAutobet();
+}
+
+//
+// Unlimited bets function
+//
+async function unlimitedBets() {
+  while (autobetRunning) {
+    // Check for stopOnProfit
+    if (stopOnProfit() === true) {
+      break;
+    }
+
+    // Check for stopOnLoss
+    if (stopOnLoss() === true) {
+      break;
+    }
+
+    placeBet();
+    await new Promise((resolve) => setTimeout(resolve, 750));
+  }
+}
+
+//
+// Disable all controls
+//
+function disableAllControls() {
+  buttonManual.disabled = true;
+  buttonAuto.disabled = true;
+  resetOnWinButton.disabled = true;
+  resetOnLossButton.disabled = true;
+  increaseOnWinButton.disabled = true;
+  increaseOnLossButton.disabled = true;
+  numberOfBets.disabled = true;
+  increaseOnWinInput.disabled = true;
+  increaseOnLossInput.disabled = true;
+  stopOnProfitInput.disabled = true;
+  stopOnLossInput.disabled = true;
+  multiplierInput.disabled = true;
+  winChanceInput.disabled = true;
+  amountDoubleButton.disabled = true;
+  amountHalfButton.disabled = true;
+  betAmount.disabled = true;
+  slider.disabled = true;
+  overUnderChange.removeEventListener("click", overUnderChangeFunction);
+  overUnder.style.opacity = "0.5";
+  overUnder.style.cursor = "not-allowed";
+}
+
+//
+// Enable all controls
+//
+function enableAllControls() {
+  startAutobetButton.removeAttribute("disabled");
+  buttonManual.removeAttribute("disabled");
+  buttonAuto.removeAttribute("disabled");
+  resetOnWinButton.removeAttribute("disabled");
+  resetOnLossButton.removeAttribute("disabled");
+  increaseOnWinButton.removeAttribute("disabled");
+  increaseOnLossButton.removeAttribute("disabled");
+  numberOfBets.removeAttribute("disabled");
+
+  if (lastIncreaseOnWinButtonState === true) {
+    increaseOnWinInput.removeAttribute("disabled");
+  }
+
+  if (lastIncreaseOnLossButtonState === true) {
+    increaseOnLossInput.removeAttribute("disabled");
+  }
+
+  stopOnProfitInput.removeAttribute("disabled");
+  stopOnLossInput.removeAttribute("disabled");
+  multiplierInput.removeAttribute("disabled");
+  winChanceInput.removeAttribute("disabled");
+  amountDoubleButton.removeAttribute("disabled");
+  amountHalfButton.removeAttribute("disabled");
+  betAmount.removeAttribute("disabled");
+  slider.removeAttribute("disabled");
+  overUnderChange.addEventListener("click", overUnderChangeFunction);
+  overUnder.style.opacity = "1";
+  overUnder.style.cursor = "pointer";
+}
+
+//
+// Increase on win
+//
+function increaseOnWin() {
+  if (resetOnWinButton.disabled === true && outcome === "Win" && increaseOnWinInput.value > 0) {
+    increasePercentage = 1 + increaseOnWinInput.value / 100;
+    console.log(increasePercentage);
+    let newBetAmount = (betAmount.value *= increasePercentage).toFixed(2);
+    console.log(newBetAmount);
+    betAmount.value = newBetAmount;
+  }
+}
+
+//
+// Increase on loss
+//
+function increaseOnLoss() {
+  if (resetOnLossButton.disabled === true && outcome === "Loss" && increaseOnLossInput.value > 0) {
+    increasePercentage = 1 + increaseOnLossInput.value / 100;
+    console.log(increasePercentage);
+    let newBetAmount = (betAmount.value *= increasePercentage).toFixed(2);
+    console.log(newBetAmount);
+    betAmount.value = newBetAmount;
+  }
+}
+
+//
+// Listen for every change of stopOnProfitInput
+//
+stopOnProfitInput.addEventListener("input", function () {
+  stopOnProfitValue = stopOnProfitInput.value;
+  calculateStopOnProfitThreshold();
+});
+
+//
+// Calculate stopOnProfitThreshold
+//
+function calculateStopOnProfitThreshold() {
+  if (stopOnProfitInput.value <= 0) {
+    return;
+  } else {
+    targetWinBalance = balanceAmount + parseFloat(stopOnProfitValue);
+  }
+}
+
+//
+// Stop on profit
+//
+function stopOnProfit() {
+  if (stopOnProfitInput.value <= 0) {
+    return false;
+  } else {
+    if (balanceAmount >= targetWinBalance) {
+      autobetRunning = false;
+      stopAutobet();
+      stopOnProfitInput.value = 0;
+      return true;
+    }
+  }
+}
+
+//
+// Listen for every change of stopOnLossInput
+//
+stopOnLossInput.addEventListener("input", function () {
+  stopOnLossValue = stopOnLossInput.value;
+  calculateStopOnLossThreshold();
+});
+
+//
+// Calculate stopOnLossThreshold
+//
+function calculateStopOnLossThreshold() {
+  if (stopOnLossInput.value <= 0) {
+    return;
+  } else {
+    targetLossBalance = balanceAmount - parseFloat(stopOnLossValue);
+  }
+}
+
+//
+// Stop on loss
+//
+function stopOnLoss() {
+  if (stopOnLossInput.value <= 0) {
+    return false;
+  }
+  if (balanceAmount <= targetLossBalance) {
+    autobetRunning = false;
+    stopAutobet();
+    stopOnLossInput.value = 0;
+    return true;
+  }
+}
+
+//
+// Amount half
+//
+function amountHalf() {
+  const currentValue = parseFloat(betAmount.value);
+  const checkValue = currentValue / 2.0;
+
+  //Check if the value wouldn't be smaller than 0.1 (minimal possible bet). If it would be smaller, automatically set value to 0.1
+  if (checkValue > 0.1) {
+    const newValue = currentValue / 2.0;
+    betAmount.value = newValue.toFixed(2);
+    profitOnWinCalculation();
+  } else {
+    betAmount.value = (0.1).toFixed(1);
+    profitOnWinCalculation();
+  }
+}
+
+//
+// Amount double
+//
+function amountDouble() {
+  const currentValue = parseFloat(betAmount.value);
+  const checkValue = currentValue * 2.0;
+
+  //Check if the value wouldn't be greater than 9999999 (maximal possible bet). If it would be greater, automatically set value to 9999999
+  if (checkValue > 9999999) {
+    betAmount.value = 9999999.0;
+    profitOnWinCalculation();
+  } else {
+    const newValue = currentValue * 2.0;
+    betAmount.value = newValue.toFixed(2);
+    profitOnWinCalculation();
+  }
+}

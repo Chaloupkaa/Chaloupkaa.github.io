@@ -1,5 +1,31 @@
-.color {
-  --primary-background: ;
-  --secondary-background: ;
-  --default-text-color: #fff;
+:root {
+  /* Main background colors */
+  --primary-game-container-color: #26234d;
+  --secondary-game-container-color: #151236;
+  /* Text */
+  --default-text-color: #d9d7e9;
+  --body-background-color: #312d58;
+  /* Buttons */
+  --bet-button-color: #fcd804;
+  --bet-button-disabled-color: #b39800;
+  --amount-editor-button-color: #2d2950;
+  --amount-editor-button-hover-color: #35365e;
+  --manual-auto-color: #0d0a2c;
+  --manual-auto-select-color: #241f52;
+  /* Inputs */
+  --number-input-background-color: #403c64;
+  --number-input-border-color: #2d2950;
+  --number-input-default-disabled: #524d81;
+  --number-input-border-hover-color: #fcd704b9;
+  --number-input-border-focus-color: #fcd704;
+  --select-input-background-color: #403c64;
+  --select-input-border-color: #2d2950;
+  --select-input-border-hover-color: #fcd704b9;
+  --select-input-border-focus-color: #fcd704;
+  --range-input-inner-padding-color: #09071f;
+  --range-input-outer-padding-color: #1b1936;
+  /* After elements colors */
+  /* Other */
+  --win-element-background: #fcd704;
+  --win-element-background-darker: #fcc204;
 }

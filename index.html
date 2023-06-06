@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/img/logo/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/img/logo/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/mediaQueries.css" />
@@ -18,24 +15,19 @@
     <title>BETLOAD</title>
   </head>
   <body>
+    <div class="loader-wrapper" id="loaderWrapper"><div class="loader" id="loader"></div></div>
     <header>
       <div class="auth-bar">
         <div class="left">
-          <a href="index.html" class="logo-link"
-            ><img src="img/logo/logo-full.svg" class="logo"
-          /></a>
+          <a href="index.html" class="logo-link"><img src="img/logo/logo-full.svg" class="logo" /></a>
           <a href="#" class="link">Affiliate</a>
           <a href="#" class="link link-support">Live Support</a>
           <ul class="socials">
             <li>
-              <a href="#"
-                ><img src="img/general/discord.svg" class="socials-discord"
-              /></a>
+              <a href="#"><img src="img/general/discord.svg" class="socials-discord" /></a>
             </li>
             <li>
-              <a href="#"
-                ><img src="img/general/tiktok.svg" class="socials-tiktok"
-              /></a>
+              <a href="#"><img src="img/general/tiktok.svg" class="socials-tiktok" /></a>
             </li>
           </ul>
         </div>
@@ -78,6 +70,9 @@
         <div class="game-card mines-game" id="minesGame">
           <a href="mines/mines.html">Mines</a>
         </div>
+        <div class="game-card limbo-game" id="minesGame">
+          <a href="limbo/limbo.html">Limbo</a>
+        </div>
       </div>
     </div>
     <footer>
@@ -86,7 +81,7 @@
           <li>
             <p>Our Products</p>
             <ul class="inner-list">
-              <li><a href="#">Minigames</a></li>
+              <li><a href="minigames/minigames.html">Minigames</a></li>
               <li><a href="#">VIP Club</a></li>
             </ul>
           </li>
@@ -123,9 +118,7 @@
                 <a href="/policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="/policies-info/disputeResolution.html"
-                  >Dispute Resolution</a
-                >
+                <a href="/policies-info/disputeResolution.html">Dispute Resolution</a>
               </li>
               <li>
                 <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
@@ -138,18 +131,7 @@
               </li>
             </ul>
           </li>
-          <li class="license">
-            <a
-              href="https://verification.curacao-egaming.com/validateview.aspx?domain="
-              target="_blank"
-            >
-              <img
-                src="https://verification.curacao-egaming.com/validate.ashx?domain="
-                alt=""
-                width="60"
-              />
-            </a>
-          </li>
+
           <li>
             <p>Contact Us</p>
             <ul class="inner-list">
@@ -177,7 +159,6 @@
               <a href="#"><img src="img/payments/diners-club.svg" /></a>
               <a href="#"><img src="img/payments/ecopayz.svg" /></a>
               <a href="#"><img src="img/payments/jcb.svg" /></a>
-              <a href="#"><img src="img/payments/qiwi.svg" /></a>
               <a href="#"><img src="img/payments/astropay.svg" /></a>
               <a href="#"><img src="img/payments/web-money.svg" /></a>
             </div>
@@ -192,8 +173,7 @@
           </div>
           <span class="warning">
             <p>
-              Attention! It is gambling advertising. Gambling is not suitable
-              for solving financial problems. Please read
+              Attention! It is gambling advertising. Gambling is not suitable for solving financial problems. Please read
               <a href="#">Terms & Conditions</a> and play responsibly.
             </p>
           </span>
@@ -201,5 +181,6 @@
       </div>
     </footer>
     <script src="mainPage.js"></script>
+    <script src="js/loader.js"></script>
   </body>
 </html>

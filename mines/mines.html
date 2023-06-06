@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/colors.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/mediaQueries.css" />
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="../css/manualAutoBet.css" />
     <link rel="stylesheet" href="../css/gameContainers.css" />
     <link rel="stylesheet" href="mines.css" />
+    <link rel="stylesheet" href="minesMediaQueries.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -99,37 +101,56 @@
               </div>
             </div>
             <div class="manual-profit-on-win" id="manualBet">
-              <p class="game-text">Mines</p>
-              <div class="input-icon-wrapper">
-                <select class="num-of-mines" id="numOfMines">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                </select>
+              <div id="asteroidSelectWrapper">
+                <p class="game-text">Asteroids</p>
+                <div class="input-icon-wrapper">
+                  <select class="num-of-mines" id="numOfMines">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                  </select>
+                </div>
+              </div>
+              <div class="remaining-wrapper" id="remainingWrapper">
+                <div class="remaining-mines-wrapper">
+                  <p class="game-text">Asteroids</p>
+                  <div class="input-icon-wrapper">
+                    <input type="number" class="remaining-mines" id="remainingAsteroids" disabled />
+                    <i class="fa-solid fa-meteor after-icons-half"></i>
+                  </div>
+                </div>
+                <div class="remaining-planets-wrapper">
+                  <p class="game-text">Planets</p>
+                  <div class="input-icon-wrapper">
+                    <input type="number" class="remaining-planets" id="remainingPlanets" disabled />
+                    <i class="fa-solid fa-earth-europe after-icons-half"></i>
+                  </div>
+                </div>
               </div>
               <button class="bet-button" id="betButton" onclick="betCashoutHandler()">Bet</button>
             </div>
+
             <!--Autobet settings-->
             <div id="autoBet">
               <div class="num-bets">
@@ -288,11 +309,7 @@
               </li>
             </ul>
           </li>
-          <li class="license">
-            <a href="https://verification.curacao-egaming.com/validateview.aspx?domain=" target="_blank">
-              <img src="https://verification.curacao-egaming.com/validate.ashx?domain=" alt="" width="60" />
-            </a>
-          </li>
+
           <li>
             <p>Contact Us</p>
             <ul class="inner-list">
@@ -320,7 +337,6 @@
               <a href="#"><img src="/img/payments/diners-club.svg" /></a>
               <a href="#"><img src="/img/payments/ecopayz.svg" /></a>
               <a href="#"><img src="/img/payments/jcb.svg" /></a>
-              <a href="#"><img src="/img/payments/qiwi.svg" /></a>
               <a href="#"><img src="/img/payments/astropay.svg" /></a>
               <a href="#"><img src="/img/payments/web-money.svg" /></a>
             </div>

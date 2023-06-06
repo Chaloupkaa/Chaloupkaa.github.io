@@ -1,5 +1,5 @@
 body > main {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--default-text-color);
   padding: 0;
   position: relative;
   max-width: 1300px;
@@ -10,23 +10,26 @@ body > main {
 
 h1 {
   font-size: 1.75rem;
+  color: #fcd804;
 }
 
 body > main > div {
   padding: 0;
   margin: 0;
   position: relative;
-  background-color: #37373c;
+  background-color: var(--primary-game-container-color);
   min-height: 850px;
   line-height: 40px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--default-text-color);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 body > main > div > section.terms {
   line-height: 40px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--default-text-color);
   margin: 0;
   position: relative;
   z-index: 9;
@@ -37,7 +40,7 @@ body > main > div > section.terms {
 body > main > div > section.terms > ul {
   line-height: 40px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--default-text-color);
   padding: 0;
   margin-top: 0.5rem;
   list-style: disc;
@@ -48,7 +51,7 @@ body > main > div > section.terms > ul > li {
   font-weight: 400;
   line-height: 32px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--default-text-color);
   list-style-type: disc;
   list-style-position: inside;
   padding: 0;
@@ -60,7 +63,7 @@ body > main > div > section.terms > ul > li {
   font-weight: 400;
   line-height: 25px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--default-text-color);
   padding: 0;
   margin-top: 1rem;
 }

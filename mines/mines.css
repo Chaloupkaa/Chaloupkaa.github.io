@@ -16,17 +16,19 @@
   height: 112px;
   border-radius: 10px;
   border-style: none;
-  background-color: #0d4a6d;
-  transition: all 50ms ease-in-out;
-  box-shadow: 0px 5px 0px #35a7e9;
+  background-color: #0d0a2c;
+  background-image: url(../img/logo/backgroundMine.png);
+  transition: all 150ms ease-in-out;
+  box-shadow: 0px 3px 0px #17153b;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 6.5rem;
 }
 
 .mine:hover:not(:disabled) {
-  background-color: #106393;
-  transform: translateY(-3px);
+  background-image: url(../img/logo/backgroundMineHover.png);
+  transform: translateY(-4px);
   cursor: pointer;
 }
 
@@ -52,18 +54,44 @@
 
 /* Mine turn animation */
 .turn-animation {
-  animation: turnAnimation 0.8s ease-in-out 0s 1 normal forwards;
+  animation: turnAnimation 0.5s ease-in-out 0s 1 normal forwards;
 }
 
 @keyframes turnAnimation {
   0% {
     transform: translateX(0) rotateY(0);
   }
-  50% {
-    transform: translateX(5px) rotateY(180deg);
+
+  25% {
+    transform: translateX(-3px) rotateY(-20deg);
+  }
+
+  75% {
+    transform: translateX(3px) rotateY(-180deg);
   }
   100% {
-    transform: translateX(0) rotateY(180deg);
+    transform: translateX(0) rotateY(-180deg);
+  }
+}
+
+.turn-back {
+  animation: turnAnimationBack 0.5s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes turnAnimationBack {
+  0% {
+    transform: translateX(0) rotateY(-180deg);
+  }
+
+  25% {
+    transform: translateX(-3px) rotateY(-160deg);
+  }
+
+  75% {
+    transform: translateX(3px) rotateY(0);
+  }
+  100% {
+    transform: translateX(0) rotateY(0);
   }
 }
 
@@ -75,7 +103,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 500;
+  z-index: 2;
 }
 .cashout-popup {
   display: flex;
@@ -83,14 +111,12 @@
   align-items: center;
   cursor: default;
   user-select: none;
-
   width: 172px;
   height: 118px;
-
   background-color: #1a2c38;
   border-style: solid;
   border-radius: 10px;
-  border-color: #00b801;
+  border-color: #fcd804;
   border-width: 4px;
 }
 
@@ -108,14 +134,14 @@
 
 .final-multiplier {
   font-size: 32px;
-  color: #00e701;
+  color: #fcd804;
   font-weight: 700;
 }
 
 .multiplier-sign {
   font-size: 32px;
   margin-left: 2px;
-  color: #00e701;
+  color: #fcd804;
   font-weight: 700;
 }
 
@@ -134,10 +160,33 @@
 }
 
 .cashed-out-amount {
-  color: #00e701;
+  color: #fcd804;
 }
 
 .cashout-eur {
-  color: #00e701;
+  color: #fcd804;
   margin-left: 4px;
+}
+
+.remaining-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#remainingWrapper {
+  display: none;
+}
+
+#remainingAsteroids,
+#remainingPlanets {
+  opacity: 1;
+  background-color: var(--number-input-background-color);
+}
+
+#remainingAsteroids:hover,
+#remainingPlanets:hover {
+  cursor: pointer;
+  border-color: var(--number-input-border-hover-color);
 }

@@ -1,7 +1,8 @@
 /* General settings */
 
 .sidebar {
-  width: 25%;
+  min-width: 218px;
+  width: 20%;
 }
 
 #autoBet > * {
@@ -28,11 +29,12 @@ input[type="number"] {
   user-select: none;
   box-sizing: border-box;
   font-family: inherit;
+  font-variant-numeric: tabular-nums;
   line-height: 1.5;
   width: 100%;
-  color: #fff;
-  background: #0f212e;
-  border: 2px solid #2f4553;
+  color: var(--default-text-color);
+  background: var(--number-input-background-color);
+  border: 2px solid var(--number-input-border-color);
   border-radius: 0.25rem;
   letter-spacing: 0;
   font-weight: 600;
@@ -47,12 +49,12 @@ input[type="number"] {
   padding-right: 2em;
 }
 
-input[type="number"]:hover:not(:disabled) {
-  border-color: #557086;
+input[type="number"]:hover:not(:disabled):not(:focus) {
+  border-color: var(--number-input-border-hover-color);
 }
 
 input[type="number"]:focus {
-  border-color: #557086;
+  border-color: var(--number-input-border-focus-color);
 }
 
 /* Select input styles */
@@ -64,9 +66,9 @@ select {
   font-family: inherit;
   line-height: 1.5;
   width: 100%;
-  color: #fff;
-  background-color: #0f212e;
-  border: 2px solid #2f4553;
+  color: var(--default-text-color);
+  background-color: var(--select-input-background-color);
+  border: 2px solid var(--select-input-border-color);
   border-radius: 0.25rem;
   letter-spacing: 0;
   font-weight: 600;
@@ -82,11 +84,11 @@ select {
 }
 
 select:hover:not(:disabled) {
-  border-color: #557086;
+  border-color: var(--select-input-border-hover-color);
 }
 
 select:focus {
-  border-color: #557086;
+  border-color: var(--select-input-border-focus-color);
 }
 
 select:disabled {
@@ -102,12 +104,12 @@ select:disabled {
   align-items: center;
   margin: 5% 5%;
   height: 45px;
-  background-color: #0f212e;
+  background-color: var(--manual-auto-color);
   border-radius: 100px;
 }
 
 .manual-auto-btn {
-  background-color: #0f212e;
+  background-color: var(--manual-auto-color);
   height: 35px;
   border-radius: 100px;
   width: 45%;
@@ -122,15 +124,15 @@ select:disabled {
 }
 
 .manual-auto-btn:hover:not(:disabled) {
-  background-color: #2f4553;
+  background-color: var(--manual-auto-select-color);
 }
 
 .manual-auto-btn:focus {
-  background-color: #2f4553;
+  background-color: var(--manual-auto-select-color);
 }
 
 .buttonActive {
-  background-color: #2f4553;
+  background-color: var(--manual-auto-select-color);
 }
 
 /* Amount editors */
@@ -138,19 +140,25 @@ select:disabled {
 .amount-editor-button {
   width: 60px;
   height: 39px;
-  background-color: #2f4553;
+  background-color: var(--amount-editor-button-color);
   border-style: none;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
 }
 .amount-editor-button:hover:not(:disabled) {
-  color: #fff;
-  background-color: #3d5564;
+  color: var(--default-text-color);
+  background-color: var(--amount-editor-button-hover-color);
+  cursor: pointer;
+}
+
+.amount-editor-button:active:not(:disabled) {
+  font-size: 0.75rem;
 }
 
 /* Bet button */
 
 .bet-button {
-  background-color: #00b801;
+  background-color: var(--bet-button-color);
   width: 100%;
   height: 3.5rem;
   border-style: none;
@@ -165,7 +173,7 @@ select:disabled {
 }
 
 .bet-button:disabled {
-  background-color: #008a01;
+  background-color: var(--bet-button-disabled-color);
   cursor: default;
 }
 
@@ -203,7 +211,7 @@ select:disabled {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: #1a2c38;
+  background-color: #414141;
   transform: translateX(-1px);
 }
 
@@ -224,24 +232,36 @@ select:disabled {
   z-index: 2;
 }
 
+.after-icons-half {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 75%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #b1bad3;
+  z-index: 2;
+}
+
 #littleDice {
   display: none;
   margin-top: 5px;
 }
 
-/* Wrappers */
-
-.on-win-loss-wrapper {
-  display: flex;
+#infinityIcon {
+  left: 87%;
 }
+
+/* Wrappers */
 
 .input-icon-wrapper {
   position: relative;
 }
 
 .on-win-loss-wrapper {
+  display: flex;
   position: relative;
-  background-color: #2f4553;
+  background-color: var(--manual-auto-color);
   border-radius: 3px;
   vertical-align: middle;
 }
@@ -251,20 +271,19 @@ select:disabled {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: #2f4553;
   border-radius: 4px;
 }
 
 /* Reset on */
 
 .reset-increase-wrapper {
-  background-color: #2f4553;
+  background-color: var(--manual-auto-color);
   border-radius: 3px;
   display: flex;
 }
 
 .reset-on {
-  background-color: #2f4553;
+  background-color: var(--manual-auto-color);
   border-style: none;
   color: #d5dceb;
   font-size: 11px;
@@ -280,8 +299,8 @@ select:disabled {
 }
 
 .reset-on:hover:not(:disabled) {
-  color: #fff;
-  background-color: #3d5564;
+  color: var(--default-text-color);
+  background-color: var(--manual-auto-select-color);
   cursor: pointer;
 }
 
@@ -293,9 +312,9 @@ select:disabled {
 /* Increase-by */
 
 .increase-by {
-  background-color: #2f4553;
+  background-color: var(--manual-auto-color);
   border-style: none;
-  color: #d5dceb;
+  color: var(--default-text-color);
   font-size: 11px;
   padding: 10px;
   margin-top: 2px;
@@ -309,8 +328,8 @@ select:disabled {
 }
 
 .increase-by:hover:not(:disabled) {
-  color: #fff;
-  background-color: #3d5564;
+  color: var(--default-text-color);
+  background-color: var(--manual-auto-select-color);
   cursor: pointer;
 }
 
@@ -330,8 +349,8 @@ select:disabled {
 
 #profitOnWin {
   cursor: not-allowed;
-  background-color: #2f4553;
-  color: #fff;
+  background-color: var(--number-input-default-disabled);
+  color: var(--default-text-color);
   opacity: 1;
 }
 
@@ -344,18 +363,17 @@ select:disabled {
 /* Need to be at the end */
 
 .auto-betting-button-active {
-  background-color: #071824;
-  color: #fff;
+  background-color: var(--manual-auto-select-color);
+  color: var(--default-text-color);
   cursor: pointer;
 }
 
 .auto-betting-button-active:hover {
-  background-color: #071824;
+  background-color: var(--manual-auto-select-color);
 }
 
 .on-win-loss-input:is(:disabled) {
-  background-color: #203444;
-  color: #fff;
+  color: var(--default-text-color);
   cursor: not-allowed;
 }
 
