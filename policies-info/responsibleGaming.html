@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="/css/settings.css" />
     <link rel="stylesheet" href="policies.css" />
     <link rel="stylesheet" href="policiesMediaQueries.css" />
-    <title>BETLOAD | Self-Exclusion</title>
+
+    <title>BETLOAD | Dispute Resolution</title>
   </head>
   <body>
+    <div class="loader-wrapper" id="loaderWrapper">
+      <div class="loader" id="loader"></div>
+    </div>
     <header>
       <div class="auth-bar">
         <div class="left">
@@ -55,25 +59,27 @@
       <div class="content">
         <section class="terms">
           <div class="nbsp">&nbsp;</div>
-          <h1>Self-Exclusion</h1>
+          <h1>Dispute Resolution</h1>
           <div class="nbsp">&nbsp;</div>
           <div class="terms-text">
-            The Player may ask for self-exclusion for an extended period if the situation is more critical. You must send an email to our customer
-            care staff to request self-exclusion for a duration of between six months and five years. The Account will be closed for 6 months if the
-            User does not choose a self-exclusion term.
+            You are able to temporarily self-exclude from betload.gg. You won't be able to play, deposit, withdraw, get rain checks or free cases, or
+            watch other players play. You acknowledge that it is not reversible by self-excluding. For a permanent ban, please get in touch with our
+            support.
           </div>
-          <div class="terms-text">
-            However, figuring out whether a person's gambling has developed into a problem can be challenging. Please let us know if you have any
-            gambling-related problems while terminating the account so that our employees can behave appropriately.
+          <div class="options">
+            <div class="option" id="1">1 DAY</div>
+            <div class="option" id="3">3 DAYS</div>
+            <div class="option option-selected" id="7">7 DAYS</div>
+            <div class="option" id="14">14 DAYS</div>
+            <div class="option" id="21">21 DAYS</div>
+            <div class="option" id="30">30 DAYS</div>
+            <div class="option" id="60">60 DAYS</div>
+            <div class="option" id="90">90 DAYS</div>
+            <div class="option" id="180">180 DAYS</div>
+            <div class="option" id="365">365 DAYS</div>
           </div>
-          <div class="nbsp">&nbsp;</div>
-          <div class="nbsp">&nbsp;</div>
-          <h1>Time Out Period</h1>
-          <div class="nbsp">&nbsp;</div>
-          <div class="terms-text">
-            Please get in touch with our Customer Support team and ask them to temporarily close your account if you need some time off from gambling.
-            In the event of a formal request from the Player, the Account may be prematurely reopened at the sole discretion of the Casino.
-          </div>
+
+          <button class="self-exclude-button">SELF EXCLUDE</button>
         </section>
       </div>
     </main>
@@ -126,7 +132,7 @@
                 <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
               </li>
               <li>
-                <a href="#">Self-Exclusion</a>
+                <a href="/policies-info/selfExclusion.html">Self-Exclusion</a>
               </li>
               <li>
                 <a href="#">Frequently Asked Questions (F.A.Q)</a>
@@ -183,5 +189,7 @@
       </div>
     </footer>
     <script src="../js/userInfo.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="options.js"></script>
   </body>
 </html>

@@ -15,47 +15,38 @@
     <title>BETLOAD</title>
   </head>
   <body>
-    <div class="loader-wrapper" id="loaderWrapper"><div class="loader" id="loader"></div></div>
+    <div class="loader-wrapper" id="loaderWrapper">
+      <div class="loader" id="loader"></div>
+    </div>
     <header>
       <div class="auth-bar">
         <div class="left">
           <a href="index.html" class="logo-link"><img src="img/logo/logo-full.svg" class="logo" /></a>
-          <a href="#" class="link">Affiliate</a>
-          <a href="#" class="link link-support">Live Support</a>
-          <ul class="socials">
-            <li>
-              <a href="#"><img src="img/general/discord.svg" class="socials-discord" /></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/general/tiktok.svg" class="socials-tiktok" /></a>
-            </li>
-          </ul>
+        </div>
+        <div class="mid">
+          <div>
+            <ul>
+              <div class="balance-deposit-wrapper">
+                <li class="balance default">
+                  <img src="img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
+                  <span class="balance-amount">€</span>
+                  <span class="balance-amount" id="balanceAmount"></span>
+                </li>
+                <li>
+                  <a href="#" class="deposit">Deposit</a>
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
         <div class="right">
           <div class="user-info">
             <ul>
-              <li class="balance default">
-                <span class="balance-amount" id="balanceAmount">100.00</span>
-                <div class="currency-wrapper">
-                  <span class="currency-string">EUR</span>
-                </div>
-              </li>
-              <li>
-                <a href="#" class="deposit">DEPOSIT</a>
-              </li>
-              <li class="user-notifications">
-                <img src="img/general/bell.svg" class="bell-icon" />
-                <span class="total-notifications"></span>
-              </li>
               <li class="account-info">
                 <img src="img/general/user-icon.svg" class="user-icon" />
-                <span class="username">chaloupka_</span>
+                <span class="username" id="username"></span>
               </li>
-              <li>
-                <div class="logout">
-                  <img src="img/general/logout.svg" class="logout-img" />
-                </div>
-              </li>
+              <li></li>
             </ul>
           </div>
         </div>
@@ -68,9 +59,9 @@
           <a href="dice/dice.html">Dice</a>
         </div>
         <div class="game-card mines-game" id="minesGame">
-          <a href="mines/mines.html">Mines</a>
+          <a href="mines/mines.html">Asteroids</a>
         </div>
-        <div class="game-card limbo-game" id="minesGame">
+        <div class="game-card limbo-game" id="limboGame">
           <a href="limbo/limbo.html">Limbo</a>
         </div>
       </div>
@@ -83,6 +74,7 @@
             <ul class="inner-list">
               <li><a href="minigames/minigames.html">Minigames</a></li>
               <li><a href="#">VIP Club</a></li>
+              <li><button class="wipe-data-button" onclick="resetData()">Wipe data</button></li>
             </ul>
           </li>
           <li>
@@ -92,7 +84,7 @@
                 <a href="#">Company Details</a>
               </li>
               <li>
-                <a href="#">Responsible Gaming</a>
+                <a href="/policies-info/responsibleGaming.html">Responsible Gaming</a>
               </li>
               <li>
                 <a href="#">Privacy Policy</a>
@@ -182,5 +174,6 @@
     </footer>
     <script src="mainPage.js"></script>
     <script src="js/loader.js"></script>
+    <script src="js/userInfo.js"></script>
   </body>
 </html>

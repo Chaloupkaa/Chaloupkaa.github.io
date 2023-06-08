@@ -4,6 +4,7 @@
   --secondary-game-container-color: #151236;
   /* Text */
   --default-text-color: #d9d7e9;
+  --dark-text-color: #232645;
   --body-background-color: #312d58;
   /* Buttons */
   --bet-button-color: #fcd804;
@@ -28,4 +29,6 @@
   /* Other */
   --win-element-background: #fcd704;
   --win-element-background-darker: #fcc204;
+  --loss-element-background: #e60000;
+  --loss-element-background-darker: #a10000;
 }

@@ -7,3 +7,6 @@
       <div class="close-btn"><img src="img/popup-close.png" id="closeBtnBalance" /></div>
       <p class="insufficient-balance-p">Insufficient balance!</p>
     </div>
+
+
+    You are able to temporarily self-exclude from betload.gg. You won't be able to play, deposit, withdraw, get rain checks or free cases, or watch other players play. You acknowledge that it is not reversible by self-excluding. For a permanent ban, please get in touch with our support. 

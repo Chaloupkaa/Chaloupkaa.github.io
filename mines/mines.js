@@ -2,7 +2,7 @@
 // Betting
 //
 let betAmount = document.querySelector("#betAmount");
-let balanceAmount = 100.0;
+let balanceAmount = window.balance;
 let outcome;
 let betButton = document.getElementById("betButton");
 let amountHalfButton = document.getElementById("amountHalf");
@@ -154,9 +154,11 @@ function placeBet() {
     gameEnded = false;
     // Hide asteroids select input
     asteroidSelectWrapper.style.display = "none";
-    console.log("generated mines");
     balanceAmount -= betAmount;
-    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3);
+    window.balance = balanceAmount; // Update the global 'window.balance' variable
+    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3); // Update the displayed balance in the HTML element
+    // Save the updated balance to localStorage
+    localStorage.setItem("balance", balanceAmount.toFixed(3));
   }
 }
 //
@@ -184,8 +186,6 @@ function generateMines() {
       minesArray.push(randomTile);
     }
   }
-  console.log("Mines:");
-  console.log(minesArray);
 }
 
 //
@@ -261,7 +261,6 @@ tiles.forEach((tile) => {
 
     // Number of left tiles - 1
     numOfLeftTiles--;
-    console.log(numOfLeftTiles);
 
     if (numOfLeftTiles === 0) {
       if (minesArray.includes(tile)) {
@@ -405,8 +404,9 @@ function cashout() {
 
   // Add currentCashoutAmount to the balance
   let balanceAfterCashout = parseFloat(balanceAmount) + parseFloat(currentCashoutAmount);
-  balanceAmount = balanceAfterCashout;
+  window.balance = balanceAfterCashout; // Update the global 'window.balance' variable
   document.getElementById("balanceAmount").textContent = balanceAfterCashout.toFixed(3);
+  localStorage.setItem("balance", balanceAfterCashout.toFixed(3));
 }
 
 //

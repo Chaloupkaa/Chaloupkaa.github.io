@@ -152,12 +152,10 @@ function handleAutobetButton() {
   if (!autobetRunning) {
     autobetRunning = true;
     startAutobet();
-    console.log("Starting autobet");
   } else {
     autobetRunning = false;
     startAutobetButton.disabled = "true";
     stopAutobet();
-    console.log("Stopping autobet");
   }
 }
 
@@ -318,9 +316,7 @@ function enableAllControls() {
 function increaseOnWin() {
   if (resetOnWinButton.disabled === true && outcome === "Win" && increaseOnWinInput.value > 0) {
     increasePercentage = 1 + increaseOnWinInput.value / 100;
-    console.log(increasePercentage);
     let newBetAmount = (betAmount.value *= increasePercentage).toFixed(2);
-    console.log(newBetAmount);
     betAmount.value = newBetAmount;
   }
 }
@@ -331,9 +327,7 @@ function increaseOnWin() {
 function increaseOnLoss() {
   if (resetOnLossButton.disabled === true && outcome === "Loss" && increaseOnLossInput.value > 0) {
     increasePercentage = 1 + increaseOnLossInput.value / 100;
-    console.log(increasePercentage);
     let newBetAmount = (betAmount.value *= increasePercentage).toFixed(2);
-    console.log(newBetAmount);
     betAmount.value = newBetAmount;
   }
 }

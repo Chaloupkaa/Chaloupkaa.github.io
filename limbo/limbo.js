@@ -2,7 +2,7 @@
 // Betting
 //
 let betAmount = document.querySelector("#betAmount").value;
-let balanceAmount = 100.0;
+let balanceAmount = window.balance;
 let outcome;
 let betButton = document.getElementById("betButton");
 let amountHalfButton = document.getElementById("amountHalf");
@@ -100,7 +100,10 @@ function placeBet() {
   if (betAmount <= balanceAmount) {
     // Show current balance after betting
     balanceAmount -= betAmount;
-    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3);
+    window.balance = balanceAmount; // Update the global 'window.balance' variable
+    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3); // Update the displayed balance in the HTML element
+    // Save the updated balance to localStorage
+    localStorage.setItem("balance", balanceAmount.toFixed(3));
   }
 }
 
@@ -286,7 +289,6 @@ document.getElementById("betButton").addEventListener("click", async () => {
     multiplicationSignEl.style.color = "#d9d7e9";
 
     runStepsAnimation(initialStep, multiplier, totalSteps);
-    console.log(`Result: ${result}`);
     finalTargetMultiplier = result;
 
     editResultArray();
@@ -314,11 +316,13 @@ async function getPreviousGameHash(hashCode) {
 // If result was greater or same as target multiplier payout user his bet * user's targeted multiplier
 //
 function payout() {
-  console.log(betAmount + ", " + targetMultiplierInput.value);
   payoutAmount = document.querySelector("#betAmount").value * parseFloat(targetMultiplierInput.value);
   balanceAmount += payoutAmount;
+  window.balance = balanceAmount; // Update the global 'window.balance' variable
   setTimeout(() => {
-    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3);
+    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3); // Update the displayed balance in the HTML element
+    // Save the updated balance to localStorage
+    localStorage.setItem("balance", balanceAmount.toFixed(3));
   }, 1000);
 }
 

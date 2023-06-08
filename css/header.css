@@ -69,13 +69,12 @@ li {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 0.9375rem;
-  background-color: #323246;
-  border-radius: 0.3125rem;
+  background-color: #383158;
   cursor: pointer;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  line-height: 1rem;
   box-sizing: inherit;
+  margin-left: 0;
+  padding-left: 4px;
 }
 
 .currency-string {
@@ -87,22 +86,28 @@ li {
 }
 
 .balance-amount {
-  font-size: 15px;
   color: #fff;
-  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  user-select: none;
+  font-variant-numeric: tabular-nums;
 }
 
 .deposit {
-  color: #ffffff;
-  background: #00aaeb;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #232645;
+  background: #60af5a;
   text-transform: capitalize;
   font-weight: 500;
-  box-shadow: rgba(42, 197, 241, 0.2) 0px 0.625rem 1.875rem;
-  height: 2.5rem;
+  height: 36px;
+  padding: 6px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6.875rem;
+  width: 80px;
+  min-width: 32px;
   border-radius: 0.3125rem;
   transition: all 0.2s ease-in-out;
 }
@@ -111,34 +116,9 @@ li {
   filter: brightness(1.15);
 }
 
-.user-notifications {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  float: left;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  line-height: 2.5rem;
-  box-shadow: rgba(42, 197, 241, 0.2) 0px 10px 30px 0px;
-  background-color: #323246;
-  border-radius: 0.1875rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.user-notifications:hover {
-  filter: brightness(1.2);
-}
-
-.bell-icon {
-  font-size: 15px;
-  line-height: 2.5rem;
-}
 .account-info {
-  background-color: #323246;
+  background-color: #383158;
   color: #adb8cc;
-  max-width: 9.75rem;
   white-space: nowrap;
   padding: 0 1.25rem;
   width: 100%;
@@ -148,6 +128,17 @@ li {
   border-radius: 0.3125rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+.balance-deposit-wrapper {
+  margin: 0 auto;
+  background-color: #383158;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  border-radius: 6px;
+  justify-content: center;
+  height: 46px;
 }
 
 .account-info:hover {
@@ -225,4 +216,11 @@ li {
   display: none !important;
   font-size: 1.25rem;
   margin-left: 0.25rem;
+}
+
+.cash-balance-icon {
+  width: 18px;
+  height: 18px;
+  text-shadow: 0px 2px 0px, rgba(0, 0, 0, 0.15);
+  margin-right: 6px;
 }

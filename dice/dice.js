@@ -12,7 +12,7 @@ const diceLossSFX = new Audio("audio/dice-throw.mp3");
 
 //Betting
 let betAmount = document.querySelector("#betAmount");
-let balanceAmount = 100.0;
+let balanceAmount = window.balance;
 let outcome;
 let betButton = document.getElementById("betButton");
 let amountHalfButton = document.getElementById("amountHalf");
@@ -78,7 +78,7 @@ multiplierInput.addEventListener("input", () => {
       slider.value = 100 - winChanceValue;
       let overUnderValue = slider.value;
       overUnder.value = overUnderValue;
-      winChanceInput.value = (100 - slider.value).toFixed(2);
+      winChanceInput.value = (100 - slider.value).toFixed(3);
       profitOnWinCalculation();
       moveColorsOnInput();
     }
@@ -124,10 +124,10 @@ winChanceInput.addEventListener("input", () => {
       betButton.disabled = false;
       let winChanceValue = winChanceInput.value;
       let multiplierValue = 99 / winChanceValue;
-      multiplierInput.value = multiplierValue.toFixed(2);
+      multiplierInput.value = multiplierValue.toFixed(3);
       let overUnderValue = 100 - winChanceValue;
       slider.value = overUnderValue;
-      overUnder.value = overUnderValue.toFixed(2);
+      overUnder.value = overUnderValue.toFixed(3);
       profitOnWinCalculation();
       moveColorsOnInput();
     }
@@ -148,7 +148,7 @@ winChanceInput.addEventListener("input", () => {
       betButton.disabled = false;
       let winChanceValue = winChanceInput.value;
       let multiplierValue = 99 / winChanceValue;
-      multiplierInput.value = multiplierValue.toFixed(2);
+      multiplierInput.value = multiplierValue.toFixed(3);
       let overUnderValue = winChanceValue;
       slider.value = overUnderValue;
       overUnder.value = overUnderValue;
@@ -186,7 +186,7 @@ slider.oninput = function () {
 function winChance() {
   if (overUnderState.textContent === "Over") {
     let winChanceValue = 100 - slider.value;
-    winChanceInput.value = winChanceValue.toFixed(2);
+    winChanceInput.value = winChanceValue.toFixed(3);
     return winChanceValue;
   }
 
@@ -200,10 +200,10 @@ function winChance() {
 function multiplier(winChanceValue) {
   if (overUnderState.textContent === "Over") {
     let multiplierValue = 99 / winChanceValue;
-    multiplierInput.value = multiplierValue.toFixed(2);
+    multiplierInput.value = multiplierValue.toFixed(3);
   } else {
     let multiplierValue = 99 / winChanceValue;
-    multiplierInput.value = multiplierValue.toFixed(2);
+    multiplierInput.value = multiplierValue.toFixed(3);
   }
 }
 
@@ -233,7 +233,7 @@ function invertSlider() {
   let currentSliderValue = slider.value;
   let newSliderValue = 100 - currentSliderValue;
   slider.value = newSliderValue;
-  overUnder.value = newSliderValue.toFixed(2);
+  overUnder.value = newSliderValue.toFixed(3);
 
   //Edit background colors of slider
   if (overUnderState.textContent === "Under") {
@@ -282,8 +282,11 @@ function placeBet() {
   }
 
   if (betAmount <= balanceAmount) {
-    // Show current balance after betting
-    document.getElementById("balanceAmount").textContent = (balanceAmount - betAmount).toFixed(2);
+    balanceAmount -= betAmount;
+    window.balance = balanceAmount; // Update the global 'window.balance' variable
+    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3); // Update the displayed balance in the HTML element
+    // Save the updated balance to localStorage
+    localStorage.setItem("balance", balanceAmount.toFixed(3));
     checkWinOrLoss();
     clearTimeout(timer);
     displayResultPopup();
@@ -295,7 +298,15 @@ function placeBet() {
 }
 
 function autobet() {
-  document.getElementById("balanceAmount").textContent = (balanceAmount - betAmount).toFixed(2);
+  let updatedBalance = balanceAmount - betAmount;
+  window.balance = updatedBalance; // Update the global 'window.balance' variable
+  document.getElementById("balanceAmount").textContent = updatedBalance.toFixed(3); // Update the displayed balance in the HTML element
+
+  // Update the 'balanceAmount' variable
+  balanceAmount = updatedBalance;
+
+  // Save the updated balance to localStorage
+  localStorage.setItem("balance", balanceAmount.toFixed(3));
   checkWinOrLoss();
   displayResultPopup();
 }
@@ -327,7 +338,7 @@ function sliderStopUnder() {
 }
 
 function profitOnWinCalculation() {
-  let calcProfitOnWin = (betAmount.value * multiplierInput.value).toFixed(2);
+  let calcProfitOnWin = (betAmount.value * multiplierInput.value).toFixed(3);
   profitOnWin.value = calcProfitOnWin;
 }
 
@@ -351,7 +362,7 @@ function checkWinOrLoss() {
   currentProfitOnWin = profitOnWinElement.value - betAmount.value;
 
   let sliderValue = parseFloat(document.getElementById("slider").value);
-  let calcProfitOnWin = (betAmount.value * multiplierInput.value).toFixed(2);
+  let calcProfitOnWin = (betAmount.value * multiplierInput.value).toFixed(3);
 
   //Calculate random number
   let randomNumber = Math.random() * 99.98 + 0.01;
@@ -400,13 +411,14 @@ function checkWinOrLoss() {
   clearTimeout(timer);
 
   if (outcome === "Win") {
-    balanceAmount += currentProfitOnWin;
-    console.log(currentProfitOnWin);
+    balanceAmount += parseFloat(profitOnWin.value);
+    window.balance = balanceAmount; // Update the global 'window.balance' variable
+    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3); // Update the displayed balance in the HTML element**
+    // Save the updated balance to localStorage
+    localStorage.setItem("balance", balanceAmount.toFixed(3));
   }
-  if (outcome === "Loss") {
-    balanceAmount -= betAmount.value;
-  }
-  document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(2);
+
+  document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3);
 
   //Edit result array
   const resultsArray = document.getElementById("resultsArray");

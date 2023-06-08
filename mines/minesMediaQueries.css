@@ -2,12 +2,38 @@
   .mine {
     width: 100px;
     height: 100px;
+    background-size: cover;
   }
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 810px) {
+  .mine {
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-height: 820px) {
+  .mine {
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-height: 750px) {
   .mine {
     width: 80px;
     height: 80px;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-height: 684px) {
+  .mine {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
   }
 }
