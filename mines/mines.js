@@ -64,7 +64,7 @@ let remainingPlanets = 0;
 //
 // SFX
 //
-const asteroidHitSFX = new Audio("audio/AsteroidHit.aac");
+const asteroidHitSFX = new Audio("audio/asteroidHit.aac");
 const planetHitSFX = new Audio("audio/planetHit.aac");
 const cashoutSFX = new Audio("audio/cashoutSFX.aac");
 
