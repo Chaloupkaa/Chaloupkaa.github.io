@@ -15,6 +15,9 @@ function loadData() {
 
     document.getElementById("username").textContent = username;
     document.getElementById("balanceAmount").textContent = balance.toFixed(3); // Round to 2 decimal positions
+    if (window.location.pathname.includes("minigames.html")) {
+      document.getElementById("userUsername").textContent = username;
+    }
 
     // Store the balance in the global 'window' object
     window.balance = parseFloat(balance);
@@ -24,6 +27,9 @@ function loadData() {
 
     document.getElementById("username").textContent = username;
     document.getElementById("balanceAmount").textContent = parseFloat(balance).toFixed(3); // Round to 2 decimal positions
+    if (window.location.pathname.includes("minigames.html")) {
+      document.getElementById("userUsername").textContent = username;
+    }
 
     // Store the balance in the global 'window' object
     window.balance = parseFloat(balance);

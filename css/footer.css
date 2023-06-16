@@ -9,12 +9,14 @@ body > footer {
 body > footer > nav {
   color: rgba(255, 255, 255, 0.3);
   padding: 0;
-  margin: 0;
+  margin-left: 25vw;
+  margin-right: 25vw;
   overflow: hidden;
 }
 
 body > footer > nav > ul {
-  color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
   padding: 0;
   list-style-type: none;
   overflow: hidden;
@@ -35,7 +37,6 @@ body > footer > nav > ul > li {
   box-sizing: border-box;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.4);
-  width: 245px;
 }
 
 body > footer > nav > ul > li > p {
@@ -128,7 +129,6 @@ body > footer > nav > ul > li.license > a > img {
 }
 
 body > footer > div.icons {
-  margin: 0;
   overflow: hidden;
   background: #312d58;
   padding: 2rem 0;
@@ -140,6 +140,8 @@ body > footer > div.icons > div {
   position: relative;
   max-width: 1300px;
   margin: 0 auto;
+  margin-left: 25vw;
+  margin-right: 25vw;
   box-sizing: border-box;
   width: auto;
 }

@@ -10,22 +10,15 @@
 
 .betload-originals-text {
   font-size: 2rem;
-  margin-left: 15%;
-}
-
-.all-cards {
-  display: grid;
-  justify-content: center; /**/
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
+  margin-left: 25vw;
 }
 
 .game-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 145px;
+  width: 100%;
+  height: 300px;
   color: darkslategray;
   transition: all 0.2s ease-in-out;
   border-radius: 10px;
@@ -44,4 +37,78 @@
 
 .limbo-game {
   background-color: rgb(40, 87, 87);
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-vip-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 20px;
+  line-height: 1.5rem;
+  width: 20%;
+  cursor: default;
+}
+
+.whole-vip-progress-bar-wrapper {
+  margin-top: 1rem;
+}
+
+.vip-progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--primary-game-container-color);
+}
+
+.current-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background-color: var(--win-element-background);
+}
+
+.vip-levels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+
+.current-vip-level,
+.next-vip-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.current-vip-level-text,
+.next-vip-level-text {
+  margin-left: 0.5rem;
+  color: #b1bad3;
+}
+
+.bookmark-icon {
+  font-size: 1rem;
+}
+
+.current-icon {
+  color: #0000009a;
+}
+
+.next-icon {
+  color: #a19d94;
 }

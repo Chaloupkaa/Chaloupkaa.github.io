@@ -1,5 +1,5 @@
 @media (max-width: 970px) {
-  .auth-bar {
+  .auth-bar margin25 {
     margin-left: 5vw;
     margin-right: 5vw;
   }
@@ -20,26 +20,26 @@
     display: none;
   }
 
-  .auth-bar {
+  .auth-bar margin25 {
     justify-content: center;
   }
 }
 
 @media only screen and (max-width: 490px) {
-  body > header > div.auth-bar {
+  body > header > div.auth-bar margin25 {
     height: 100%;
     padding: 5px;
   }
 
-  body > header > div.auth-bar > div.right > div > ul > li.account-info > span {
+  body > header > div.auth-bar margin25 > div.right > div > ul > li.account-info > span {
     display: none;
   }
 
-  body > header > div.auth-bar > div.right > div > ul > li.account-info > img {
+  body > header > div.auth-bar margin25 > div.right > div > ul > li.account-info > img {
     margin: 0;
   }
 
-  body > header > div.auth-bar > div.right {
+  body > header > div.auth-bar margin25 > div.right {
     justify-content: space-evenly;
   }
 

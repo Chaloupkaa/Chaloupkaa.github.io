@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../img/logo/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../css/colors.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/header.css" />
@@ -22,6 +26,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
     <title>BETLOAD | Limbo</title>
   </head>
   <body>
@@ -29,16 +37,21 @@
       <div class="loader" id="loader"></div>
     </div>
     <header>
-      <div class="auth-bar">
+      <div class="auth-bar margin25">
         <div class="left">
-          <a href="../index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
+          <a href="../index.html" class="logo-link"
+            ><img src="../img/logo/logo-full.svg" class="logo"
+          /></a>
         </div>
         <div class="mid">
           <div>
             <ul>
               <div class="balance-deposit-wrapper">
                 <li class="balance default">
-                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
+                  <img
+                    src="../img/icons/cash-balance-icon.svg"
+                    class="cash-balance-icon"
+                  />
                   <span class="balance-amount">€</span>
                   <span class="balance-amount" id="balanceAmount"></span>
                 </li>
@@ -64,19 +77,55 @@
       <div class="nav-wrapper"></div>
     </header>
     <div class="all-content-on-site-wrapper">
+      <div class="welcome-vip-wrapper margin25">
+        <div class="welcome-message">
+          <p>Embrace the wins, <span id="userUsername"></span></p>
+        </div>
+        <div class="whole-vip-progress-bar-wrapper">
+          <div class="vip-progress-wrapper">
+            <p>Your VIP Progress</p>
+            <span id="vipProgressPercent">0.00%</span>
+          </div>
+          <div class="progress-bar" id="progressBar">
+            <div class="current-progress" id="currentProgress"></div>
+          </div>
+          <div class="vip-levels">
+            <div class="current-vip-level">
+              <i class="fa-regular fa-bookmark bookmark-icon current-icon"></i>
+              <span class="current-vip-level-text">None</span>
+            </div>
+            <div class="next-vip-level">
+              <i class="fa-regular fa-bookmark bookmark-icon next-icon"></i>
+              <span class="next-vip-level-text">Iron</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="betload-originals-wrapper">
         <span class="betload-originals-text">BETLOAD Originals</span>
       </div>
-      <div class="all-cards">
-        <div class="game-card dice-game" id="diceGame">
-          <a href="dice/dice.html">Dice</a>
-        </div>
-        <div class="game-card mines-game" id="minesGame">
-          <a href="mines/mines.html">Mines</a>
-        </div>
-        <div class="game-card limbo-game" id="minesGame">
-          <a href="limbo/limbo.html">Limbo</a>
-        </div>
+      <div class="minigame-slider-wrapper margin25">
+        <section class="splide" id="minigame-slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="game-card dice-game" id="diceGame">
+                  <a href="../dice/dice.html">Dice</a>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="game-card mines-game" id="minesGame">
+                  <a href="../mines/mines.html">Asteroids</a>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="game-card limbo-game" id="limboGame">
+                  <a href="../limbo/limbo.html">Limbo</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
     <footer>
@@ -116,19 +165,21 @@
                 <a href="#">Terms & Conditions</a>
               </li>
               <li>
-                <a href="/policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
+                <a href="../policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
               </li>
               <li>
-                <a href="/policies-info/refundPolicy.html">Refund Policy</a>
+                <a href="../policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="/policies-info/disputeResolution.html">Dispute Resolution</a>
+                <a href="../policies-info/disputeResolution.html"
+                  >Dispute Resolution</a
+                >
               </li>
               <li>
-                <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
+                <a href="../policies-info/fairnessrng.html">Fairness & RNG</a>
               </li>
               <li>
-                <a href="policies-info\selfExclusion.html">Self-Exclusion</a>
+                <a href="../policies-info\selfExclusion.html">Self-Exclusion</a>
               </li>
               <li>
                 <a href="#">Frequently Asked Questions (F.A.Q)</a>
@@ -156,8 +207,6 @@
               <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
               <a href="#"><img src="/img/payments/skrill.svg" /></a>
               <a href="#"><img src="/img/payments/btc.svg" /></a>
-              <a href="#"><img src="/img/payments/discover.svg" /></a>
-              <a href="#"><img src="/img/payments/payop.svg" /></a>
             </div>
             <div>
               <a href="#"><img src="/img/payments/diners-club.svg" /></a>
@@ -177,13 +226,16 @@
           </div>
           <span class="warning">
             <p>
-              Attention! It is gambling advertising. Gambling is not suitable for solving financial problems. Please read
+              Attention! It is gambling advertising. Gambling is not suitable
+              for solving financial problems. Please read
               <a href="#">Terms & Conditions</a> and play responsibly.
             </p>
           </span>
         </div>
       </div>
     </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+    <script src="splide.js"></script>
     <script src="../js/userInfo.js"></script>
     <script type="module" src="limbo.js"></script>
     <script src="../js/betSidebar.js"></script>

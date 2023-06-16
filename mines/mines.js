@@ -116,10 +116,12 @@ function placeBet() {
     document.getElementById("incorrectBet").style.display = "block";
     document.body.classList.add("popup-visible");
     // After user clicks the close button hide popup and enable user interaction again
-    document.getElementById("closeBtnBet").addEventListener("click", function () {
-      document.getElementById("incorrectBet").style.display = "none";
-      document.body.classList.remove("popup-visible");
-    });
+    document
+      .getElementById("closeBtnBet")
+      .addEventListener("click", function () {
+        document.getElementById("incorrectBet").style.display = "none";
+        document.body.classList.remove("popup-visible");
+      });
   }
 
   // Check if player has enough balance
@@ -131,10 +133,12 @@ function placeBet() {
     document.getElementById("balancePopup").style.display = "block";
     document.body.classList.add("popup-visible");
     // After user clicks the close button hide popup and enable user interaction again
-    document.getElementById("closeBtnBalance").addEventListener("click", function () {
-      document.getElementById("balancePopup").style.display = "none";
-      document.body.classList.remove("popup-visible");
-    });
+    document
+      .getElementById("closeBtnBalance")
+      .addEventListener("click", function () {
+        document.getElementById("balancePopup").style.display = "none";
+        document.body.classList.remove("popup-visible");
+      });
   }
 
   if (betAmount <= balanceAmount) {
@@ -154,9 +158,14 @@ function placeBet() {
     gameEnded = false;
     // Hide asteroids select input
     asteroidSelectWrapper.style.display = "none";
+    console.log(balanceAmount);
     balanceAmount -= betAmount;
+    console.log(balanceAmount);
     window.balance = balanceAmount; // Update the global 'window.balance' variable
-    document.getElementById("balanceAmount").textContent = balanceAmount.toFixed(3); // Update the displayed balance in the HTML element
+    console.log(window.balance);
+    document.getElementById("balanceAmount").textContent =
+      balanceAmount.toFixed(3); // Update the displayed balance in the HTML element
+
     // Save the updated balance to localStorage
     localStorage.setItem("balance", balanceAmount.toFixed(3));
   }
@@ -253,7 +262,8 @@ tiles.forEach((tile) => {
 
       // Edit number of remaining planets
       updateRemainingPlanetsNumber();
-      document.getElementById("betButton").innerText = "Cashout " + currentCashoutAmount;
+      document.getElementById("betButton").innerText =
+        "Cashout " + currentCashoutAmount;
     }
 
     // Listen for first clicked mine so cashout button can be enabled again
@@ -367,7 +377,9 @@ function nCr(n, r) {
 
 function calculateMultiplier() {
   const houseEdge = 0.01;
-  currentMultiplier = ((1 - houseEdge) * nCr(25, correctTiles)) / nCr(25 - numOfMines, correctTiles);
+  currentMultiplier =
+    ((1 - houseEdge) * nCr(25, correctTiles)) /
+    nCr(25 - numOfMines, correctTiles);
   currentCashoutAmount = (betAmount.value * currentMultiplier).toFixed(3);
 }
 
@@ -403,10 +415,11 @@ function cashout() {
   displayCashoutPopup();
 
   // Add currentCashoutAmount to the balance
-  let balanceAfterCashout = parseFloat(balanceAmount) + parseFloat(currentCashoutAmount);
-  window.balance = balanceAfterCashout; // Update the global 'window.balance' variable
-  document.getElementById("balanceAmount").textContent = balanceAfterCashout.toFixed(3);
-  localStorage.setItem("balance", balanceAfterCashout.toFixed(3));
+  balanceAmount = parseFloat(balanceAmount) + parseFloat(currentCashoutAmount);
+  window.balance = balanceAmount; // Update the global 'window.balance' variable
+  document.getElementById("balanceAmount").textContent =
+    balanceAmount.toFixed(3);
+  localStorage.setItem("balance", balanceAmount.toFixed(3));
 }
 
 //

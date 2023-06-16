@@ -1,5 +1,5 @@
 <header>
-      <div class="auth-bar">
+      <div class="auth-bar margin25">
         <div class="left">
           <a href="index.html" class="logo-link"><img src="img/logo/logo-full.svg" class="logo" /></a>
         </div>

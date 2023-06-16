@@ -75,9 +75,7 @@
               <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
               <a href="#"><img src="/img/payments/skrill.svg" /></a>
               <a href="#"><img src="/img/payments/btc.svg" /></a>
-              <a href="#"><img src="/img/payments/discover.svg" /></a>
-              <a href="#"><img src="/img/payments/payop.svg" /></a>
-            </div>
+             </div>
             <div>
               <a href="#"><img src="/img/payments/diners-club.svg" /></a>
               <a href="#"><img src="/img/payments/ecopayz.svg" /></a>

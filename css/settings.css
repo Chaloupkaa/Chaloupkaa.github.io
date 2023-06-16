@@ -122,3 +122,10 @@ body {
   background-color: var(--loss-element-background-darker);
   cursor: pointer;
 }
+
+/* Presets */
+
+.margin25 {
+  margin-left: 25vw;
+  margin-right: 25vw;
+}

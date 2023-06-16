@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../img/logo/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../css/colors.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/header.css" />
@@ -29,16 +33,21 @@
       <div class="loader" id="loader"></div>
     </div>
     <header>
-      <div class="auth-bar">
+      <div class="auth-bar margin25">
         <div class="left">
-          <a href="../index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
+          <a href="../index.html" class="logo-link"
+            ><img src="../img/logo/logo-full.svg" class="logo"
+          /></a>
         </div>
         <div class="mid">
           <div>
             <ul>
               <div class="balance-deposit-wrapper">
                 <li class="balance default">
-                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
+                  <img
+                    src="../img/icons/cash-balance-icon.svg"
+                    class="cash-balance-icon"
+                  />
                   <span class="balance-amount">€</span>
                   <span class="balance-amount" id="balanceAmount"></span>
                 </li>
@@ -81,19 +90,40 @@
       <div class="game-container">
         <div class="sidebar">
           <div class="manual-auto">
-            <button id="manual" class="manual-auto-btn buttonActive">Manual</button>
-            <button id="auto" disabled="true" class="manual-auto-btn">Auto</button>
+            <button id="manual" class="manual-auto-btn buttonActive">
+              Manual
+            </button>
+            <button id="auto" disabled="true" class="manual-auto-btn">
+              Auto
+            </button>
           </div>
           <!--Manual betting settings-->
           <div id="bettingSettingsManual" class="betting-Settings-Wrapper">
             <div class="bet-amount-wrapper">
               <p class="game-text">Bet Amount</p>
               <div class="bet-amount-input-wrapper">
-                <input type="number" id="betAmount" class="currency-input-string" value="10.00" />
+                <input
+                  type="number"
+                  id="betAmount"
+                  class="currency-input-string"
+                  value="10.00"
+                />
 
-                <button id="amountHalf" class="amount-editor-button" onclick="amountHalf()">½</button>
+                <button
+                  id="amountHalf"
+                  class="amount-editor-button"
+                  onclick="amountHalf()"
+                >
+                  ½
+                </button>
 
-                <button id="amountDouble" class="amount-editor-button" onclick="amountDouble()">2×</button>
+                <button
+                  id="amountDouble"
+                  class="amount-editor-button"
+                  onclick="amountDouble()"
+                >
+                  2×
+                </button>
               </div>
             </div>
             <div class="manual-profit-on-win" id="manualBet">
@@ -106,7 +136,10 @@
                 <p class="game-text">Number of Bets</p>
                 <div class="input-icon-wrapper">
                   <input type="number" id="numberOfBets" value="0" min="0" />
-                  <i id="infinityIcon" class="fa-solid fa-infinity after-icons infinity-transition"></i>
+                  <i
+                    id="infinityIcon"
+                    class="fa-solid fa-infinity after-icons infinity-transition"
+                  ></i>
                 </div>
               </div>
               <div class="on-win">
@@ -114,10 +147,17 @@
                 <div class="on-win-loss-wrapper">
                   <div class="reset-increase-wrapper">
                     <button id="resetOnWin" class="reset-on">Reset</button>
-                    <button id="increaseOnWinButton" class="increase-by">Increase by:</button>
+                    <button id="increaseOnWinButton" class="increase-by">
+                      Increase by:
+                    </button>
                   </div>
 
-                  <input type="number" id="increaseOnWinInput" class="on-win-loss-input" value="0" />
+                  <input
+                    type="number"
+                    id="increaseOnWinInput"
+                    class="on-win-loss-input"
+                    value="0"
+                  />
                   <i class="fa-solid fa-percent after-icons"></i>
                 </div>
               </div>
@@ -126,9 +166,16 @@
                 <div class="on-win-loss-wrapper">
                   <div class="reset-increase-wrapper">
                     <button id="resetOnLoss" class="reset-on">Reset</button>
-                    <button id="increaseOnLossButton" class="increase-by">Increase by:</button>
+                    <button id="increaseOnLossButton" class="increase-by">
+                      Increase by:
+                    </button>
                   </div>
-                  <input type="number" id="increaseOnLossInput" class="on-win-loss-input" value="0" />
+                  <input
+                    type="number"
+                    id="increaseOnLossInput"
+                    class="on-win-loss-input"
+                    value="0"
+                  />
                   <i class="fa-solid fa-percent after-icons"></i>
                 </div>
               </div>
@@ -147,8 +194,16 @@
                 </div>
               </div>
               <div class="start-autobet">
-                <button class="bet-button" id="startAutobet" onclick=" handleAutobetButton()">
-                  Start Autobet<i id="littleDice" class="fa-solid fa-dice fa-bounce" style="color: #071d2a"></i>
+                <button
+                  class="bet-button"
+                  id="startAutobet"
+                  onclick=" handleAutobetButton()"
+                >
+                  Start Autobet<i
+                    id="littleDice"
+                    class="fa-solid fa-dice fa-bounce"
+                    style="color: #071d2a"
+                  ></i>
                 </button>
               </div>
             </div>
@@ -222,7 +277,9 @@
                 <a href="/policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="/policies-info/disputeResolution.html">Dispute Resolution</a>
+                <a href="/policies-info/disputeResolution.html"
+                  >Dispute Resolution</a
+                >
               </li>
               <li>
                 <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
@@ -256,8 +313,6 @@
               <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
               <a href="#"><img src="/img/payments/skrill.svg" /></a>
               <a href="#"><img src="/img/payments/btc.svg" /></a>
-              <a href="#"><img src="/img/payments/discover.svg" /></a>
-              <a href="#"><img src="/img/payments/payop.svg" /></a>
             </div>
             <div>
               <a href="#"><img src="/img/payments/diners-club.svg" /></a>
@@ -277,7 +332,8 @@
           </div>
           <span class="warning">
             <p>
-              Attention! It is gambling advertising. Gambling is not suitable for solving financial problems. Please read
+              Attention! It is gambling advertising. Gambling is not suitable
+              for solving financial problems. Please read
               <a href="#">Terms & Conditions</a> and play responsibly.
             </p>
           </span>
