@@ -183,7 +183,7 @@ select:disabled {
 }
 
 .auto-bet-button-active {
-  background-color: #008a01;
+  background-color: var(--bet-button-disabled-color);
   cursor: pointer;
 }
 

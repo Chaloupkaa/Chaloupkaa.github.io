@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 59.41 59.41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        mix-blend-mode: screen;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient-11);
+      }
+
+      .cls-2, .cls-6, .cls-8 {
+        opacity: .45;
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient-8);
+        opacity: .34;
+      }
+
+      .cls-10 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient-5);
+      }
+
+      .cls-11 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient-10);
+      }
+
+      .cls-6 {
+        fill: url(#radial-gradient-9);
+      }
+
+      .cls-12 {
+        fill: url(#radial-gradient-7);
+        mix-blend-mode: multiply;
+        opacity: .25;
+      }
+
+      .cls-13 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-7 {
+        fill: url(#radial-gradient-4);
+      }
+
+      .cls-8 {
+        fill: url(#radial-gradient-12);
+      }
+
+      .cls-9 {
+        fill: url(#radial-gradient-6);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="8.81" cy="587.63" fx="8.81" fy="587.63" r="29.48" gradientTransform="translate(595.75 -129.31) rotate(75.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#461980"/>
+      <stop offset=".43" stop-color="#451b81" stop-opacity=".99"/>
+      <stop offset=".58" stop-color="#432386" stop-opacity=".93"/>
+      <stop offset=".69" stop-color="#3e318e" stop-opacity=".84"/>
+      <stop offset=".78" stop-color="#39459a" stop-opacity=".71"/>
+      <stop offset=".86" stop-color="#315fa9" stop-opacity=".54"/>
+      <stop offset=".92" stop-color="#287fbc" stop-opacity=".32"/>
+      <stop offset=".98" stop-color="#1da4d2" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#1ab0da" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="-593.57" cy="-350" fx="-593.57" fy="-350" r="67.63" gradientTransform="translate(460.34 549.4) rotate(21.3)" gradientUnits="userSpaceOnUse">
+      <stop offset=".06" stop-color="#1ab0da"/>
+      <stop offset="1" stop-color="#461980"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="1.74" cy="564.97" fx="1.74" fy="564.97" r="155.02" gradientTransform="translate(595.75 -129.31) rotate(75.17)" gradientUnits="userSpaceOnUse">
+      <stop offset=".05" stop-color="#f3a400"/>
+      <stop offset="1" stop-color="#ec29b8"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-4" cx="1.74" cy="564.97" fx="1.74" fy="564.97" r="155.02" xlink:href="#radial-gradient-3"/>
+    <radialGradient id="radial-gradient-5" cx="1.74" cy="564.96" fx="1.74" fy="564.96" r="155.02" xlink:href="#radial-gradient-3"/>
+    <radialGradient id="radial-gradient-6" cx="1.74" cy="564.97" fx="1.74" fy="564.97" r="155.02" xlink:href="#radial-gradient-3"/>
+    <radialGradient id="radial-gradient-7" cx="-593" cy="-344.4" fx="-593" fy="-344.4" r="61.34" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-8" cx="-591.6" cy="-336.84" fx="-591.6" fy="-336.84" r="50.28" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-9" cx="1041.27" cy="-599.43" fx="1041.27" fy="-599.43" r="20.03" gradientTransform="translate(206.42 1213.36) rotate(-68.53)" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-10" cx="-594.9" cy="-347.2" fx="-594.9" fy="-347.2" r="43.29" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-11" cx="1045.85" cy="-610.66" fx="1045.85" fy="-610.66" r="4.34" gradientTransform="translate(206.42 1213.36) rotate(-68.53)" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-12" cx="1052.7" cy="-603.28" fx="1052.7" fy="-603.28" r="2.55" gradientTransform="translate(206.42 1213.36) rotate(-68.53)" xlink:href="#radial-gradient-2"/>
+  </defs>
+  <g class="cls-10">
+    <g id="Vrstva_1" data-name="Vrstva 1">
+      <g>
+        <g>
+          <path class="cls-11" d="m57.37,40.49c-5.96,15.28-23.17,22.84-38.45,16.88S-3.92,34.2,2.04,18.92C7.99,3.64,25.21-3.92,40.49,2.04c15.28,5.96,22.84,23.17,16.88,38.45Z"/>
+          <path class="cls-13" d="m51.19,38.08c-4.63,11.87-17.99,17.74-29.86,13.11-11.87-4.63-17.74-17.99-13.11-29.86S26.21,3.59,38.08,8.22c11.87,4.63,17.74,17.99,13.11,29.86Z"/>
+          <g>
+            <path class="cls-1" d="m35.58,41.5c.29-.22.58-.49.67-.85.17-.7-.5-1.31-1.17-1.58-1.58-.64-3.37-.34-5.01.12-1.64.46-3.28,1.07-4.98,1.03-1.7-.04-3.53-.95-4.01-2.58-.51-1.71.59-3.5.48-5.28-.01-.24-.06-.49-.2-.68-.35-.47-1.06-.37-1.63-.24-3.23.75-6.64,1.09-9.84.24-1.14-.3-2.25-.78-3.26-1.41.11,4.69,1.67,9.21,4.38,12.97.15-.22.32-.43.52-.62,2.09-1.99,5.47-1.14,8.23-.29,2.63.8,5.32,1.49,8.07,1.52,2.75.03,5.57-.64,7.74-2.33Z"/>
+            <path class="cls-7" d="m50.02,40.6c-1.46-.53-2.93-.98-4.42-.67-2.48.51-4.1,3-4.7,5.46-.16.64-.29,1.34-.77,1.81-.29.28-.68.44-1.07.58-3.63,1.28-7.59,1.15-11.39,1.73-1.66.26-3.56.88-4.17,2.41,10.39,2.91,21.44-1.83,26.51-11.32Z"/>
+            <path class="cls-4" d="m8.22,21.33c-.05.12-.09.25-.14.38.25.4.55.76.91,1.07.82.69,1.9,1.14,2.42,2.08.28.51.36,1.12.64,1.63.69,1.28,2.46,1.64,3.85,1.2,1.39-.44,2.49-1.48,3.56-2.47,1.07-.99,2.22-1.99,3.64-2.34,1.17-.29,2.46-.07,3.47.58.9.58,1.62,1.49,2.66,1.75,1.35.33,2.76-.65,3.31-1.93.55-1.28.41-2.75.08-4.1-.16-.67-.37-1.34-.35-2.02.06-1.85,1.72-3.25,3.4-4.03,1.68-.78,3.56-1.22,4.97-2.43.29-.25.56-.55.74-.88-1.04-.61-2.15-1.15-3.31-1.61-11.87-4.63-25.24,1.24-29.86,13.11Z"/>
+            <path class="cls-9" d="m44.85,17.03c-.12,1.44.25,2.87.36,4.32.1,1.44-.12,3.03-1.17,4.03-1.28,1.22-3.27,1.12-5.04,1.23-1.59.09-3.16.41-4.66.94-1.66.58-3.4,1.65-3.75,3.37-.37,1.81.96,3.53,2.45,4.62.94.68,2.05,1.25,3.2,1.16,2.19-.17,3.72-2.57,5.91-2.74,1.76-.14,3.25,1.19,4.83,1.96,1.46.71,3.09.93,4.69.76,2.64-8.3.32-17.11-5.46-23.05-.77.98-1.27,2.17-1.37,3.41Z"/>
+          </g>
+          <path class="cls-12" d="m50.21,19.07c-.23,1.83-.69,3.66-1.39,5.45-4.63,11.87-17.99,17.74-29.86,13.11-5.37-2.09-9.5-5.98-12-10.7-1.32,10.26,4.43,20.48,14.5,24.41,11.87,4.63,25.24-1.24,29.86-13.11,2.53-6.5,1.91-13.44-1.11-19.16Z"/>
+          <path class="cls-3" d="m51.91,28.03c-.08,2.34-.55,4.71-1.45,7.02-4.3,11.04-16.74,16.5-27.79,12.2-7.73-3.01-12.71-10.01-13.54-17.72-.31,8.86,4.92,17.34,13.65,20.74,11.04,4.3,23.48-1.16,27.79-12.2,1.29-3.31,1.7-6.74,1.34-10.05Z"/>
+          <path class="cls-6" d="m8.81,23.75c4.63-11.87,17.99-17.74,29.86-13.11,6.88,2.68,11.73,8.3,13.71,14.86-1.41-7.58-6.59-14.28-14.3-17.29-11.87-4.63-25.24,1.24-29.86,13.11-1.94,4.99-2.03,10.24-.6,15-.76-4.08-.43-8.42,1.19-12.57Z"/>
+        </g>
+        <path class="cls-5" d="m9.71,26.89c.35-2.8,2.86-6.27,4.1-7.93,2.91-3.9,6.95-6.85,11.67-8.15,12.34-3.4,21.32,6.09,23,10.41s-3.1,6.42-8.35,4.28c-5.25-2.14-10.42-4.25-14.48-2.75-4.06,1.51-6.46,8.4-11.04,8.25-1.52-.05-3.62-.34-4.5-1.78-.41-.67-.51-1.47-.4-2.34Z"/>
+        <g>
+          <path class="cls-2" d="m25.67,14.14c.76,1.48-.74,3.78-3.37,5.13-2.62,1.36-5.37,1.26-6.13-.22-.76-1.48.74-3.78,3.37-5.13,2.62-1.36,5.37-1.26,6.13.22Z"/>
+          <path class="cls-8" d="m33.42,12.56c.11.97-1.2,1.92-2.92,2.12-1.73.2-3.22-.43-3.33-1.4s1.2-1.92,2.92-2.12,3.22.43,3.33,1.4Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

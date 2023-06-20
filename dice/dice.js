@@ -406,7 +406,7 @@ function checkWinOrLoss() {
     popup.classList.add("result-popup-loss");
   }
 
-  popup.style.left = `${percentage * 97.5}%`;
+  popup.style.left = `${percentage * 92}%`;
 
   clearTimeout(timer);
 

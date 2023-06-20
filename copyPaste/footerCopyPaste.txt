@@ -1,66 +1,49 @@
 <footer>
       <nav>
-        <ul class="middle">
+        <ul class="middle repair">
           <li>
-            <p>Our Products</p>
-            <ul class="inner-list">
-              <li><a href="#">Minigames</a></li>
-              <li><a href="#">VIP Club</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>Information</p>
+            <p>Start Again</p>
             <ul class="inner-list">
               <li>
-                <a href="#">Company Details</a>
-              </li>
-              <li>
-                <a href="#">Responsible Gaming</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Affiliate</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
+                <button class="wipe-data-button" onclick="resetData()">Wipe data</button>
               </li>
             </ul>
           </li>
           <li>
-            <p>Help</p>
+            <p>Need a break?</p>
             <ul class="inner-list">
               <li>
-                <a href="#">Terms & Conditions</a>
-              </li>
-              <li>
-                <a href="/policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
-              </li>
-              <li>
-                <a href="/policies-info/refundPolicy.html">Refund Policy</a>
-              </li>
-              <li>
-                <a href="/policies-info/disputeResolution.html">Dispute Resolution</a>
-              </li>
-              <li>
-                <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
-              </li>
-              <li>
-                <a href="policies-info\selfExclusion.html">Self-Exclusion</a>
-              </li>
-              <li>
-                <a href="#">Frequently Asked Questions (F.A.Q)</a>
+                <a href="../policies-info/responsibleGaming.html">Responsible Gaming</a>
               </li>
             </ul>
           </li>
-          
+          <li>
+            <p>Policies</p>
+            <ul class="inner-list">
+              <li>
+                <a href="../policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
+              </li>
+              <li>
+                <a href="../policies-info/refundPolicy.html">Refund Policy</a>
+              </li>
+              <li>
+                <a href="../policies-info/disputeResolution.html">Dispute Resolution</a>
+              </li>
+              <li>
+                <a href="../policies-info/fairnessrng.html">Fairness & RNG</a>
+              </li>
+              <li>
+                <a href="../policies-info\selfExclusion.html">Self-Exclusion</a>
+              </li>
+            </ul>
+          </li>
+
           <li>
             <p>Contact Us</p>
             <ul class="inner-list">
-              <li><a href="#">Live Support</a></li>
-              <li><a href="#">Support email</a></li>
-              <li><a href="#">Affiliate email</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Live Support</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Support email</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Affiliate email</a></li>
             </ul>
           </li>
         </ul>
@@ -74,12 +57,10 @@
               <a href="#"><img src="/img/payments/netteler.svg" /></a>
               <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
               <a href="#"><img src="/img/payments/skrill.svg" /></a>
-              <a href="#"><img src="/img/payments/btc.svg" /></a>
-             </div>
+            </div>
             <div>
-              <a href="#"><img src="/img/payments/diners-club.svg" /></a>
+              <a href="#"><img src="/img/payments/btc.svg" /></a>
               <a href="#"><img src="/img/payments/ecopayz.svg" /></a>
-              <a href="#"><img src="/img/payments/jcb.svg" /></a>
               <a href="#"><img src="/img/payments/astropay.svg" /></a>
               <a href="#"><img src="/img/payments/web-money.svg" /></a>
             </div>
@@ -89,14 +70,11 @@
       <div class="middle">
         <div class="warning-text">
           <div class="imgs">
-            <img src="/img/warning-text/18plus.png" />
-            <img src="/img/warning-text/ssl.png" />
+            <img src="../img/warning-text/18plus.png" />
+            <img src="../img/warning-text/ssl.png" />
           </div>
           <span class="warning">
-            <p>
-              Attention! It is gambling advertising. Gambling is not suitable for solving financial problems. Please read
-              <a href="#">Terms & Conditions</a> and play responsibly.
-            </p>
+            <p>Attention! Gambling can be addictive. Please play responsibly. Gambling is not suitable for solving financial problems.</p>
           </span>
         </div>
       </div>

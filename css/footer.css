@@ -256,3 +256,9 @@ body > footer > div.middle > div > span > p {
   padding: 0;
   margin: 0;
 }
+
+.repair {
+  width: 100%;
+  margin: 0;
+  justify-content: space-around;
+}

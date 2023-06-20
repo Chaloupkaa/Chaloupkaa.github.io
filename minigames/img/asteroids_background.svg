@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Vrstva_1" data-name="Vrstva 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1620 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="1033.27" cy="540" fx="1033.27" fy="540" r="670.24" gradientTransform="translate(-739.9) scale(1.5 1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#52239f"/>
+      <stop offset=".96" stop-color="#000228"/>
+    </radialGradient>
+  </defs>
+  <rect class="cls-1" width="1620" height="1080"/>
+</svg>

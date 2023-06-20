@@ -4,19 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/img/logo/favicon.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="/css/colors.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/mediaQueries.css" />
-    <link rel="stylesheet" href="/css/popups.css" />
-    <link rel="stylesheet" href="/css/settings.css" />
+    <link rel="shortcut icon" href="/img/logo/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/mediaQueries.css" />
+    <link rel="stylesheet" href="../css/popups.css" />
+    <link rel="stylesheet" href="../css/settings.css" />
     <link rel="stylesheet" href="policies.css" />
     <link rel="stylesheet" href="policiesMediaQueries.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
 
     <title>BETLOAD | Dispute Resolution</title>
   </head>
@@ -27,19 +23,14 @@
     <header>
       <div class="auth-bar margin25">
         <div class="left">
-          <a href="../index.html" class="logo-link"
-            ><img src="../img/logo/logo-full.svg" class="logo"
-          /></a>
+          <a href="../minigames/index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
         </div>
         <div class="mid">
           <div>
             <ul>
               <div class="balance-deposit-wrapper">
                 <li class="balance default">
-                  <img
-                    src="../img/icons/cash-balance-icon.svg"
-                    class="cash-balance-icon"
-                  />
+                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
                   <span class="balance-amount">€</span>
                   <span class="balance-amount" id="balanceAmount"></span>
                 </li>
@@ -64,18 +55,16 @@
       </div>
       <div class="nav-wrapper"></div>
     </header>
-    <main class="middle">
+    <main class="middle margin25">
       <div class="content">
         <section class="terms">
           <div class="nbsp">&nbsp;</div>
           <h1>Dispute Resolution</h1>
           <div class="nbsp">&nbsp;</div>
           <div class="terms-text">
-            You are able to temporarily self-exclude from betload.gg. You won't
-            be able to play, deposit, withdraw, get rain checks or free cases,
-            or watch other players play. You acknowledge that it is not
-            reversible by self-excluding. For a permanent ban, please get in
-            touch with our support.
+            You are able to temporarily self-exclude from betload.gg. You won't be able to play, deposit, withdraw, get rain checks or free cases, or
+            watch other players play. You acknowledge that it is not reversible by self-excluding. For a permanent ban, please get in touch with our
+            support.
           </div>
           <div class="options">
             <div class="option" id="1">1 DAY</div>
@@ -96,57 +85,40 @@
     </main>
     <footer>
       <nav>
-        <ul class="middle">
+        <ul class="middle repair">
           <li>
-            <p>Our Products</p>
-            <ul class="inner-list">
-              <li><a href="#">Minigames</a></li>
-              <li><a href="#">VIP Club</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>Information</p>
+            <p>Start Again</p>
             <ul class="inner-list">
               <li>
-                <a href="#">Company Details</a>
-              </li>
-              <li>
-                <a href="#">Responsible Gaming</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Affiliate</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
+                <button class="wipe-data-button" onclick="resetData()">Wipe data</button>
               </li>
             </ul>
           </li>
           <li>
-            <p>Help</p>
+            <p>Need a break?</p>
             <ul class="inner-list">
               <li>
-                <a href="#">Terms & Conditions</a>
+                <a href="../policies-info/responsibleGaming.html">Responsible Gaming</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Policies</p>
+            <ul class="inner-list">
+              <li>
+                <a href="../policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
               </li>
               <li>
-                <a href="/policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
+                <a href="../policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="#">Refund Policy</a>
+                <a href="../policies-info/disputeResolution.html">Dispute Resolution</a>
               </li>
               <li>
-                <a href="#">Dispute Resolution</a>
+                <a href="../policies-info/fairnessrng.html">Fairness & RNG</a>
               </li>
               <li>
-                <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
-              </li>
-              <li>
-                <a href="/policies-info/selfExclusion.html">Self-Exclusion</a>
-              </li>
-              <li>
-                <a href="#">Frequently Asked Questions (F.A.Q)</a>
+                <a href="../policies-info\selfExclusion.html">Self-Exclusion</a>
               </li>
             </ul>
           </li>
@@ -154,9 +126,9 @@
           <li>
             <p>Contact Us</p>
             <ul class="inner-list">
-              <li><a href="#">Live Support</a></li>
-              <li><a href="#">Support email</a></li>
-              <li><a href="#">Affiliate email</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Live Support</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Support email</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Affiliate email</a></li>
             </ul>
           </li>
         </ul>
@@ -170,12 +142,10 @@
               <a href="#"><img src="/img/payments/netteler.svg" /></a>
               <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
               <a href="#"><img src="/img/payments/skrill.svg" /></a>
-              <a href="#"><img src="/img/payments/btc.svg" /></a>
             </div>
             <div>
-              <a href="#"><img src="/img/payments/diners-club.svg" /></a>
+              <a href="#"><img src="/img/payments/btc.svg" /></a>
               <a href="#"><img src="/img/payments/ecopayz.svg" /></a>
-              <a href="#"><img src="/img/payments/jcb.svg" /></a>
               <a href="#"><img src="/img/payments/astropay.svg" /></a>
               <a href="#"><img src="/img/payments/web-money.svg" /></a>
             </div>
@@ -185,15 +155,11 @@
       <div class="middle">
         <div class="warning-text">
           <div class="imgs">
-            <img src="/img/warning-text/18plus.png" />
-            <img src="/img/warning-text/ssl.png" />
+            <img src="../img/warning-text/18plus.png" />
+            <img src="../img/warning-text/ssl.png" />
           </div>
           <span class="warning">
-            <p>
-              Attention! It is gambling advertising. Gambling is not suitable
-              for solving financial problems. Please read
-              <a href="#">Terms & Conditions</a> and play responsibly.
-            </p>
+            <p>Attention! Gambling can be addictive. Please play responsibly. Gambling is not suitable for solving financial problems.</p>
           </span>
         </div>
       </div>

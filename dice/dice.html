@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../img/logo/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/colors.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/header.css" />
@@ -35,19 +31,14 @@
     <header>
       <div class="auth-bar margin25">
         <div class="left">
-          <a href="../index.html" class="logo-link"
-            ><img src="../img/logo/logo-full.svg" class="logo"
-          /></a>
+          <a href="../minigames/index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
         </div>
         <div class="mid">
           <div>
             <ul>
               <div class="balance-deposit-wrapper">
                 <li class="balance default">
-                  <img
-                    src="../img/icons/cash-balance-icon.svg"
-                    class="cash-balance-icon"
-                  />
+                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
                   <span class="balance-amount">€</span>
                   <span class="balance-amount" id="balanceAmount"></span>
                 </li>
@@ -86,12 +77,10 @@
       <p class="insufficient-balance-p">Insufficient balance!</p>
     </div>
     <div class="main" id="main">
-      <div class="game-container">
+      <div class="game-container margin25">
         <div class="sidebar">
           <div class="manual-auto">
-            <button id="manual" class="manual-auto-btn buttonActive">
-              Manual
-            </button>
+            <button id="manual" class="manual-auto-btn buttonActive">Manual</button>
             <button id="auto" class="manual-auto-btn">Auto</button>
           </div>
           <!--Manual betting settings-->
@@ -99,28 +88,11 @@
             <div class="bet-amount-wrapper">
               <p class="game-text">Bet Amount</p>
               <div class="bet-amount-input-wrapper">
-                <input
-                  type="number"
-                  id="betAmount"
-                  class="currency-input-string"
-                  value="10.00"
-                />
+                <input type="number" id="betAmount" class="currency-input-string" value="10.00" />
 
-                <button
-                  id="amountHalf"
-                  class="amount-editor-button"
-                  onclick="amountHalf()"
-                >
-                  ½
-                </button>
+                <button id="amountHalf" class="amount-editor-button" onclick="amountHalf()">½</button>
 
-                <button
-                  id="amountDouble"
-                  class="amount-editor-button"
-                  onclick="amountDouble()"
-                >
-                  2×
-                </button>
+                <button id="amountDouble" class="amount-editor-button" onclick="amountDouble()">2×</button>
               </div>
             </div>
             <div class="manual-profit-on-win" id="manualBet">
@@ -129,9 +101,7 @@
                 <input type="number" id="profitOnWin" />
                 <i class="fas fa-euro after-icons"></i>
               </div>
-              <button class="bet-button" id="betButton" onclick="placeBet()">
-                Bet
-              </button>
+              <button class="bet-button" id="betButton" onclick="placeBet()">Bet</button>
             </div>
             <!--Autobet settings-->
             <div id="autoBet">
@@ -139,10 +109,7 @@
                 <p class="game-text">Number of Bets</p>
                 <div class="input-icon-wrapper">
                   <input type="number" id="numberOfBets" value="0" min="0" />
-                  <i
-                    id="infinityIcon"
-                    class="fa-solid fa-infinity after-icons infinity-transition"
-                  ></i>
+                  <i id="infinityIcon" class="fa-solid fa-infinity after-icons infinity-transition"></i>
                 </div>
               </div>
               <div class="on-win">
@@ -150,17 +117,10 @@
                 <div class="on-win-loss-wrapper">
                   <div class="reset-increase-wrapper">
                     <button id="resetOnWin" class="reset-on">Reset</button>
-                    <button id="increaseOnWinButton" class="increase-by">
-                      Increase by:
-                    </button>
+                    <button id="increaseOnWinButton" class="increase-by">Increase by:</button>
                   </div>
 
-                  <input
-                    type="number"
-                    id="increaseOnWinInput"
-                    class="on-win-loss-input"
-                    value="0"
-                  />
+                  <input type="number" id="increaseOnWinInput" class="on-win-loss-input" value="0" />
                   <i class="fa-solid fa-percent after-icons"></i>
                 </div>
               </div>
@@ -169,16 +129,9 @@
                 <div class="on-win-loss-wrapper">
                   <div class="reset-increase-wrapper">
                     <button id="resetOnLoss" class="reset-on">Reset</button>
-                    <button id="increaseOnLossButton" class="increase-by">
-                      Increase by:
-                    </button>
+                    <button id="increaseOnLossButton" class="increase-by">Increase by:</button>
                   </div>
-                  <input
-                    type="number"
-                    id="increaseOnLossInput"
-                    class="on-win-loss-input"
-                    value="0"
-                  />
+                  <input type="number" id="increaseOnLossInput" class="on-win-loss-input" value="0" />
                   <i class="fa-solid fa-percent after-icons"></i>
                 </div>
               </div>
@@ -197,16 +150,8 @@
                 </div>
               </div>
               <div class="start-autobet">
-                <button
-                  class="bet-button"
-                  id="startAutobet"
-                  onclick=" handleAutobetButton()"
-                >
-                  Start Autobet<i
-                    id="littleDice"
-                    class="fa-solid fa-dice fa-bounce"
-                    style="color: #071d2a"
-                  ></i>
+                <button class="bet-button" id="startAutobet" onclick=" handleAutobetButton()">
+                  Start Autobet<i id="littleDice" class="fa-solid fa-dice fa-bounce" style="color: #071d2a"></i>
                 </button>
               </div>
             </div>
@@ -217,17 +162,8 @@
           <div class="slider-wrapper">
             <div class="zones-wrapper">
               <div class="slider-padding">
-                <div
-                  class="result-popup result-popup-win"
-                  id="resultPopup"
-                ></div>
-                <input
-                  type="range"
-                  id="slider"
-                  class="slider"
-                  value="50"
-                  step="0.01"
-                />
+                <div class="result-popup result-popup-win" id="resultPopup"></div>
+                <input type="range" id="slider" class="slider" value="50" step="0.01" />
               </div>
             </div>
           </div>
@@ -242,13 +178,7 @@
             <div class="over-under">
               <p class="game-text">Roll <span id="overUnderSpan">Over</span></p>
               <div id="overUnderChange" class="input-icon-wrapper">
-                <input
-                  type="number"
-                  min="0.01"
-                  max="99.99"
-                  id="overUnder"
-                  disabled
-                />
+                <input type="number" min="0.01" max="99.99" id="overUnder" disabled />
                 <i class="fa-solid fa-rotate after-icons"></i>
               </div>
             </div>
@@ -265,40 +195,26 @@
     </div>
     <footer>
       <nav>
-        <ul class="middle">
+        <ul class="middle repair">
           <li>
-            <p>Our Products</p>
-            <ul class="inner-list">
-              <li><a href="#">Minigames</a></li>
-              <li><a href="#">VIP Club</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>Information</p>
+            <p>Start Again</p>
             <ul class="inner-list">
               <li>
-                <a href="#">Company Details</a>
-              </li>
-              <li>
-                <a href="#">Responsible Gaming</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Affiliate</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
+                <button class="wipe-data-button" onclick="resetData()">Wipe data</button>
               </li>
             </ul>
           </li>
           <li>
-            <p>Help</p>
+            <p>Need a break?</p>
             <ul class="inner-list">
               <li>
-                <a href="#">Terms & Conditions</a>
+                <a href="../policies-info/responsibleGaming.html">Responsible Gaming</a>
               </li>
+            </ul>
+          </li>
+          <li>
+            <p>Policies</p>
+            <ul class="inner-list">
               <li>
                 <a href="../policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
               </li>
@@ -306,18 +222,13 @@
                 <a href="../policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="../policies-info/disputeResolution.html"
-                  >Dispute Resolution</a
-                >
+                <a href="../policies-info/disputeResolution.html">Dispute Resolution</a>
               </li>
               <li>
                 <a href="../policies-info/fairnessrng.html">Fairness & RNG</a>
               </li>
               <li>
-                <a href="../policies-info/selfExclusion.html">Self-Exclusion</a>
-              </li>
-              <li>
-                <a href="#">Frequently Asked Questions (F.A.Q)</a>
+                <a href="../policies-info\selfExclusion.html">Self-Exclusion</a>
               </li>
             </ul>
           </li>
@@ -325,9 +236,9 @@
           <li>
             <p>Contact Us</p>
             <ul class="inner-list">
-              <li><a href="#">Live Support</a></li>
-              <li><a href="#">Support email</a></li>
-              <li><a href="#">Affiliate email</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Live Support</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Support email</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Affiliate email</a></li>
             </ul>
           </li>
         </ul>
@@ -336,22 +247,17 @@
         <div class="middle">
           <div class="payments">
             <div>
-              <a href="#"><img src="../img/payments/mastercard.svg" /></a>
-              <a href="#"><img src="../img/payments/visa.svg" /></a>
-              <a href="#"><img src="../img/payments/netteler.svg" /></a>
-              <a href="#"><img src="../img/payments/paysafecard.svg" /></a>
-              <a href="#"><img src="../img/payments/skrill.svg" /></a>
-              <a href="#"><img src="../img/payments/btc.svg" /></a>
-              <a href="#"><img src="../img/payments/discover.svg" /></a>
-              <a href="#"><img src="../img/payments/payop.svg" /></a>
+              <a href="#"><img src="/img/payments/mastercard.svg" /></a>
+              <a href="#"><img src="/img/payments/visa.svg" /></a>
+              <a href="#"><img src="/img/payments/netteler.svg" /></a>
+              <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
+              <a href="#"><img src="/img/payments/skrill.svg" /></a>
             </div>
             <div>
-              <a href="#"><img src="../img/payments/diners-club.svg" /></a>
-              <a href="#"><img src="../img/payments/ecopayz.svg" /></a>
-              <a href="#"><img src="../img/payments/jcb.svg" /></a>
-              <a href="#"><img src="../img/payments/qiwi.svg" /></a>
-              <a href="#"><img src="../img/payments/astropay.svg" /></a>
-              <a href="#"><img src="../img/payments/web-money.svg" /></a>
+              <a href="#"><img src="/img/payments/btc.svg" /></a>
+              <a href="#"><img src="/img/payments/ecopayz.svg" /></a>
+              <a href="#"><img src="/img/payments/astropay.svg" /></a>
+              <a href="#"><img src="/img/payments/web-money.svg" /></a>
             </div>
           </div>
         </div>
@@ -363,11 +269,7 @@
             <img src="../img/warning-text/ssl.png" />
           </div>
           <span class="warning">
-            <p>
-              Attention! It is gambling advertising. Gambling is not suitable
-              for solving financial problems. Please read
-              <a href="#">Terms & Conditions</a> and play responsibly.
-            </p>
+            <p>Attention! Gambling can be addictive. Please play responsibly. Gambling is not suitable for solving financial problems.</p>
           </span>
         </div>
       </div>

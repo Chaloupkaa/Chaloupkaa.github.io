@@ -7,6 +7,7 @@
 .game-container {
   display: flex;
   width: 960px;
+  min-height: 575px;
   height: 70vh;
   margin-top: 1rem;
   background-color: var(--secondary-game-container-color);

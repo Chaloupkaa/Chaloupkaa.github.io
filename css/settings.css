@@ -16,6 +16,7 @@
 body {
   background-color: var(--body-background-color);
   height: 100%;
+  overflow-x: hidden;
 }
 
 /*Scrollbar*/

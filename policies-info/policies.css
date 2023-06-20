@@ -2,8 +2,6 @@ body > main {
   color: var(--default-text-color);
   padding: 0;
   position: relative;
-  max-width: 1300px;
-  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -19,7 +17,6 @@ h1 {
 }
 
 .content {
-  max-width: 90%;
 }
 
 body > main > div {
@@ -42,7 +39,7 @@ body > main > div > section.terms {
   margin: 0;
   position: relative;
   z-index: 9;
-  padding: 50px 96px;
+  padding: 30px 76px;
   padding-bottom: 0;
 }
 
@@ -81,7 +78,6 @@ body > main > div > section.terms > ul > li {
 .options {
   display: flex;
   justify-content: center;
-  max-width: 100%;
   flex-direction: row;
   gap: 0.5rem;
   white-space: nowrap;
@@ -124,4 +120,10 @@ body > main > div > section.terms > ul > li {
   cursor: pointer;
   background-color: #fcd704d3;
   box-shadow: 0 2px 0 #fcd70465;
+}
+
+.self-exclude-button:active {
+  font-size: 0.98rem;
+  box-shadow: 0 2px 0 #fcd704d3;
+  transition: all 10ms linear;
 }

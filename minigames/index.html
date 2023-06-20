@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/mediaQueries.css" />
+    <link rel="stylesheet" href="../css/popups.css" />
+    <link rel="stylesheet" href="../css/settings.css" />
+    <link rel="stylesheet" href="../css/manualAutoBet.css" />
+    <link rel="stylesheet" href="../css/gameContainers.css" />
+    <link rel="stylesheet" href="minigames.css" />
+    <link rel="stylesheet" href="minigamesMediaQueries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>BETLOAD</title>
+  </head>
+  <body>
+    <div class="loader-wrapper" id="loaderWrapper">
+      <div class="loader" id="loader"></div>
+    </div>
+    <header>
+      <div class="auth-bar margin25">
+        <div class="left">
+          <a href="../minigames/index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
+        </div>
+        <div class="mid">
+          <div>
+            <ul>
+              <div class="balance-deposit-wrapper">
+                <li class="balance default">
+                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
+                  <span class="balance-amount">€</span>
+                  <span class="balance-amount" id="balanceAmount"></span>
+                </li>
+                <li>
+                  <a href="#" class="deposit">Deposit</a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="user-info">
+            <ul>
+              <li class="account-info">
+                <img src="../img/general/user-icon.svg" class="user-icon" />
+                <span class="username" id="username"></span>
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="nav-wrapper"></div>
+    </header>
+    <div class="all-content-on-site-wrapper">
+      <div class="welcome-vip-wrapper margin25">
+        <div class="welcome-message">
+          <p>Welcome, <span id="userUsername"></span></p>
+        </div>
+        <div class="whole-vip-progress-bar-wrapper">
+          <div class="vip-progress-wrapper">
+            <p>Your VIP Progress</p>
+            <span id="vipProgressPercent">0.00%</span>
+          </div>
+          <div class="progress-bar" id="progressBar">
+            <div class="current-progress" id="currentProgress"></div>
+          </div>
+          <div class="vip-levels">
+            <div class="current-vip-level">
+              <i class="fa-regular fa-bookmark bookmark-icon current-icon"></i>
+              <span class="current-vip-level-text">None</span>
+            </div>
+            <div class="next-vip-level">
+              <i class="fa-regular fa-bookmark bookmark-icon next-icon"></i>
+              <span class="next-vip-level-text">Iron</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="betload-originals-wrapper">
+        <span class="betload-originals-text">BETLOAD Originals</span>
+      </div>
+      <div class="minigame-slider-wrapper margin25">
+        <div class="game-card mines-game" id="minesGame">
+          <a href="../mines/mines.html" class="minigame-name">Asteroids</a>
+          <img src="img/asteroids_background.svg" class="asteroids-background" />
+          <img src="img/asteroids_floor.svg" class="asteroids-floor" />
+          <img src="img/asteroids_stars.svg" class="asteroids-stars" />
+          <img src="img/asteroids_astronaut.svg" class="asteroids-astronaut" />
+          <img src="img/asteroids_cloud_left.svg" class="asteroids-cloud-left" />
+          <img src="img/asteroids_cloud_right.svg" class="asteroids-cloud-right" />
+          <img src="img/asteroids_planet_1.svg" class="asteroids-planet-1" />
+          <img src="img/asteroids_planet_2.svg" class="asteroids-planet-2" />
+          <img src="img/asteroids_planet_3.svg" class="asteroids-planet-3" />
+          <img src="img/asteroids_planet_4.svg" class="asteroids-planet-4" />
+          <img src="img/asteroids_planet_5.svg" class="asteroids-planet-5" />
+          <img src="img/asteroids_planet_6.svg" class="asteroids-planet-6" />
+          <img src="img/asteroids_planet_7.svg" class="asteroids-planet-7" />
+          <img src="img/asteroids_planet_8.svg" class="asteroids-planet-8" />
+          <img src="img/asteroids_planet_9.svg" class="asteroids-planet-9" />
+        </div>
+
+        <div class="game-card dice-game" id="diceGame">
+          <a href="../dice/dice.html" class="minigame-name">Dice</a>
+          <img src="img/dice_background_house.png" class="dice-background-house" />
+          <img src="img/dice_casino_pattern.png" class="dice-casino-pattern" />
+          <img src="img/dice_slider.png" class="dice-slider" />
+          <img src="img/chip01.png" class="chip01" />
+          <img src="img/chip02.png" class="chip02" />
+          <img src="img/chip03.png" class="chip03" />
+          <img src="img/chip04.png" class="chip04" />
+          <img src="img/chip05.png" class="chip05" />
+          <img src="img/chip06.png" class="chip06" />
+        </div>
+
+        <div class="game-card limbo-game" id="limboGame">
+          <a href="../limbo/limbo.html" class="minigame-name">Limbo</a>
+
+          <span class="multiplier-numbers number-1">700x</span>
+          <span class="multiplier-numbers number-2">69x</span>
+          <span class="multiplier-numbers number-3">3.64x</span>
+          <span class="multiplier-numbers number-4">10.78x</span>
+          <span class="multiplier-numbers number-5">1.20x</span>
+          <span class="multiplier-numbers number-6">420x</span>
+          <span class="multiplier-numbers number-7">1.00x</span>
+          <img src="img/limbo_background.png" class="limbo-background" />
+          <img src="img/limbo_fire_overlay.png" class="limbo-fire-overlay" />
+          <img src="img/limbo_arrow_1.png" class="limbo-arrow-1 limbo-arrow" />
+          <img src="img/limbo_arrow_1.png" class="limbo-arrow-2 limbo-arrow" />
+          <img src="img/limbo_arrow_1.png" class="limbo-arrow-3 limbo-arrow" />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <nav>
+        <ul class="middle repair">
+          <li>
+            <p>Start Again</p>
+            <ul class="inner-list">
+              <li>
+                <button class="wipe-data-button" onclick="resetData()">Wipe data</button>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Need a break?</p>
+            <ul class="inner-list">
+              <li>
+                <a href="../policies-info/responsibleGaming.html">Responsible Gaming</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Policies</p>
+            <ul class="inner-list">
+              <li>
+                <a href="../policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
+              </li>
+              <li>
+                <a href="../policies-info/refundPolicy.html">Refund Policy</a>
+              </li>
+              <li>
+                <a href="../policies-info/disputeResolution.html">Dispute Resolution</a>
+              </li>
+              <li>
+                <a href="../policies-info/fairnessrng.html">Fairness & RNG</a>
+              </li>
+              <li>
+                <a href="../policies-info\selfExclusion.html">Self-Exclusion</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Contact Us</p>
+            <ul class="inner-list">
+              <li><a href="mailto:l20210039@ssptaji.cz">Live Support</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Support email</a></li>
+              <li><a href="mailto:l20210039@ssptaji.cz">Affiliate email</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <div class="middle">
+          <div class="payments">
+            <div>
+              <a href="#"><img src="/img/payments/mastercard.svg" /></a>
+              <a href="#"><img src="/img/payments/visa.svg" /></a>
+              <a href="#"><img src="/img/payments/netteler.svg" /></a>
+              <a href="#"><img src="/img/payments/paysafecard.svg" /></a>
+              <a href="#"><img src="/img/payments/skrill.svg" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="/img/payments/btc.svg" /></a>
+              <a href="#"><img src="/img/payments/ecopayz.svg" /></a>
+              <a href="#"><img src="/img/payments/astropay.svg" /></a>
+              <a href="#"><img src="/img/payments/web-money.svg" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="warning-text">
+          <div class="imgs">
+            <img src="../img/warning-text/18plus.png" />
+            <img src="../img/warning-text/ssl.png" />
+          </div>
+          <span class="warning">
+            <p>Attention! Gambling can be addictive. Please play responsibly. Gambling is not suitable for solving financial problems.</p>
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/userInfo.js"></script>
+    <script type="module" src="limbo.js"></script>
+    <script src="../js/betSidebar.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="minigames.js"></script>
+  </body>
+</html>

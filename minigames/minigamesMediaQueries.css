@@ -1,20 +1,32 @@
 @media only screen and (max-width: 1500px) {
-    .margin25 {
-        margin-left: 20vw;
-        margin-right: 20vw;
-    }
+  .margin25 {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+
+  .betload-originals-text {
+    margin-left: 20vw;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
-    .margin25 {
-        margin-left: 15vw;
-        margin-right: 15vw;
-    }
+  .margin25 {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
+  .betload-originals-text {
+    margin-left: 15vw;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
-    .margin25 {
-        margin-left: 15vw;
-        margin-right: 15vw;
-    }
+  .margin25 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .betload-originals-text {
+    margin-left: 10vw;
+  }
 }
