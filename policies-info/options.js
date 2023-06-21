@@ -7,7 +7,6 @@ const options = [
   document.getElementById("30"),
   document.getElementById("60"),
   document.getElementById("90"),
-  document.getElementById("180"),
   document.getElementById("365"),
 ];
 

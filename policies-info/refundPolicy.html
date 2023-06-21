@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/img/logo/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/img/logo/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/css/colors.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/mediaQueries.css" />
@@ -16,17 +20,25 @@
     <title>BETLOAD | Refund Policy</title>
   </head>
   <body>
+    <div class="loader-wrapper" id="loaderWrapper">
+      <div class="loader" id="loader"></div>
+    </div>
     <header>
       <div class="auth-bar margin25">
         <div class="left">
-          <a href="../minigames/index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
+          <a href="../index.html" class="logo-link"
+            ><img src="../img/logo/logo-full.svg" class="logo"
+          /></a>
         </div>
         <div class="mid">
           <div>
             <ul>
               <div class="balance-deposit-wrapper">
                 <li class="balance default">
-                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
+                  <img
+                    src="../img/icons/cash-balance-icon.svg"
+                    class="cash-balance-icon"
+                  />
                   <span class="balance-amount">€</span>
                   <span class="balance-amount" id="balanceAmount"></span>
                 </li>
@@ -57,27 +69,44 @@
           <div class="nbsp">&nbsp;</div>
           <h1>Refund Policy</h1>
           <div class="nbsp">&nbsp;</div>
-          <div class="terms-text">Please carefully read the following policy, which outlines BetLoad's refund procedures.</div>
-          <div class="terms-text">Ensure that you are familiar with our terms and conditions.</div>
-          <div class="terms-text">If the alleged deposit and bonuses have been used to play using the Services, there is no refund option.</div>
           <div class="terms-text">
-            If a player claims that another person has entered his/her player account, the player's request for a refund will only be taken into
-            consideration if it is made within the first fourteen (14) days following the alleged transaction or during the first thirty (30) calendar
-            days.
+            Please carefully read the following policy, which outlines BetLoad's
+            refund procedures.
           </div>
           <div class="terms-text">
-            As required by law, our users must comply with BetLoad's request within five (5) days and produce any official identity. All user funds
-            will be forfeited, and the account will be cancelled, if the requested paperwork is not given within five (5) days of our request. A
-            decision of this kind cannot be appealed.
+            Ensure that you are familiar with our terms and conditions.
           </div>
           <div class="terms-text">
-            Every user should play fairly, which means they shouldn't utilize technology or other means to influence a game's outcome.
+            If the alleged deposit and bonuses have been used to play using the
+            Services, there is no refund option.
           </div>
           <div class="terms-text">
-            The player is responsible for any charges associated with the refund process. These expenses could include, at the sole discretion of the
-            company, a 20% administrative fee and any other fees incurred throughout the refund procedure.
+            If a player claims that another person has entered his/her player
+            account, the player's request for a refund will only be taken into
+            consideration if it is made within the first fourteen (14) days
+            following the alleged transaction or during the first thirty (30)
+            calendar days.
           </div>
-          <div class="terms-text">In case of any misunderstanding contact support@betload.gg</div>
+          <div class="terms-text">
+            As required by law, our users must comply with BetLoad's request
+            within five (5) days and produce any official identity. All user
+            funds will be forfeited, and the account will be cancelled, if the
+            requested paperwork is not given within five (5) days of our
+            request. A decision of this kind cannot be appealed.
+          </div>
+          <div class="terms-text">
+            Every user should play fairly, which means they shouldn't utilize
+            technology or other means to influence a game's outcome.
+          </div>
+          <div class="terms-text">
+            The player is responsible for any charges associated with the refund
+            process. These expenses could include, at the sole discretion of the
+            company, a 20% administrative fee and any other fees incurred
+            throughout the refund procedure.
+          </div>
+          <div class="terms-text">
+            In case of any misunderstanding contact support@betload.gg
+          </div>
         </section>
       </div>
     </main>
@@ -88,7 +117,9 @@
             <p>Start Again</p>
             <ul class="inner-list">
               <li>
-                <button class="wipe-data-button" onclick="resetData()">Wipe data</button>
+                <button class="wipe-data-button" onclick="resetData()">
+                  Wipe data
+                </button>
               </li>
             </ul>
           </li>
@@ -96,7 +127,9 @@
             <p>Need a break?</p>
             <ul class="inner-list">
               <li>
-                <a href="../policies-info/responsibleGaming.html">Responsible Gaming</a>
+                <a href="../policies-info/responsibleGaming.html"
+                  >Responsible Gaming</a
+                >
               </li>
             </ul>
           </li>
@@ -110,7 +143,9 @@
                 <a href="../policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="../policies-info/disputeResolution.html">Dispute Resolution</a>
+                <a href="../policies-info/disputeResolution.html"
+                  >Dispute Resolution</a
+                >
               </li>
               <li>
                 <a href="../policies-info/fairnessrng.html">Fairness & RNG</a>
@@ -157,11 +192,15 @@
             <img src="../img/warning-text/ssl.png" />
           </div>
           <span class="warning">
-            <p>Attention! Gambling can be addictive. Please play responsibly. Gambling is not suitable for solving financial problems.</p>
+            <p>
+              Attention! Gambling can be addictive. Please play responsibly.
+              Gambling is not suitable for solving financial problems.
+            </p>
           </span>
         </div>
       </div>
     </footer>
     <script src="../js/userInfo.js"></script>
+    <script src="../js/loader.js"></script>
   </body>
 </html>

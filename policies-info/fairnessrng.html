@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/img/logo/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/img/logo/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/css/colors.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/mediaQueries.css" />
@@ -16,17 +20,25 @@
     <title>BETLOAD | Fairness & RNG Methods</title>
   </head>
   <body>
+    <div class="loader-wrapper" id="loaderWrapper">
+      <div class="loader" id="loader"></div>
+    </div>
     <header>
       <div class="auth-bar margin25">
         <div class="left">
-          <a href="../minigames/index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
+          <a href="../index.html" class="logo-link"
+            ><img src="../img/logo/logo-full.svg" class="logo"
+          /></a>
         </div>
         <div class="mid">
           <div>
             <ul>
               <div class="balance-deposit-wrapper">
                 <li class="balance default">
-                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
+                  <img
+                    src="../img/icons/cash-balance-icon.svg"
+                    class="cash-balance-icon"
+                  />
                   <span class="balance-amount">€</span>
                   <span class="balance-amount" id="balanceAmount"></span>
                 </li>
@@ -59,32 +71,47 @@
           <div class="nbsp">&nbsp;</div>
 
           <div class="terms-text">
-            The core of game functionality and player faith in game outcomes and fairness is the Random Number Generator (RNG). A respected licensed
-            laboratory has tested and certified a variety of RNGs for the company.
+            The core of game functionality and player faith in game outcomes and
+            fairness is the Random Number Generator (RNG). A respected licensed
+            laboratory has tested and certified a variety of RNGs for the
+            company.
           </div>
 
           <div class="terms-text">
-            The implementation of the RNG complies with the technical requirements, according to the source code review. To name a few, but not all of
-            them:
+            The implementation of the RNG complies with the technical
+            requirements, according to the source code review. To name a few,
+            but not all of them:
           </div>
 
           <ul>
             <li>Identification of the algorithm</li>
-            <li>Internal state security, seeding and re-seeding, and thread safety</li>
+            <li>
+              Internal state security, seeding and re-seeding, and thread safety
+            </li>
             <li>Scaling for Instant game</li>
           </ul>
-          <div class="terms-text">Our extensive RNG tests evaluate the RNG's statistical randomness, unpredictability, and non-repeatability.</div>
           <div class="terms-text">
-            All of our casino games use Random Number Generators, or RNGs, which are computer programs that ensure that all outcomes remain arbitrary.
-            No matter what, it is impossible to predict or influence these games.
+            Our extensive RNG tests evaluate the RNG's statistical randomness,
+            unpredictability, and non-repeatability.
           </div>
           <div class="terms-text">
-            The fundamental idea behind demonstrable fairness is that participants should be able to demonstrate and confirm that their outcomes are
-            accurate and unaltered.
+            All of our casino games use Random Number Generators, or RNGs, which
+            are computer programs that ensure that all outcomes remain
+            arbitrary. No matter what, it is impossible to predict or influence
+            these games.
           </div>
-          <div class="terms-text">The commitment strategy is employed to guarantee that the player has a say in every outcome produced.</div>
           <div class="terms-text">
-            Your PC or mobile device will now have access to a simple, fun, and transparent gaming environment, according to the company.
+            The fundamental idea behind demonstrable fairness is that
+            participants should be able to demonstrate and confirm that their
+            outcomes are accurate and unaltered.
+          </div>
+          <div class="terms-text">
+            The commitment strategy is employed to guarantee that the player has
+            a say in every outcome produced.
+          </div>
+          <div class="terms-text">
+            Your PC or mobile device will now have access to a simple, fun, and
+            transparent gaming environment, according to the company.
           </div>
         </section>
       </div>
@@ -96,7 +123,9 @@
             <p>Start Again</p>
             <ul class="inner-list">
               <li>
-                <button class="wipe-data-button" onclick="resetData()">Wipe data</button>
+                <button class="wipe-data-button" onclick="resetData()">
+                  Wipe data
+                </button>
               </li>
             </ul>
           </li>
@@ -104,7 +133,9 @@
             <p>Need a break?</p>
             <ul class="inner-list">
               <li>
-                <a href="#">Responsible Gaming</a>
+                <a href="/policies-info/responsibleGaming.html"
+                  >Responsible Gaming</a
+                >
               </li>
             </ul>
           </li>
@@ -115,13 +146,15 @@
                 <a href="/policies-info/kycAmlPolicy.html">KYC/AML Policy</a>
               </li>
               <li>
-                <a href="#">Refund Policy</a>
+                <a href="/policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="#">Dispute Resolution</a>
+                <a href="/policies-info/disputeResolution.html"
+                  >Dispute Resolution</a
+                >
               </li>
               <li>
-                <a href="#">Fairness & RNG</a>
+                <a href="/policies-info/fairnessrng.html">Fairness & RNG</a>
               </li>
               <li>
                 <a href="/policies-info/selfExclusion.html">Self-Exclusion</a>
@@ -165,11 +198,15 @@
             <img src="/img/warning-text/ssl.png" />
           </div>
           <span class="warning">
-            <p>Attention! Gambling can be addictive. Please play responsibly. Gambling is not suitable for solving financial problems.</p>
+            <p>
+              Attention! Gambling can be addictive. Please play responsibly.
+              Gambling is not suitable for solving financial problems.
+            </p>
           </span>
         </div>
       </div>
     </footer>
+    <script src="../js/loader.js"></script>
     <script src="../js/userInfo.js"></script>
   </body>
 </html>

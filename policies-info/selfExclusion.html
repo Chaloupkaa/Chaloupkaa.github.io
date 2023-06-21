@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/img/logo/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/img/logo/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/css/colors.css" />
 
     <link rel="stylesheet" href="/css/header.css" />
@@ -17,17 +21,25 @@
     <title>BETLOAD | Self-Exclusion</title>
   </head>
   <body>
+    <div class="loader-wrapper" id="loaderWrapper">
+      <div class="loader" id="loader"></div>
+    </div>
     <header>
       <div class="auth-bar margin25">
         <div class="left">
-          <a href="../minigames/index.html" class="logo-link"><img src="../img/logo/logo-full.svg" class="logo" /></a>
+          <a href="../index.html" class="logo-link"
+            ><img src="../img/logo/logo-full.svg" class="logo"
+          /></a>
         </div>
         <div class="mid">
           <div>
             <ul>
               <div class="balance-deposit-wrapper">
                 <li class="balance default">
-                  <img src="../img/icons/cash-balance-icon.svg" class="cash-balance-icon" />
+                  <img
+                    src="../img/icons/cash-balance-icon.svg"
+                    class="cash-balance-icon"
+                  />
                   <span class="balance-amount">€</span>
                   <span class="balance-amount" id="balanceAmount"></span>
                 </li>
@@ -59,21 +71,28 @@
           <h1>Self-Exclusion</h1>
           <div class="nbsp">&nbsp;</div>
           <div class="terms-text">
-            The Player may ask for self-exclusion for an extended period if the situation is more critical. You must send an email to our customer
-            care staff to request self-exclusion for a duration of between six months and five years. The Account will be closed for 6 months if the
-            User does not choose a self-exclusion term.
+            The Player may ask for self-exclusion for an extended period if the
+            situation is more critical. You must send an email to our customer
+            care staff to request self-exclusion for a duration of between six
+            months and five years. The Account will be closed for 6 months if
+            the User does not choose a self-exclusion term.
           </div>
           <div class="terms-text">
-            However, figuring out whether a person's gambling has developed into a problem can be challenging. Please let us know if you have any
-            gambling-related problems while terminating the account so that our employees can behave appropriately.
+            However, figuring out whether a person's gambling has developed into
+            a problem can be challenging. Please let us know if you have any
+            gambling-related problems while terminating the account so that our
+            employees can behave appropriately.
           </div>
           <div class="nbsp">&nbsp;</div>
           <div class="nbsp">&nbsp;</div>
           <h1>Time Out Period</h1>
           <div class="nbsp">&nbsp;</div>
           <div class="terms-text">
-            Please get in touch with our Customer Support team and ask them to temporarily close your account if you need some time off from gambling.
-            In the event of a formal request from the Player, the Account may be prematurely reopened at the sole discretion of the Casino.
+            Please get in touch with our Customer Support team and ask them to
+            temporarily close your account if you need some time off from
+            gambling. In the event of a formal request from the Player, the
+            Account may be prematurely reopened at the sole discretion of the
+            Casino.
           </div>
         </section>
       </div>
@@ -85,7 +104,9 @@
             <p>Start Again</p>
             <ul class="inner-list">
               <li>
-                <button class="wipe-data-button" onclick="resetData()">Wipe data</button>
+                <button class="wipe-data-button" onclick="resetData()">
+                  Wipe data
+                </button>
               </li>
             </ul>
           </li>
@@ -93,7 +114,9 @@
             <p>Need a break?</p>
             <ul class="inner-list">
               <li>
-                <a href="../policies-info/responsibleGaming.html">Responsible Gaming</a>
+                <a href="../policies-info/responsibleGaming.html"
+                  >Responsible Gaming</a
+                >
               </li>
             </ul>
           </li>
@@ -107,7 +130,9 @@
                 <a href="../policies-info/refundPolicy.html">Refund Policy</a>
               </li>
               <li>
-                <a href="../policies-info/disputeResolution.html">Dispute Resolution</a>
+                <a href="../policies-info/disputeResolution.html"
+                  >Dispute Resolution</a
+                >
               </li>
               <li>
                 <a href="../policies-info/fairnessrng.html">Fairness & RNG</a>
@@ -154,11 +179,15 @@
             <img src="../img/warning-text/ssl.png" />
           </div>
           <span class="warning">
-            <p>Attention! Gambling can be addictive. Please play responsibly. Gambling is not suitable for solving financial problems.</p>
+            <p>
+              Attention! Gambling can be addictive. Please play responsibly.
+              Gambling is not suitable for solving financial problems.
+            </p>
           </span>
         </div>
       </div>
     </footer>
     <script src="../js/userInfo.js"></script>
+    <script src="../js/loader.js"></script>
   </body>
 </html>
